@@ -1,0 +1,4 @@
+sensor_msgs/Image camera
+sensor_msgs/PointCloud2 lidar
+sensor_msgs/PointCloud2 radar
+builtin_interfaces/Time sync_time
