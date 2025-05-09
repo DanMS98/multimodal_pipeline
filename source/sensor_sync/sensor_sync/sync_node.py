@@ -18,8 +18,8 @@ class SyncNode(Node):
     def __init__(self):
         
         super().__init__('sync_node')
-        logger.info("Intializing SyncNode")
-        self.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, True)])
+        logger.info("Intializing SyncNode...")
+        # self.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, True)])
         self.camera_buffer = deque(maxlen=100)
         self.lidar_buffer = deque(maxlen=100)
         self.radar_buffer = deque(maxlen=100)
@@ -30,9 +30,11 @@ class SyncNode(Node):
 
         self.sync_pub = self.create_publisher(SyncedSensors, '/synced_sensors', 10)
 
-        self.sync_rate = 10.0  # Hz
-        self.sync_threshold = 0.05  # seconds
-        self.timer = self.create_timer(1.0 / self.sync_rate, self.sync_callback)
+        # self.sync_rate = 10.0  # Hz
+        # self.sync_threshold = 0.05  # seconds
+        # self.timer = self.create_timer(1.0 / self.sync_rate, self.sync_callback)
+        self.timer = self.create_timer(0.5, self.timer_callback)
+
         logger.info("SyncNode Intialized")
 
 
@@ -43,18 +45,17 @@ class SyncNode(Node):
         # cv2.imshow('Camera Feed', frame)
         # cv2.waitKey(1)
         ts = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
-        logger.info(f'Camera timestamp: {ts}')
+        # logger.info(f'Camera timestamp: {ts}')
         self.camera_buffer.append((ts, msg))
 
     def lidar_callback(self, msg):
         ts = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
-        logger.info(f'Lidar timestamp: {ts}')
+        # logger.info(f'Lidar timestamp: {ts}')
         self.lidar_buffer.append((ts, msg))
 
     def radar_callback(self, msg):
         ts = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
-        logger.info(f'Radar timestamp: {ts}')
-
+        # logger.info(f'Radar timestamp: {ts}')
         self.radar_buffer.append((ts, msg))
 
     def find_closest(self, buffer, target_time):
@@ -74,9 +75,8 @@ class SyncNode(Node):
         latest = buffer.pop()
         return latest[1]
 
-    def sync_callback(self):
-
-        # logger.info("Sync Callback started...")
+    def timer_callback(self):
+        logger.debug("Sync Callback started...")
 
         now = self.get_clock().now().seconds_nanoseconds()
         sync_time = now[0] + now[1] * 1e-9
@@ -108,8 +108,8 @@ class SyncNode(Node):
             logger.info("Publish synced message...")
 
             self.sync_pub.publish(synced_msg)
-        # else:
-        #     logger.info("Couldn't publish the message")
+        else:
+            logger.warning("Couldn't publish the message")
             
 
 def main(args=None):
