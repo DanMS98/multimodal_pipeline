@@ -26,6 +26,7 @@ ament_export_dependencies(rosidl_default_runtime sensor_msgs builtin_interfaces 
 
 install(PROGRAMS
   sensor_sync/sync_node.py
+  sensor_sync/calibration_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
