@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image, PointCloud2
@@ -10,7 +9,6 @@ from loguru import logger
 import cv2
 from cv_bridge import CvBridge
 from rclpy.parameter import Parameter
-
 
 
 
@@ -88,7 +86,6 @@ class SyncNode(Node):
         camera_msg = self.find_latest(self.camera_buffer)
         lidar_msg = self.find_latest(self.lidar_buffer)
         radar_msg = self.find_latest(self.radar_buffer)
-
 
         if camera_msg and lidar_msg and radar_msg:
             synced_msg = SyncedSensors()
