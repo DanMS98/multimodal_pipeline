@@ -12,53 +12,109 @@ import struct
 from sensor_msgs.msg import PointCloud2, PointField
 import ros2_numpy as rnp
 import struct
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 
-
-
-class CalibrationNode(Node):
+class LidarUtils(Node):
     def __init__(self):
-        super().__init__('calibration_node')
-        self.subscription = self.create_subscription(
-            SyncedSensors,
-            '/synced_sensors',
-            self.listener_callback,
-            10
-        )
+        pass
 
-        # self.sync_pub = self.create_publisher(SyncedSensors, '/synced_sensors', 10)
-        # self.timer = self.create_timer(0.5, self.timer_callback)
+    def lidar_reconstructor(self, msg):
+        try:
+            point_step = msg.point_step
+            data = msg.data
+            width = msg.width
+            height = msg.height
+            nan_count = 0
+            total_points = width * height
 
-        self.camera = None
-        self.lidar = None
-        self.radar = None
-        self.visualize = False
-        self.bridge = CvBridge()
-        logger.info("Calibration Node Initialized")
+            valid_count = 0
+            
+            reconstructed_points = []
+            for i in range(total_points):
+                start_index = i * point_step
+                end_index = start_index + point_step
+                point_data = data[start_index:end_index]
+                try:
+                    x = struct.unpack_from('f', point_data, 0)[0]
+                    y = struct.unpack_from('f', point_data, 4)[0]
+                    z = struct.unpack_from('f', point_data, 8)[0]
+                    range_val = struct.unpack_from('f', point_data, offset=32)[0]
+                    intensity = struct.unpack_from('f', point_data, offset=16)[0]
+                    ring = struct.unpack_from('H', point_data, offset=26)[0]
+                    if any([x != x, y != y, z != z]):  # Check for nan using `!=` comparison
+                        nan_count += 1
+                    else:
+                        valid_count += 1
+                    # logger.info(f"Point {i}: X: {x}, Y: {y}, Z: {z}, Intensity: {intensity}, Range: {range_val}")
+                    # if not np.isnan(range_val) and range_val > 0.001:
+                        # logger.error(f"Range: {range_val}, Intensity: {intensity}, Ring: {ring}")
+                        # exit()
+                    if not np.isnan(range_val) and range_val > 0:
+                        #  (assumes 64-channel LiDAR)
+                        vertical_angle = np.deg2rad(-30 + 60 * (ring / 63))
+                        #  (assumes 360° coverage)
+                        horizontal_angle = np.deg2rad((i % width) * 360 / width)
+
+                        # Convert to Cartesian coordinates
+                        x = range_val * np.cos(vertical_angle) * np.cos(horizontal_angle)
+                        y = range_val * np.cos(vertical_angle) * np.sin(horizontal_angle)
+                        z = range_val * np.sin(vertical_angle)
+
+                        reconstructed_points.append([x, y, z, intensity])
+                    else:
+                        # logger.warning(f'range_val: {range_val}')
+                        reconstructed_points.append([np.nan, np.nan, np.nan, intensity])
+
+                except struct.error as e:
+                    logger.error(f"Data unpacking error at point {i}: {e}")
+            logger.info(f"Total Points: {total_points}")
+            logger.info(f"Valid Points: {valid_count}")
+            logger.info(f"NaN Points: {nan_count}")
+            logger.info(f"Percentage of Valid Points: {(valid_count / total_points) * 100:.2f}%")
+            logger.info(f"Percentage of NaN Points: {(nan_count / total_points) * 100:.2f}%\n")
+
+            # Convert to numpy array
+            points_array = np.array(reconstructed_points, dtype=np.float32)
+            logger.info(f"Reconstructed PointCloud2 with shape: {points_array.shape}")
+            if points_array.shape[0] > 0:
+                self.visualize_points(points_array)
+            else:
+                logger.warning("No valid points to visualize.")
+
+        except Exception as e:
+            logger.error(f"Error in lidar_callback: {e}")
+        return points_array
+    
 
 
-    def listener_callback(self, msg):
-        self.camera = msg.camera
-        self.lidar = msg.lidar
-        self.radar = msg.radar
-        logger.info(f"Received Synced Message:")
-        logger.info(f"Sync Time: {msg.sync_time}")
-        
-        logger.debug(f'lidar_points:{self.lidar.header}')
+    def visualize_points(self, points):
+        """ Live 3D visualization using Matplotlib. """
+        try:
+            # Extract X, Y, Z, Intensity
+            x_vals = points[:, 0]
+            y_vals = points[:, 1]
+            z_vals = points[:, 2]
+            intensity = points[:, 3]
 
-        lidar_points = self.lidar_test(self.lidar)
-        # lidar_points = self.pc2_to_array(self.lidar)
+            # Plot with Matplotlib
+            fig = plt.figure(figsize=(10, 7))
+            ax = fig.add_subplot(111, projection='3d')
 
-        # logger.debug(f"First 5 X Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Y Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Z Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Intensity: {lidar_points['intensity'][:5]}")
+            # Scatter plot with intensity-based coloring
+            scatter = ax.scatter(x_vals, y_vals, z_vals, c=intensity, cmap='viridis', s=1)
+            plt.colorbar(scatter, ax=ax, label='Intensity')
 
-        # self.process_camera()
-        # self.process_lidar()
-        # self.process_radar()
+            ax.set_title('3D PointCloud Visualization')
+            ax.set_xlabel('X')
+            ax.set_ylabel('Y')
+            ax.set_zlabel('Z')
 
-        # radar_points = self.parse_pointcloud2(self.radar)
+            plt.show()
+
+        except Exception as e:
+            logger.error(f"Visualization Error: {e}")   
 
 
     def lidar_test(self, msg):
@@ -89,6 +145,52 @@ class CalibrationNode(Node):
 
         except Exception as e:
             logger.error(f"Error during manual extraction: {e}")
+
+
+class CalibrationNode(Node):
+    def __init__(self):
+        super().__init__('calibration_node')
+        self.subscription = self.create_subscription(
+            SyncedSensors,
+            '/synced_sensors',
+            self.listener_callback,
+            10
+        )
+
+        self.l_utils = LidarUtils()
+        # self.sync_pub = self.create_publisher(SyncedSensors, '/synced_sensors', 10)
+        # self.timer = self.create_timer(0.5, self.timer_callback)
+
+        self.camera = None
+        self.lidar = None
+        self.radar = None
+        self.visualize = False
+        self.bridge = CvBridge()
+        logger.info("Calibration Node Initialized")
+
+
+    def listener_callback(self, msg):
+        self.camera = msg.camera
+        self.lidar = msg.lidar
+        self.radar = msg.radar
+        logger.info(f"Received Synced Message:")
+        logger.info(f"Sync Time: {msg.sync_time}")
+        
+        logger.debug(f'lidar_points:{self.lidar.header}')
+
+        lidar_points = self.l_utils.lidar_reconstructor(self.lidar)
+        # lidar_points = self.pc2_to_array(self.lidar)
+
+        # logger.debug(f"First 5 X Points: {lidar_points['xyz'][:5]}")
+        # logger.debug(f"First 5 Y Points: {lidar_points['xyz'][:5]}")
+        # logger.debug(f"First 5 Z Points: {lidar_points['xyz'][:5]}")
+        # logger.debug(f"First 5 Intensity: {lidar_points['intensity'][:5]}")
+
+        # self.process_camera()
+        # self.process_lidar()
+        # self.process_radar()
+
+        # radar_points = self.parse_pointcloud2(self.radar)
 
 
 
@@ -207,6 +309,9 @@ class CalibrationNode(Node):
         except Exception as e:
             logger.error(f"Error converting PointCloud2: {e}")
             return None
+        
+
+
 
 
 def main(args=None):

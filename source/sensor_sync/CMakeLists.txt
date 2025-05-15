@@ -24,6 +24,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 ament_export_dependencies(rosidl_default_runtime sensor_msgs builtin_interfaces std_msgs)
 
+# Install Python modules
+install(
+  DIRECTORY sensor_sync/
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 install(PROGRAMS
   sensor_sync/sync_node.py
   sensor_sync/calibration_node.py
