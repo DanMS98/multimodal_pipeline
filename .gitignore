@@ -11,4 +11,5 @@ __pycache__/
 .colcon/
 *.swp
 *.DS_Store
+/source/ouster-ros/
 

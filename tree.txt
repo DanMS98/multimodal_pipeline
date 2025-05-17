@@ -1,0 +1,3990 @@
+.
+├── build
+│   ├── COLCON_IGNORE
+│   ├── compile_commands.json
+│   ├── ouster_example
+│   │   ├── cmake_args.last
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeFiles
+│   │   │   ├── 3.22.1
+│   │   │   │   ├── CMakeCCompiler.cmake
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   ├── CompilerIdC
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   │   └── tmp
+│   │   │   │   └── CompilerIdCXX
+│   │   │   │       ├── a.out
+│   │   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │   │       └── tmp
+│   │   │   ├── cmake.check_cache
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── CMakeOutput.log
+│   │   │   ├── CMakeRuleHashes.txt
+│   │   │   ├── CMakeTmp
+│   │   │   ├── Export
+│   │   │   │   └── lib
+│   │   │   │       └── cmake
+│   │   │   │           └── OusterSDK
+│   │   │   │               ├── OusterSDKTargets.cmake
+│   │   │   │               └── OusterSDKTargets-release.cmake
+│   │   │   ├── Makefile2
+│   │   │   ├── Makefile.cmake
+│   │   │   ├── ouster_generate_header.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── progress.marks
+│   │   │   └── TargetDirectories.txt
+│   │   ├── cmake_install.cmake
+│   │   ├── colcon_build.rc
+│   │   ├── colcon_command_prefix_build.sh
+│   │   ├── colcon_command_prefix_build.sh.env
+│   │   ├── compile_commands.json
+│   │   ├── CPackConfig.cmake
+│   │   ├── CPackSourceConfig.cmake
+│   │   ├── generated
+│   │   │   └── ouster
+│   │   │       └── impl
+│   │   │           └── build.h
+│   │   ├── install_manifest.txt
+│   │   ├── Makefile
+│   │   ├── ouster_client
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── ouster_client.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── client.cpp.o
+│   │   │   │   │       ├── client.cpp.o.d
+│   │   │   │   │       ├── image_processing.cpp.o
+│   │   │   │   │       ├── image_processing.cpp.o.d
+│   │   │   │   │       ├── lidar_scan.cpp.o
+│   │   │   │   │       ├── lidar_scan.cpp.o.d
+│   │   │   │   │       ├── logging.cpp.o
+│   │   │   │   │       ├── logging.cpp.o.d
+│   │   │   │   │       ├── netcompat.cpp.o
+│   │   │   │   │       ├── netcompat.cpp.o.d
+│   │   │   │   │       ├── parsing.cpp.o
+│   │   │   │   │       ├── parsing.cpp.o.d
+│   │   │   │   │       ├── profile_extension.cpp.o
+│   │   │   │   │       ├── profile_extension.cpp.o.d
+│   │   │   │   │       ├── sensor_http.cpp.o
+│   │   │   │   │       ├── sensor_http.cpp.o.d
+│   │   │   │   │       ├── sensor_http_imp.cpp.o
+│   │   │   │   │       ├── sensor_http_imp.cpp.o.d
+│   │   │   │   │       ├── sensor_info.cpp.o
+│   │   │   │   │       ├── sensor_info.cpp.o.d
+│   │   │   │   │       ├── sensor_tcp_imp.cpp.o
+│   │   │   │   │       ├── sensor_tcp_imp.cpp.o.d
+│   │   │   │   │       ├── types.cpp.o
+│   │   │   │   │       ├── types.cpp.o.d
+│   │   │   │   │       ├── udp_packet_source.cpp.o
+│   │   │   │   │       ├── udp_packet_source.cpp.o.d
+│   │   │   │   │       ├── util.cpp.o
+│   │   │   │   │       └── util.cpp.o.d
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── libouster_client.a
+│   │   │   └── Makefile
+│   │   ├── ouster_osf
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── all_fb_gen.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── cpp_gen.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── ouster_osf.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── basics.cpp.o
+│   │   │   │   │       ├── basics.cpp.o.d
+│   │   │   │   │       ├── compat_ops.cpp.o
+│   │   │   │   │       ├── compat_ops.cpp.o.d
+│   │   │   │   │       ├── crc32.cpp.o
+│   │   │   │   │       ├── crc32.cpp.o.d
+│   │   │   │   │       ├── fb_utils.cpp.o
+│   │   │   │   │       ├── fb_utils.cpp.o.d
+│   │   │   │   │       ├── file.cpp.o
+│   │   │   │   │       ├── file.cpp.o.d
+│   │   │   │   │       ├── json_utils.cpp.o
+│   │   │   │   │       ├── json_utils.cpp.o.d
+│   │   │   │   │       ├── layout_streaming.cpp.o
+│   │   │   │   │       ├── layout_streaming.cpp.o.d
+│   │   │   │   │       ├── metadata.cpp.o
+│   │   │   │   │       ├── metadata.cpp.o.d
+│   │   │   │   │       ├── meta_extrinsics.cpp.o
+│   │   │   │   │       ├── meta_extrinsics.cpp.o.d
+│   │   │   │   │       ├── meta_lidar_sensor.cpp.o
+│   │   │   │   │       ├── meta_lidar_sensor.cpp.o.d
+│   │   │   │   │       ├── meta_streaming_info.cpp.o
+│   │   │   │   │       ├── meta_streaming_info.cpp.o.d
+│   │   │   │   │       ├── operations.cpp.o
+│   │   │   │   │       ├── operations.cpp.o.d
+│   │   │   │   │       ├── pcap_source.cpp.o
+│   │   │   │   │       ├── pcap_source.cpp.o.d
+│   │   │   │   │       ├── png_tools.cpp.o
+│   │   │   │   │       ├── png_tools.cpp.o.d
+│   │   │   │   │       ├── reader.cpp.o
+│   │   │   │   │       ├── reader.cpp.o.d
+│   │   │   │   │       ├── stream_lidar_scan.cpp.o
+│   │   │   │   │       ├── stream_lidar_scan.cpp.o.d
+│   │   │   │   │       ├── writer.cpp.o
+│   │   │   │   │       └── writer.cpp.o.d
+│   │   │   │   ├── progress.marks
+│   │   │   │   ├── py_gen.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   └── ts_gen.dir
+│   │   │   │       ├── build.make
+│   │   │   │       ├── cmake_clean.cmake
+│   │   │   │       ├── compiler_depend.make
+│   │   │   │       ├── compiler_depend.ts
+│   │   │   │       ├── DependInfo.cmake
+│   │   │   │       └── progress.make
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── fb_binary_schemas
+│   │   │   │   ├── chunk.bfbs
+│   │   │   │   ├── header.bfbs
+│   │   │   │   ├── metadata.bfbs
+│   │   │   │   ├── os_sensor
+│   │   │   │   │   ├── extrinsics.bfbs
+│   │   │   │   │   ├── lidar_scan_stream.bfbs
+│   │   │   │   │   └── lidar_sensor.bfbs
+│   │   │   │   └── streaming
+│   │   │   │       └── streaming_info.bfbs
+│   │   │   ├── fb_source_generated
+│   │   │   │   └── cpp
+│   │   │   │       ├── chunk_generated.h
+│   │   │   │       ├── header_generated.h
+│   │   │   │       ├── metadata_generated.h
+│   │   │   │       ├── os_sensor
+│   │   │   │       │   ├── extrinsics_generated.h
+│   │   │   │       │   ├── lidar_scan_stream_generated.h
+│   │   │   │       │   └── lidar_sensor_generated.h
+│   │   │   │       └── streaming
+│   │   │   │           └── streaming_info_generated.h
+│   │   │   ├── libouster_osf.a
+│   │   │   └── Makefile
+│   │   ├── ouster_pcap
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── ouster_pcap.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── indexed_pcap_reader.cpp.o
+│   │   │   │   │       ├── indexed_pcap_reader.cpp.o.d
+│   │   │   │   │       ├── os_pcap.cpp.o
+│   │   │   │   │       ├── os_pcap.cpp.o.d
+│   │   │   │   │       ├── pcap.cpp.o
+│   │   │   │   │       └── pcap.cpp.o.d
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── libouster_pcap.a
+│   │   │   └── Makefile
+│   │   ├── OusterSDKConfig.cmake
+│   │   ├── OusterSDKConfigVersion.cmake
+│   │   └── ouster_viz
+│   │       ├── CMakeFiles
+│   │       │   ├── CMakeDirectoryInformation.cmake
+│   │       │   ├── ouster_viz.dir
+│   │       │   │   ├── build.make
+│   │       │   │   ├── cmake_clean.cmake
+│   │       │   │   ├── cmake_clean_target.cmake
+│   │       │   │   ├── compiler_depend.internal
+│   │       │   │   ├── compiler_depend.make
+│   │       │   │   ├── compiler_depend.ts
+│   │       │   │   ├── DependInfo.cmake
+│   │       │   │   ├── depend.make
+│   │       │   │   ├── flags.make
+│   │       │   │   ├── link.txt
+│   │       │   │   ├── progress.make
+│   │       │   │   └── src
+│   │       │   │       ├── camera.cpp.o
+│   │       │   │       ├── camera.cpp.o.d
+│   │       │   │       ├── cloud.cpp.o
+│   │       │   │       ├── cloud.cpp.o.d
+│   │       │   │       ├── glfw.cpp.o
+│   │       │   │       ├── glfw.cpp.o.d
+│   │       │   │       ├── gltext.cpp.o
+│   │       │   │       ├── gltext.cpp.o.d
+│   │       │   │       ├── image.cpp.o
+│   │       │   │       ├── image.cpp.o.d
+│   │       │   │       ├── misc.cpp.o
+│   │       │   │       ├── misc.cpp.o.d
+│   │       │   │       ├── point_viz.cpp.o
+│   │       │   │       └── point_viz.cpp.o.d
+│   │       │   └── progress.marks
+│   │       ├── cmake_install.cmake
+│   │       ├── libouster_viz.a
+│   │       └── Makefile
+│   ├── ouster_ros
+│   │   ├── ament_cmake_core
+│   │   │   ├── ouster_rosConfig.cmake
+│   │   │   ├── ouster_rosConfig-version.cmake
+│   │   │   ├── package.cmake
+│   │   │   └── stamps
+│   │   │       ├── ament_cmake_export_dependencies-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_include_directories-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_libraries-extras.cmake.stamp
+│   │   │       ├── ament_prefix_path.sh.stamp
+│   │   │       ├── library_path.sh.stamp
+│   │   │       ├── nameConfig.cmake.in.stamp
+│   │   │       ├── nameConfig-version.cmake.in.stamp
+│   │   │       ├── package_xml_2_cmake.py.stamp
+│   │   │       ├── package.xml.stamp
+│   │   │       ├── path.sh.stamp
+│   │   │       └── templates_2_cmake.py.stamp
+│   │   ├── ament_cmake_environment_hooks
+│   │   │   ├── ament_prefix_path.dsv
+│   │   │   ├── library_path.dsv
+│   │   │   ├── local_setup.bash
+│   │   │   ├── local_setup.dsv
+│   │   │   ├── local_setup.sh
+│   │   │   ├── local_setup.zsh
+│   │   │   ├── package.dsv
+│   │   │   └── path.dsv
+│   │   ├── ament_cmake_export_dependencies
+│   │   │   └── ament_cmake_export_dependencies-extras.cmake
+│   │   ├── ament_cmake_export_include_directories
+│   │   │   └── ament_cmake_export_include_directories-extras.cmake
+│   │   ├── ament_cmake_export_libraries
+│   │   │   └── ament_cmake_export_libraries-extras.cmake
+│   │   ├── ament_cmake_index
+│   │   │   └── share
+│   │   │       └── ament_index
+│   │   │           └── resource_index
+│   │   │               ├── package_run_dependencies
+│   │   │               │   └── ouster_ros
+│   │   │               ├── packages
+│   │   │               │   └── ouster_ros
+│   │   │               ├── parent_prefix_path
+│   │   │               │   └── ouster_ros
+│   │   │               └── rclcpp_components
+│   │   │                   └── ouster_ros
+│   │   ├── ament_cmake_package_templates
+│   │   │   └── templates.cmake
+│   │   ├── ament_cmake_uninstall_target
+│   │   │   └── ament_cmake_uninstall_target.cmake
+│   │   ├── cmake_args.last
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeFiles
+│   │   │   ├── 3.22.1
+│   │   │   │   ├── CMakeCCompiler.cmake
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   ├── CompilerIdC
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   │   └── tmp
+│   │   │   │   └── CompilerIdCXX
+│   │   │   │       ├── a.out
+│   │   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │   │       └── tmp
+│   │   │   ├── cmake.check_cache
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── CMakeOutput.log
+│   │   │   ├── CMakeRuleHashes.txt
+│   │   │   ├── CMakeTmp
+│   │   │   ├── EXAMPLE_INCLUDED.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── Makefile2
+│   │   │   ├── Makefile.cmake
+│   │   │   ├── os_cloud_component.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_cloud_node.cpp.o
+│   │   │   │       ├── os_cloud_node.cpp.o.d
+│   │   │   │       ├── os_processing_node_base.cpp.o
+│   │   │   │       └── os_processing_node_base.cpp.o.d
+│   │   │   ├── os_cloud.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rclcpp_components
+│   │   │   │       ├── node_main_os_cloud.cpp.o
+│   │   │   │       └── node_main_os_cloud.cpp.o.d
+│   │   │   ├── os_driver_component.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_driver_node.cpp.o
+│   │   │   │       ├── os_driver_node.cpp.o.d
+│   │   │   │       ├── os_sensor_node_base.cpp.o
+│   │   │   │       ├── os_sensor_node_base.cpp.o.d
+│   │   │   │       ├── os_sensor_node.cpp.o
+│   │   │   │       └── os_sensor_node.cpp.o.d
+│   │   │   ├── os_driver.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rclcpp_components
+│   │   │   │       ├── node_main_os_driver.cpp.o
+│   │   │   │       └── node_main_os_driver.cpp.o.d
+│   │   │   ├── os_image_component.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_image_node.cpp.o
+│   │   │   │       ├── os_image_node.cpp.o.d
+│   │   │   │       ├── os_processing_node_base.cpp.o
+│   │   │   │       └── os_processing_node_base.cpp.o.d
+│   │   │   ├── os_image.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rclcpp_components
+│   │   │   │       ├── node_main_os_image.cpp.o
+│   │   │   │       └── node_main_os_image.cpp.o.d
+│   │   │   ├── os_replay_component.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_replay_node.cpp.o
+│   │   │   │       ├── os_replay_node.cpp.o.d
+│   │   │   │       ├── os_sensor_node_base.cpp.o
+│   │   │   │       └── os_sensor_node_base.cpp.o.d
+│   │   │   ├── os_replay.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rclcpp_components
+│   │   │   │       ├── node_main_os_replay.cpp.o
+│   │   │   │       └── node_main_os_replay.cpp.o.d
+│   │   │   ├── os_sensor_component.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_sensor_node_base.cpp.o
+│   │   │   │       ├── os_sensor_node_base.cpp.o.d
+│   │   │   │       ├── os_sensor_node.cpp.o
+│   │   │   │       └── os_sensor_node.cpp.o.d
+│   │   │   ├── os_sensor.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rclcpp_components
+│   │   │   │       ├── node_main_os_sensor.cpp.o
+│   │   │   │       └── node_main_os_sensor.cpp.o.d
+│   │   │   ├── ouster_ros_library.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── src
+│   │   │   │       ├── os_ros.cpp.o
+│   │   │   │       └── os_ros.cpp.o.d
+│   │   │   ├── ouster_ros_test.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   ├── src
+│   │   │   │   │   ├── os_ros.cpp.o
+│   │   │   │   │   └── os_ros.cpp.o.d
+│   │   │   │   └── test
+│   │   │   │       ├── lock_free_ring_buffer_test.cpp.o
+│   │   │   │       ├── lock_free_ring_buffer_test.cpp.o.d
+│   │   │   │       ├── point_accessor_test.cpp.o
+│   │   │   │       ├── point_accessor_test.cpp.o.d
+│   │   │   │       ├── point_cloud_compose_test.cpp.o
+│   │   │   │       ├── point_cloud_compose_test.cpp.o.d
+│   │   │   │       ├── point_transform_test.cpp.o
+│   │   │   │       ├── point_transform_test.cpp.o.d
+│   │   │   │       ├── test_main.cpp.o
+│   │   │   │       └── test_main.cpp.o.d
+│   │   │   ├── ouster_ros_uninstall.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── progress.marks
+│   │   │   ├── TargetDirectories.txt
+│   │   │   └── uninstall.dir
+│   │   │       ├── build.make
+│   │   │       ├── cmake_clean.cmake
+│   │   │       ├── compiler_depend.make
+│   │   │       ├── compiler_depend.ts
+│   │   │       ├── DependInfo.cmake
+│   │   │       └── progress.make
+│   │   ├── cmake_install.cmake
+│   │   ├── colcon_build.rc
+│   │   ├── colcon_command_prefix_build.sh
+│   │   ├── colcon_command_prefix_build.sh.env
+│   │   ├── CPackConfig.cmake
+│   │   ├── CPackSourceConfig.cmake
+│   │   ├── CTestConfiguration.ini
+│   │   ├── CTestCustom.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   ├── gtest
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── gtest.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── gtest-all.cc.o
+│   │   │   │   │       └── gtest-all.cc.o.d
+│   │   │   │   ├── gtest_main.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── gtest_main.cc.o
+│   │   │   │   │       └── gtest_main.cc.o.d
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CTestTestfile.cmake
+│   │   │   ├── libgtest.a
+│   │   │   ├── libgtest_main.a
+│   │   │   └── Makefile
+│   │   ├── install_manifest.txt
+│   │   ├── libos_cloud_component.so
+│   │   ├── libos_driver_component.so
+│   │   ├── libos_image_component.so
+│   │   ├── libos_replay_component.so
+│   │   ├── libos_sensor_component.so
+│   │   ├── libouster_ros_library.so
+│   │   ├── Makefile
+│   │   ├── os_cloud
+│   │   ├── os_driver
+│   │   ├── os_image
+│   │   ├── os_replay
+│   │   ├── os_sensor
+│   │   ├── ouster_example
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── Export
+│   │   │   │   │   └── lib
+│   │   │   │   │       └── cmake
+│   │   │   │   │           └── OusterSDK
+│   │   │   │   │               ├── OusterSDKTargets.cmake
+│   │   │   │   │               └── OusterSDKTargets-release.cmake
+│   │   │   │   ├── ouster_generate_header.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CTestTestfile.cmake
+│   │   │   ├── generated
+│   │   │   │   └── ouster
+│   │   │   │       └── impl
+│   │   │   │           └── build.h
+│   │   │   ├── Makefile
+│   │   │   ├── ouster_client
+│   │   │   │   ├── CMakeFiles
+│   │   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   │   ├── ouster_client.dir
+│   │   │   │   │   │   ├── build.make
+│   │   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   │   ├── depend.make
+│   │   │   │   │   │   ├── flags.make
+│   │   │   │   │   │   ├── link.txt
+│   │   │   │   │   │   ├── progress.make
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       ├── client.cpp.o
+│   │   │   │   │   │       ├── client.cpp.o.d
+│   │   │   │   │   │       ├── image_processing.cpp.o
+│   │   │   │   │   │       ├── image_processing.cpp.o.d
+│   │   │   │   │   │       ├── lidar_scan.cpp.o
+│   │   │   │   │   │       ├── lidar_scan.cpp.o.d
+│   │   │   │   │   │       ├── logging.cpp.o
+│   │   │   │   │   │       ├── logging.cpp.o.d
+│   │   │   │   │   │       ├── netcompat.cpp.o
+│   │   │   │   │   │       ├── netcompat.cpp.o.d
+│   │   │   │   │   │       ├── parsing.cpp.o
+│   │   │   │   │   │       ├── parsing.cpp.o.d
+│   │   │   │   │   │       ├── profile_extension.cpp.o
+│   │   │   │   │   │       ├── profile_extension.cpp.o.d
+│   │   │   │   │   │       ├── sensor_http.cpp.o
+│   │   │   │   │   │       ├── sensor_http.cpp.o.d
+│   │   │   │   │   │       ├── sensor_http_imp.cpp.o
+│   │   │   │   │   │       ├── sensor_http_imp.cpp.o.d
+│   │   │   │   │   │       ├── sensor_info.cpp.o
+│   │   │   │   │   │       ├── sensor_info.cpp.o.d
+│   │   │   │   │   │       ├── sensor_tcp_imp.cpp.o
+│   │   │   │   │   │       ├── sensor_tcp_imp.cpp.o.d
+│   │   │   │   │   │       ├── types.cpp.o
+│   │   │   │   │   │       ├── types.cpp.o.d
+│   │   │   │   │   │       ├── udp_packet_source.cpp.o
+│   │   │   │   │   │       ├── udp_packet_source.cpp.o.d
+│   │   │   │   │   │       ├── util.cpp.o
+│   │   │   │   │   │       └── util.cpp.o.d
+│   │   │   │   │   └── progress.marks
+│   │   │   │   ├── cmake_install.cmake
+│   │   │   │   ├── CTestTestfile.cmake
+│   │   │   │   ├── libouster_client.a
+│   │   │   │   └── Makefile
+│   │   │   ├── OusterSDKConfig.cmake
+│   │   │   └── OusterSDKConfigVersion.cmake
+│   │   ├── ouster_ros_test
+│   │   └── rclcpp_components
+│   │       ├── node_main_configured_os_cloud.cpp.in
+│   │       ├── node_main_configured_os_driver.cpp.in
+│   │       ├── node_main_configured_os_image.cpp.in
+│   │       ├── node_main_configured_os_replay.cpp.in
+│   │       ├── node_main_configured_os_sensor.cpp.in
+│   │       ├── node_main_os_cloud.cpp
+│   │       ├── node_main_os_driver.cpp
+│   │       ├── node_main_os_image.cpp
+│   │       ├── node_main_os_replay.cpp
+│   │       └── node_main_os_sensor.cpp
+│   ├── ouster_sensor_msgs
+│   │   ├── ament_cmake_core
+│   │   │   ├── ouster_sensor_msgsConfig.cmake
+│   │   │   ├── ouster_sensor_msgsConfig-version.cmake
+│   │   │   ├── package.cmake
+│   │   │   └── stamps
+│   │   │       ├── ament_cmake_export_dependencies-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_include_directories-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_libraries-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_targets-extras.cmake.stamp
+│   │   │       ├── ament_prefix_path.sh.stamp
+│   │   │       ├── GetConfig.srv.stamp
+│   │   │       ├── GetMetadata.srv.stamp
+│   │   │       ├── library_path.sh.stamp
+│   │   │       ├── nameConfig.cmake.in.stamp
+│   │   │       ├── nameConfig-version.cmake.in.stamp
+│   │   │       ├── package_xml_2_cmake.py.stamp
+│   │   │       ├── package.xml.stamp
+│   │   │       ├── PacketMsg.msg.stamp
+│   │   │       ├── path.sh.stamp
+│   │   │       ├── pythonpath.sh.in.stamp
+│   │   │       ├── rosidl_cmake_export_typesupport_libraries-extras.cmake.stamp
+│   │   │       ├── rosidl_cmake_export_typesupport_targets-extras.cmake.stamp
+│   │   │       ├── rosidl_cmake-extras.cmake.stamp
+│   │   │       ├── SetConfig.srv.stamp
+│   │   │       ├── Telemetry.msg.stamp
+│   │   │       └── templates_2_cmake.py.stamp
+│   │   ├── ament_cmake_environment_hooks
+│   │   │   ├── ament_prefix_path.dsv
+│   │   │   ├── library_path.dsv
+│   │   │   ├── local_setup.bash
+│   │   │   ├── local_setup.dsv
+│   │   │   ├── local_setup.sh
+│   │   │   ├── local_setup.zsh
+│   │   │   ├── package.dsv
+│   │   │   ├── path.dsv
+│   │   │   ├── pythonpath.dsv
+│   │   │   └── pythonpath.sh
+│   │   ├── ament_cmake_export_dependencies
+│   │   │   └── ament_cmake_export_dependencies-extras.cmake
+│   │   ├── ament_cmake_export_include_directories
+│   │   │   └── ament_cmake_export_include_directories-extras.cmake
+│   │   ├── ament_cmake_export_libraries
+│   │   │   └── ament_cmake_export_libraries-extras.cmake
+│   │   ├── ament_cmake_export_targets
+│   │   │   └── ament_cmake_export_targets-extras.cmake
+│   │   ├── ament_cmake_index
+│   │   │   └── share
+│   │   │       └── ament_index
+│   │   │           └── resource_index
+│   │   │               ├── package_run_dependencies
+│   │   │               │   └── ouster_sensor_msgs
+│   │   │               ├── packages
+│   │   │               │   └── ouster_sensor_msgs
+│   │   │               ├── parent_prefix_path
+│   │   │               │   └── ouster_sensor_msgs
+│   │   │               └── rosidl_interfaces
+│   │   │                   └── ouster_sensor_msgs
+│   │   ├── ament_cmake_package_templates
+│   │   │   └── templates.cmake
+│   │   ├── ament_cmake_python
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── ouster_sensor_msgs
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── libouster_sensor_msgs__rosidl_generator_py.so
+│   │   │       │   ├── msg
+│   │   │       │   │   ├── __init__.py
+│   │   │       │   │   ├── _packet_msg.py
+│   │   │       │   │   ├── _packet_msg_s.c
+│   │   │       │   │   ├── _telemetry.py
+│   │   │       │   │   └── _telemetry_s.c
+│   │   │       │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_c.c
+│   │   │       │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │       │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │       │   ├── ouster_sensor_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       │   ├── ouster_sensor_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       │   ├── ouster_sensor_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       │   └── srv
+│   │   │       │       ├── _get_config.py
+│   │   │       │       ├── _get_config_s.c
+│   │   │       │       ├── _get_metadata.py
+│   │   │       │       ├── _get_metadata_s.c
+│   │   │       │       ├── __init__.py
+│   │   │       │       ├── _set_config.py
+│   │   │       │       └── _set_config_s.c
+│   │   │       ├── ouster_sensor_msgs.egg-info
+│   │   │       │   ├── dependency_links.txt
+│   │   │       │   ├── PKG-INFO
+│   │   │       │   ├── SOURCES.txt
+│   │   │       │   └── top_level.txt
+│   │   │       └── setup.py
+│   │   ├── ament_cmake_uninstall_target
+│   │   │   └── ament_cmake_uninstall_target.cmake
+│   │   ├── cmake_args.last
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeFiles
+│   │   │   ├── 3.22.1
+│   │   │   │   ├── CMakeCCompiler.cmake
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   ├── CompilerIdC
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   │   └── tmp
+│   │   │   │   └── CompilerIdCXX
+│   │   │   │       ├── a.out
+│   │   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │   │       └── tmp
+│   │   │   ├── ament_cmake_python_build_ouster_sensor_msgs_egg.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── ament_cmake_python_copy_ouster_sensor_msgs.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── cmake.check_cache
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── CMakeOutput.log
+│   │   │   ├── CMakeRuleHashes.txt
+│   │   │   ├── CMakeTmp
+│   │   │   ├── Export
+│   │   │   │   └── share
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           └── cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_generator_cExport.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_generator_cExport-noconfig.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_generator_cppExport.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_generator_pyExport.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_generator_pyExport-noconfig.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+│   │   │   │               ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_cExport.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_cExport-noconfig.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_cppExport.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cExport.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+│   │   │   │               ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport.cmake
+│   │   │   │               └── ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+│   │   │   ├── Makefile2
+│   │   │   ├── Makefile.cmake
+│   │   │   ├── ouster_sensor_msgs__cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── ouster_sensor_msgs.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── ouster_sensor_msgs__rosidl_generator_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_c
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   └── detail
+│   │   │   │           │       ├── packet_msg__functions.c.o
+│   │   │   │           │       ├── packet_msg__functions.c.o.d
+│   │   │   │           │       ├── telemetry__functions.c.o
+│   │   │   │           │       └── telemetry__functions.c.o.d
+│   │   │   │           └── srv
+│   │   │   │               └── detail
+│   │   │   │                   ├── get_config__functions.c.o
+│   │   │   │                   ├── get_config__functions.c.o.d
+│   │   │   │                   ├── get_metadata__functions.c.o
+│   │   │   │                   ├── get_metadata__functions.c.o.d
+│   │   │   │                   ├── set_config__functions.c.o
+│   │   │   │                   └── set_config__functions.c.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_generator_py.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   ├── _packet_msg_s.c.o
+│   │   │   │           │   ├── _packet_msg_s.c.o.d
+│   │   │   │           │   ├── _telemetry_s.c.o
+│   │   │   │           │   └── _telemetry_s.c.o.d
+│   │   │   │           └── srv
+│   │   │   │               ├── _get_config_s.c.o
+│   │   │   │               ├── _get_config_s.c.o.d
+│   │   │   │               ├── _get_metadata_s.c.o
+│   │   │   │               ├── _get_metadata_s.c.o.d
+│   │   │   │               ├── _set_config_s.c.o
+│   │   │   │               └── _set_config_s.c.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_c
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   ├── packet_msg__type_support.cpp.o
+│   │   │   │           │   ├── packet_msg__type_support.cpp.o.d
+│   │   │   │           │   ├── telemetry__type_support.cpp.o
+│   │   │   │           │   └── telemetry__type_support.cpp.o.d
+│   │   │   │           └── srv
+│   │   │   │               ├── get_config__type_support.cpp.o
+│   │   │   │               ├── get_config__type_support.cpp.o.d
+│   │   │   │               ├── get_metadata__type_support.cpp.o
+│   │   │   │               ├── get_metadata__type_support.cpp.o.d
+│   │   │   │               ├── set_config__type_support.cpp.o
+│   │   │   │               └── set_config__type_support.cpp.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_cpp
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   ├── packet_msg__type_support.cpp.o
+│   │   │   │           │   ├── packet_msg__type_support.cpp.o.d
+│   │   │   │           │   ├── telemetry__type_support.cpp.o
+│   │   │   │           │   └── telemetry__type_support.cpp.o.d
+│   │   │   │           └── srv
+│   │   │   │               ├── get_config__type_support.cpp.o
+│   │   │   │               ├── get_config__type_support.cpp.o.d
+│   │   │   │               ├── get_metadata__type_support.cpp.o
+│   │   │   │               ├── get_metadata__type_support.cpp.o.d
+│   │   │   │               ├── set_config__type_support.cpp.o
+│   │   │   │               └── set_config__type_support.cpp.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_c.c.o
+│   │   │   │           └── _ouster_sensor_msgs_s.ep.rosidl_typesupport_c.c.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_fastrtps_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_fastrtps_c
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   └── detail
+│   │   │   │           │       ├── packet_msg__type_support_c.cpp.o
+│   │   │   │           │       ├── packet_msg__type_support_c.cpp.o.d
+│   │   │   │           │       ├── telemetry__type_support_c.cpp.o
+│   │   │   │           │       └── telemetry__type_support_c.cpp.o.d
+│   │   │   │           └── srv
+│   │   │   │               └── detail
+│   │   │   │                   ├── get_config__type_support_c.cpp.o
+│   │   │   │                   ├── get_config__type_support_c.cpp.o.d
+│   │   │   │                   ├── get_metadata__type_support_c.cpp.o
+│   │   │   │                   ├── get_metadata__type_support_c.cpp.o.d
+│   │   │   │                   ├── set_config__type_support_c.cpp.o
+│   │   │   │                   └── set_config__type_support_c.cpp.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_fastrtps_cpp
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   └── detail
+│   │   │   │           │       └── dds_fastrtps
+│   │   │   │           │           ├── packet_msg__type_support.cpp.o
+│   │   │   │           │           ├── packet_msg__type_support.cpp.o.d
+│   │   │   │           │           ├── telemetry__type_support.cpp.o
+│   │   │   │           │           └── telemetry__type_support.cpp.o.d
+│   │   │   │           └── srv
+│   │   │   │               └── detail
+│   │   │   │                   └── dds_fastrtps
+│   │   │   │                       ├── get_config__type_support.cpp.o
+│   │   │   │                       ├── get_config__type_support.cpp.o.d
+│   │   │   │                       ├── get_metadata__type_support.cpp.o
+│   │   │   │                       ├── get_metadata__type_support.cpp.o.d
+│   │   │   │                       ├── set_config__type_support.cpp.o
+│   │   │   │                       └── set_config__type_support.cpp.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_fastrtps_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+│   │   │   │           └── _ouster_sensor_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_introspection_c
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   └── detail
+│   │   │   │           │       ├── packet_msg__type_support.c.o
+│   │   │   │           │       ├── packet_msg__type_support.c.o.d
+│   │   │   │           │       ├── telemetry__type_support.c.o
+│   │   │   │           │       └── telemetry__type_support.c.o.d
+│   │   │   │           └── srv
+│   │   │   │               └── detail
+│   │   │   │                   ├── get_config__type_support.c.o
+│   │   │   │                   ├── get_config__type_support.c.o.d
+│   │   │   │                   ├── get_metadata__type_support.c.o
+│   │   │   │                   ├── get_metadata__type_support.c.o.d
+│   │   │   │                   ├── set_config__type_support.c.o
+│   │   │   │                   └── set_config__type_support.c.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_introspection_cpp
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── msg
+│   │   │   │           │   └── detail
+│   │   │   │           │       ├── packet_msg__type_support.cpp.o
+│   │   │   │           │       ├── packet_msg__type_support.cpp.o.d
+│   │   │   │           │       ├── telemetry__type_support.cpp.o
+│   │   │   │           │       └── telemetry__type_support.cpp.o.d
+│   │   │   │           └── srv
+│   │   │   │               └── detail
+│   │   │   │                   ├── get_config__type_support.cpp.o
+│   │   │   │                   ├── get_config__type_support.cpp.o.d
+│   │   │   │                   ├── get_metadata__type_support.cpp.o
+│   │   │   │                   ├── get_metadata__type_support.cpp.o.d
+│   │   │   │                   ├── set_config__type_support.cpp.o
+│   │   │   │                   └── set_config__type_support.cpp.o.d
+│   │   │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── ouster_sensor_msgs
+│   │   │   │           ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+│   │   │   │           └── _ouster_sensor_msgs_s.ep.rosidl_typesupport_introspection_c.c.o.d
+│   │   │   ├── ouster_sensor_msgs_uninstall.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── progress.marks
+│   │   │   ├── TargetDirectories.txt
+│   │   │   └── uninstall.dir
+│   │   │       ├── build.make
+│   │   │       ├── cmake_clean.cmake
+│   │   │       ├── compiler_depend.make
+│   │   │       ├── compiler_depend.ts
+│   │   │       ├── DependInfo.cmake
+│   │   │       └── progress.make
+│   │   ├── cmake_install.cmake
+│   │   ├── colcon_build.rc
+│   │   ├── colcon_command_prefix_build.sh
+│   │   ├── colcon_command_prefix_build.sh.env
+│   │   ├── CTestConfiguration.ini
+│   │   ├── CTestCustom.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   ├── install_manifest.txt
+│   │   ├── libouster_sensor_msgs__rosidl_generator_c.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_cpp.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_c.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_fastrtps_c.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_introspection_cpp.so
+│   │   ├── libouster_sensor_msgs__rosidl_typesupport_introspection_c.so
+│   │   ├── Makefile
+│   │   ├── ouster_sensor_msgs__py
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── ouster_sensor_msgs__py.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── CTestTestfile.cmake
+│   │   │   └── Makefile
+│   │   ├── rosidl_adapter
+│   │   │   ├── ouster_sensor_msgs
+│   │   │   │   ├── msg
+│   │   │   │   │   ├── PacketMsg.idl
+│   │   │   │   │   └── Telemetry.idl
+│   │   │   │   └── srv
+│   │   │   │       ├── GetConfig.idl
+│   │   │   │       ├── GetMetadata.idl
+│   │   │   │       └── SetConfig.idl
+│   │   │   └── ouster_sensor_msgs.idls
+│   │   ├── rosidl_adapter__arguments__ouster_sensor_msgs.json
+│   │   ├── rosidl_cmake
+│   │   │   ├── rosidl_cmake_export_typesupport_libraries-extras.cmake
+│   │   │   ├── rosidl_cmake_export_typesupport_targets-extras.cmake
+│   │   │   ├── rosidl_cmake-extras.cmake
+│   │   │   └── srv
+│   │   │       ├── GetConfig_Request.msg
+│   │   │       ├── GetConfig_Response.msg
+│   │   │       ├── GetMetadata_Request.msg
+│   │   │       ├── GetMetadata_Response.msg
+│   │   │       ├── SetConfig_Request.msg
+│   │   │       └── SetConfig_Response.msg
+│   │   ├── rosidl_generator_c
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── packet_msg__functions.c
+│   │   │       │   │   ├── packet_msg__functions.h
+│   │   │       │   │   ├── packet_msg__struct.h
+│   │   │       │   │   ├── packet_msg__type_support.h
+│   │   │       │   │   ├── telemetry__functions.c
+│   │   │       │   │   ├── telemetry__functions.h
+│   │   │       │   │   ├── telemetry__struct.h
+│   │   │       │   │   └── telemetry__type_support.h
+│   │   │       │   ├── packet_msg.h
+│   │   │       │   ├── rosidl_generator_c__visibility_control.h
+│   │   │       │   └── telemetry.h
+│   │   │       └── srv
+│   │   │           ├── detail
+│   │   │           │   ├── get_config__functions.c
+│   │   │           │   ├── get_config__functions.h
+│   │   │           │   ├── get_config__struct.h
+│   │   │           │   ├── get_config__type_support.h
+│   │   │           │   ├── get_metadata__functions.c
+│   │   │           │   ├── get_metadata__functions.h
+│   │   │           │   ├── get_metadata__struct.h
+│   │   │           │   ├── get_metadata__type_support.h
+│   │   │           │   ├── set_config__functions.c
+│   │   │           │   ├── set_config__functions.h
+│   │   │           │   ├── set_config__struct.h
+│   │   │           │   └── set_config__type_support.h
+│   │   │           ├── get_config.h
+│   │   │           ├── get_metadata.h
+│   │   │           └── set_config.h
+│   │   ├── rosidl_generator_c__arguments.json
+│   │   ├── rosidl_generator_cpp
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── packet_msg__builder.hpp
+│   │   │       │   │   ├── packet_msg__struct.hpp
+│   │   │       │   │   ├── packet_msg__traits.hpp
+│   │   │       │   │   ├── packet_msg__type_support.hpp
+│   │   │       │   │   ├── telemetry__builder.hpp
+│   │   │       │   │   ├── telemetry__struct.hpp
+│   │   │       │   │   ├── telemetry__traits.hpp
+│   │   │       │   │   └── telemetry__type_support.hpp
+│   │   │       │   ├── packet_msg.hpp
+│   │   │       │   ├── rosidl_generator_cpp__visibility_control.hpp
+│   │   │       │   └── telemetry.hpp
+│   │   │       └── srv
+│   │   │           ├── detail
+│   │   │           │   ├── get_config__builder.hpp
+│   │   │           │   ├── get_config__struct.hpp
+│   │   │           │   ├── get_config__traits.hpp
+│   │   │           │   ├── get_config__type_support.hpp
+│   │   │           │   ├── get_metadata__builder.hpp
+│   │   │           │   ├── get_metadata__struct.hpp
+│   │   │           │   ├── get_metadata__traits.hpp
+│   │   │           │   ├── get_metadata__type_support.hpp
+│   │   │           │   ├── set_config__builder.hpp
+│   │   │           │   ├── set_config__struct.hpp
+│   │   │           │   ├── set_config__traits.hpp
+│   │   │           │   └── set_config__type_support.hpp
+│   │   │           ├── get_config.hpp
+│   │   │           ├── get_metadata.hpp
+│   │   │           └── set_config.hpp
+│   │   ├── rosidl_generator_cpp__arguments.json
+│   │   ├── rosidl_generator_py
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── __init__.py
+│   │   │       ├── libouster_sensor_msgs__rosidl_generator_py.so
+│   │   │       ├── msg
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── _packet_msg.py
+│   │   │       │   ├── _packet_msg_s.c
+│   │   │       │   ├── _telemetry.py
+│   │   │       │   └── _telemetry_s.c
+│   │   │       ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_c.c
+│   │   │       ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │       ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │       ├── ouster_sensor_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       ├── ouster_sensor_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       ├── ouster_sensor_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       └── srv
+│   │   │           ├── _get_config.py
+│   │   │           ├── _get_config_s.c
+│   │   │           ├── _get_metadata.py
+│   │   │           ├── _get_metadata_s.c
+│   │   │           ├── __init__.py
+│   │   │           ├── _set_config.py
+│   │   │           └── _set_config_s.c
+│   │   ├── rosidl_generator_py__arguments.json
+│   │   ├── rosidl_typesupport_c
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── packet_msg__type_support.cpp
+│   │   │       │   └── telemetry__type_support.cpp
+│   │   │       └── srv
+│   │   │           ├── get_config__type_support.cpp
+│   │   │           ├── get_metadata__type_support.cpp
+│   │   │           └── set_config__type_support.cpp
+│   │   ├── rosidl_typesupport_c__arguments.json
+│   │   ├── rosidl_typesupport_cpp
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── packet_msg__type_support.cpp
+│   │   │       │   └── telemetry__type_support.cpp
+│   │   │       └── srv
+│   │   │           ├── get_config__type_support.cpp
+│   │   │           ├── get_metadata__type_support.cpp
+│   │   │           └── set_config__type_support.cpp
+│   │   ├── rosidl_typesupport_cpp__arguments.json
+│   │   ├── rosidl_typesupport_fastrtps_c
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── packet_msg__rosidl_typesupport_fastrtps_c.h
+│   │   │       │   │   ├── packet_msg__type_support_c.cpp
+│   │   │       │   │   ├── telemetry__rosidl_typesupport_fastrtps_c.h
+│   │   │       │   │   └── telemetry__type_support_c.cpp
+│   │   │       │   └── rosidl_typesupport_fastrtps_c__visibility_control.h
+│   │   │       └── srv
+│   │   │           └── detail
+│   │   │               ├── get_config__rosidl_typesupport_fastrtps_c.h
+│   │   │               ├── get_config__type_support_c.cpp
+│   │   │               ├── get_metadata__rosidl_typesupport_fastrtps_c.h
+│   │   │               ├── get_metadata__type_support_c.cpp
+│   │   │               ├── set_config__rosidl_typesupport_fastrtps_c.h
+│   │   │               └── set_config__type_support_c.cpp
+│   │   ├── rosidl_typesupport_fastrtps_c__arguments.json
+│   │   ├── rosidl_typesupport_fastrtps_cpp
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── dds_fastrtps
+│   │   │       │   │   │   ├── packet_msg__type_support.cpp
+│   │   │       │   │   │   └── telemetry__type_support.cpp
+│   │   │       │   │   ├── packet_msg__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │       │   │   └── telemetry__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │       │   └── rosidl_typesupport_fastrtps_cpp__visibility_control.h
+│   │   │       └── srv
+│   │   │           └── detail
+│   │   │               ├── dds_fastrtps
+│   │   │               │   ├── get_config__type_support.cpp
+│   │   │               │   ├── get_metadata__type_support.cpp
+│   │   │               │   └── set_config__type_support.cpp
+│   │   │               ├── get_config__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               ├── get_metadata__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               └── set_config__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   ├── rosidl_typesupport_fastrtps_cpp__arguments.json
+│   │   ├── rosidl_typesupport_introspection_c
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── packet_msg__rosidl_typesupport_introspection_c.h
+│   │   │       │   │   ├── packet_msg__type_support.c
+│   │   │       │   │   ├── telemetry__rosidl_typesupport_introspection_c.h
+│   │   │       │   │   └── telemetry__type_support.c
+│   │   │       │   └── rosidl_typesupport_introspection_c__visibility_control.h
+│   │   │       └── srv
+│   │   │           └── detail
+│   │   │               ├── get_config__rosidl_typesupport_introspection_c.h
+│   │   │               ├── get_config__type_support.c
+│   │   │               ├── get_metadata__rosidl_typesupport_introspection_c.h
+│   │   │               ├── get_metadata__type_support.c
+│   │   │               ├── set_config__rosidl_typesupport_introspection_c.h
+│   │   │               └── set_config__type_support.c
+│   │   ├── rosidl_typesupport_introspection_c__arguments.json
+│   │   ├── rosidl_typesupport_introspection_cpp
+│   │   │   └── ouster_sensor_msgs
+│   │   │       ├── msg
+│   │   │       │   └── detail
+│   │   │       │       ├── packet_msg__rosidl_typesupport_introspection_cpp.hpp
+│   │   │       │       ├── packet_msg__type_support.cpp
+│   │   │       │       ├── telemetry__rosidl_typesupport_introspection_cpp.hpp
+│   │   │       │       └── telemetry__type_support.cpp
+│   │   │       └── srv
+│   │   │           └── detail
+│   │   │               ├── get_config__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               ├── get_config__type_support.cpp
+│   │   │               ├── get_metadata__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               ├── get_metadata__type_support.cpp
+│   │   │               ├── set_config__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               └── set_config__type_support.cpp
+│   │   └── rosidl_typesupport_introspection_cpp__arguments.json
+│   ├── sensor_sync
+│   │   ├── ament_cmake_core
+│   │   │   ├── package.cmake
+│   │   │   ├── sensor_syncConfig.cmake
+│   │   │   ├── sensor_syncConfig-version.cmake
+│   │   │   └── stamps
+│   │   │       ├── ament_cmake_export_dependencies-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_include_directories-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_libraries-extras.cmake.stamp
+│   │   │       ├── ament_cmake_export_targets-extras.cmake.stamp
+│   │   │       ├── ament_prefix_path.sh.stamp
+│   │   │       ├── library_path.sh.stamp
+│   │   │       ├── nameConfig.cmake.in.stamp
+│   │   │       ├── nameConfig-version.cmake.in.stamp
+│   │   │       ├── package_xml_2_cmake.py.stamp
+│   │   │       ├── package.xml.stamp
+│   │   │       ├── path.sh.stamp
+│   │   │       ├── pythonpath.sh.in.stamp
+│   │   │       ├── rosidl_cmake_export_typesupport_libraries-extras.cmake.stamp
+│   │   │       ├── rosidl_cmake_export_typesupport_targets-extras.cmake.stamp
+│   │   │       ├── rosidl_cmake-extras.cmake.stamp
+│   │   │       ├── SyncedSensors.msg.stamp
+│   │   │       └── templates_2_cmake.py.stamp
+│   │   ├── ament_cmake_environment_hooks
+│   │   │   ├── ament_prefix_path.dsv
+│   │   │   ├── library_path.dsv
+│   │   │   ├── local_setup.bash
+│   │   │   ├── local_setup.dsv
+│   │   │   ├── local_setup.sh
+│   │   │   ├── local_setup.zsh
+│   │   │   ├── package.dsv
+│   │   │   ├── path.dsv
+│   │   │   ├── pythonpath.dsv
+│   │   │   └── pythonpath.sh
+│   │   ├── ament_cmake_export_dependencies
+│   │   │   └── ament_cmake_export_dependencies-extras.cmake
+│   │   ├── ament_cmake_export_include_directories
+│   │   │   └── ament_cmake_export_include_directories-extras.cmake
+│   │   ├── ament_cmake_export_libraries
+│   │   │   └── ament_cmake_export_libraries-extras.cmake
+│   │   ├── ament_cmake_export_targets
+│   │   │   └── ament_cmake_export_targets-extras.cmake
+│   │   ├── ament_cmake_index
+│   │   │   └── share
+│   │   │       └── ament_index
+│   │   │           └── resource_index
+│   │   │               ├── package_run_dependencies
+│   │   │               │   └── sensor_sync
+│   │   │               ├── packages
+│   │   │               │   └── sensor_sync
+│   │   │               ├── parent_prefix_path
+│   │   │               │   └── sensor_sync
+│   │   │               └── rosidl_interfaces
+│   │   │                   └── sensor_sync
+│   │   ├── ament_cmake_package_templates
+│   │   │   └── templates.cmake
+│   │   ├── ament_cmake_python
+│   │   │   └── sensor_sync
+│   │   │       ├── sensor_sync
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── libsensor_sync__rosidl_generator_py.so
+│   │   │       │   ├── msg
+│   │   │       │   │   ├── __init__.py
+│   │   │       │   │   ├── _synced_sensors.py
+│   │   │       │   │   └── _synced_sensors_s.c
+│   │   │       │   ├── _sensor_sync_s.ep.rosidl_typesupport_c.c
+│   │   │       │   ├── _sensor_sync_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │       │   ├── _sensor_sync_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │       │   ├── sensor_sync_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       │   ├── sensor_sync_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       │   └── sensor_sync_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       ├── sensor_sync.egg-info
+│   │   │       │   ├── dependency_links.txt
+│   │   │       │   ├── PKG-INFO
+│   │   │       │   ├── SOURCES.txt
+│   │   │       │   └── top_level.txt
+│   │   │       └── setup.py
+│   │   ├── ament_cmake_uninstall_target
+│   │   │   └── ament_cmake_uninstall_target.cmake
+│   │   ├── cmake_args.last
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeFiles
+│   │   │   ├── 3.22.1
+│   │   │   │   ├── CMakeCCompiler.cmake
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   ├── CompilerIdC
+│   │   │   │   │   ├── a.out
+│   │   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   │   └── tmp
+│   │   │   │   └── CompilerIdCXX
+│   │   │   │       ├── a.out
+│   │   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │   │       └── tmp
+│   │   │   ├── ament_cmake_python_build_sensor_sync_egg.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── ament_cmake_python_copy_sensor_sync.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── cmake.check_cache
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── CMakeOutput.log
+│   │   │   ├── CMakeRuleHashes.txt
+│   │   │   ├── CMakeTmp
+│   │   │   ├── Export
+│   │   │   │   └── share
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_generator_cExport.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_generator_cExport-noconfig.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_generator_cppExport.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_generator_pyExport.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_generator_pyExport-noconfig.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_typesupport_fastrtps_cExport.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_typesupport_fastrtps_cppExport.cmake
+│   │   │   │               ├── export_sensor_sync__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_cExport.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_cExport-noconfig.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_cppExport.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_cppExport-noconfig.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_introspection_cExport.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_introspection_cExport-noconfig.cmake
+│   │   │   │               ├── sensor_sync__rosidl_typesupport_introspection_cppExport.cmake
+│   │   │   │               └── sensor_sync__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+│   │   │   ├── Makefile2
+│   │   │   ├── Makefile.cmake
+│   │   │   ├── progress.marks
+│   │   │   ├── sensor_sync__cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── sensor_sync.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── sensor_sync__rosidl_generator_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_c
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               └── detail
+│   │   │   │                   ├── synced_sensors__functions.c.o
+│   │   │   │                   └── synced_sensors__functions.c.o.d
+│   │   │   ├── sensor_sync__rosidl_generator_py.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               ├── _synced_sensors_s.c.o
+│   │   │   │               └── _synced_sensors_s.c.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_c
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               ├── synced_sensors__type_support.cpp.o
+│   │   │   │               └── synced_sensors__type_support.cpp.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_cpp
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               ├── synced_sensors__type_support.cpp.o
+│   │   │   │               └── synced_sensors__type_support.cpp.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── sensor_sync
+│   │   │   │           ├── _sensor_sync_s.ep.rosidl_typesupport_c.c.o
+│   │   │   │           └── _sensor_sync_s.ep.rosidl_typesupport_c.c.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_fastrtps_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_fastrtps_c
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               └── detail
+│   │   │   │                   ├── synced_sensors__type_support_c.cpp.o
+│   │   │   │                   └── synced_sensors__type_support_c.cpp.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_fastrtps_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_fastrtps_cpp
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               └── detail
+│   │   │   │                   └── dds_fastrtps
+│   │   │   │                       ├── synced_sensors__type_support.cpp.o
+│   │   │   │                       └── synced_sensors__type_support.cpp.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_fastrtps_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── sensor_sync
+│   │   │   │           ├── _sensor_sync_s.ep.rosidl_typesupport_fastrtps_c.c.o
+│   │   │   │           └── _sensor_sync_s.ep.rosidl_typesupport_fastrtps_c.c.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_introspection_c.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_introspection_c
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               └── detail
+│   │   │   │                   ├── synced_sensors__type_support.c.o
+│   │   │   │                   └── synced_sensors__type_support.c.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_introspection_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_typesupport_introspection_cpp
+│   │   │   │       └── sensor_sync
+│   │   │   │           └── msg
+│   │   │   │               └── detail
+│   │   │   │                   ├── synced_sensors__type_support.cpp.o
+│   │   │   │                   └── synced_sensors__type_support.cpp.o.d
+│   │   │   ├── sensor_sync__rosidl_typesupport_introspection_c__pyext.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.internal
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   ├── depend.make
+│   │   │   │   ├── flags.make
+│   │   │   │   ├── link.txt
+│   │   │   │   ├── progress.make
+│   │   │   │   └── rosidl_generator_py
+│   │   │   │       └── sensor_sync
+│   │   │   │           ├── _sensor_sync_s.ep.rosidl_typesupport_introspection_c.c.o
+│   │   │   │           └── _sensor_sync_s.ep.rosidl_typesupport_introspection_c.c.o.d
+│   │   │   ├── sensor_sync_uninstall.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── compiler_depend.make
+│   │   │   │   ├── compiler_depend.ts
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── TargetDirectories.txt
+│   │   │   └── uninstall.dir
+│   │   │       ├── build.make
+│   │   │       ├── cmake_clean.cmake
+│   │   │       ├── compiler_depend.make
+│   │   │       ├── compiler_depend.ts
+│   │   │       ├── DependInfo.cmake
+│   │   │       └── progress.make
+│   │   ├── cmake_install.cmake
+│   │   ├── colcon_build.rc
+│   │   ├── colcon_command_prefix_build.sh
+│   │   ├── colcon_command_prefix_build.sh.env
+│   │   ├── CTestConfiguration.ini
+│   │   ├── CTestCustom.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   ├── install_manifest.txt
+│   │   ├── libsensor_sync__rosidl_generator_c.so
+│   │   ├── libsensor_sync__rosidl_typesupport_cpp.so
+│   │   ├── libsensor_sync__rosidl_typesupport_c.so
+│   │   ├── libsensor_sync__rosidl_typesupport_fastrtps_cpp.so
+│   │   ├── libsensor_sync__rosidl_typesupport_fastrtps_c.so
+│   │   ├── libsensor_sync__rosidl_typesupport_introspection_cpp.so
+│   │   ├── libsensor_sync__rosidl_typesupport_introspection_c.so
+│   │   ├── Makefile
+│   │   ├── rosidl_adapter
+│   │   │   ├── sensor_sync
+│   │   │   │   └── msg
+│   │   │   │       └── SyncedSensors.idl
+│   │   │   └── sensor_sync.idls
+│   │   ├── rosidl_adapter__arguments__sensor_sync.json
+│   │   ├── rosidl_cmake
+│   │   │   ├── rosidl_cmake_export_typesupport_libraries-extras.cmake
+│   │   │   ├── rosidl_cmake_export_typesupport_targets-extras.cmake
+│   │   │   └── rosidl_cmake-extras.cmake
+│   │   ├── rosidl_generator_c
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           ├── detail
+│   │   │           │   ├── synced_sensors__functions.c
+│   │   │           │   ├── synced_sensors__functions.h
+│   │   │           │   ├── synced_sensors__struct.h
+│   │   │           │   └── synced_sensors__type_support.h
+│   │   │           ├── rosidl_generator_c__visibility_control.h
+│   │   │           └── synced_sensors.h
+│   │   ├── rosidl_generator_c__arguments.json
+│   │   ├── rosidl_generator_cpp
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           ├── detail
+│   │   │           │   ├── synced_sensors__builder.hpp
+│   │   │           │   ├── synced_sensors__struct.hpp
+│   │   │           │   ├── synced_sensors__traits.hpp
+│   │   │           │   └── synced_sensors__type_support.hpp
+│   │   │           ├── rosidl_generator_cpp__visibility_control.hpp
+│   │   │           └── synced_sensors.hpp
+│   │   ├── rosidl_generator_cpp__arguments.json
+│   │   ├── rosidl_generator_py
+│   │   │   └── sensor_sync
+│   │   │       ├── __init__.py
+│   │   │       ├── libsensor_sync__rosidl_generator_py.so
+│   │   │       ├── msg
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── _synced_sensors.py
+│   │   │       │   └── _synced_sensors_s.c
+│   │   │       ├── _sensor_sync_s.ep.rosidl_typesupport_c.c
+│   │   │       ├── _sensor_sync_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │       ├── _sensor_sync_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │       ├── sensor_sync_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       ├── sensor_sync_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │       └── sensor_sync_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   ├── rosidl_generator_py__arguments.json
+│   │   ├── rosidl_typesupport_c
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           └── synced_sensors__type_support.cpp
+│   │   ├── rosidl_typesupport_c__arguments.json
+│   │   ├── rosidl_typesupport_cpp
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           └── synced_sensors__type_support.cpp
+│   │   ├── rosidl_typesupport_cpp__arguments.json
+│   │   ├── rosidl_typesupport_fastrtps_c
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           ├── detail
+│   │   │           │   ├── synced_sensors__rosidl_typesupport_fastrtps_c.h
+│   │   │           │   └── synced_sensors__type_support_c.cpp
+│   │   │           └── rosidl_typesupport_fastrtps_c__visibility_control.h
+│   │   ├── rosidl_typesupport_fastrtps_c__arguments.json
+│   │   ├── rosidl_typesupport_fastrtps_cpp
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           ├── detail
+│   │   │           │   ├── dds_fastrtps
+│   │   │           │   │   └── synced_sensors__type_support.cpp
+│   │   │           │   └── synced_sensors__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │           └── rosidl_typesupport_fastrtps_cpp__visibility_control.h
+│   │   ├── rosidl_typesupport_fastrtps_cpp__arguments.json
+│   │   ├── rosidl_typesupport_introspection_c
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           ├── detail
+│   │   │           │   ├── synced_sensors__rosidl_typesupport_introspection_c.h
+│   │   │           │   └── synced_sensors__type_support.c
+│   │   │           └── rosidl_typesupport_introspection_c__visibility_control.h
+│   │   ├── rosidl_typesupport_introspection_c__arguments.json
+│   │   ├── rosidl_typesupport_introspection_cpp
+│   │   │   └── sensor_sync
+│   │   │       └── msg
+│   │   │           └── detail
+│   │   │               ├── synced_sensors__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               └── synced_sensors__type_support.cpp
+│   │   ├── rosidl_typesupport_introspection_cpp__arguments.json
+│   │   └── sensor_sync__py
+│   │       ├── CMakeFiles
+│   │       │   ├── CMakeDirectoryInformation.cmake
+│   │       │   ├── progress.marks
+│   │       │   └── sensor_sync__py.dir
+│   │       │       ├── build.make
+│   │       │       ├── cmake_clean.cmake
+│   │       │       ├── compiler_depend.make
+│   │       │       ├── compiler_depend.ts
+│   │       │       ├── DependInfo.cmake
+│   │       │       └── progress.make
+│   │       ├── cmake_install.cmake
+│   │       ├── CMakeLists.txt
+│   │       ├── CTestTestfile.cmake
+│   │       └── Makefile
+│   └── sensor_visualizer
+│       ├── build
+│       │   └── lib
+│       │       └── sensor_visualizer
+│       │           ├── camera_node.py
+│       │           ├── __init__.py
+│       │           ├── lidar_node.py
+│       │           └── radar_node.py
+│       ├── colcon_build.rc
+│       ├── colcon_command_prefix_setup_py.sh
+│       ├── colcon_command_prefix_setup_py.sh.env
+│       ├── install.log
+│       ├── prefix_override
+│       │   ├── __pycache__
+│       │   │   └── sitecustomize.cpython-310.pyc
+│       │   └── sitecustomize.py
+│       └── sensor_visualizer.egg-info
+│           ├── dependency_links.txt
+│           ├── entry_points.txt
+│           ├── PKG-INFO
+│           ├── requires.txt
+│           ├── SOURCES.txt
+│           ├── top_level.txt
+│           └── zip-safe
+├── install
+│   ├── COLCON_IGNORE
+│   ├── local_setup.bash
+│   ├── local_setup.ps1
+│   ├── local_setup.sh
+│   ├── _local_setup_util_ps1.py
+│   ├── _local_setup_util_sh.py
+│   ├── local_setup.zsh
+│   ├── ouster_example
+│   │   ├── include
+│   │   │   ├── fb_generated
+│   │   │   │   ├── chunk_generated.h
+│   │   │   │   ├── header_generated.h
+│   │   │   │   ├── metadata_generated.h
+│   │   │   │   ├── os_sensor
+│   │   │   │   │   ├── extrinsics_generated.h
+│   │   │   │   │   ├── lidar_scan_stream_generated.h
+│   │   │   │   │   └── lidar_sensor_generated.h
+│   │   │   │   └── streaming
+│   │   │   │       └── streaming_info_generated.h
+│   │   │   ├── optional-lite
+│   │   │   │   └── nonstd
+│   │   │   │       └── optional.hpp
+│   │   │   └── ouster
+│   │   │       ├── client.h
+│   │   │       ├── defaults.h
+│   │   │       ├── image_processing.h
+│   │   │       ├── impl
+│   │   │       │   ├── build.h
+│   │   │       │   ├── cartesian.h
+│   │   │       │   ├── client_poller.h
+│   │   │       │   ├── lidar_scan_impl.h
+│   │   │       │   ├── netcompat.h
+│   │   │       │   ├── packet_writer.h
+│   │   │       │   ├── profile_extension.h
+│   │   │       │   └── ring_buffer.h
+│   │   │       ├── indexed_pcap_reader.h
+│   │   │       ├── lidar_scan.h
+│   │   │       ├── osf
+│   │   │       │   ├── basics.h
+│   │   │       │   ├── crc32.h
+│   │   │       │   ├── file.h
+│   │   │       │   ├── layout_streaming.h
+│   │   │       │   ├── metadata.h
+│   │   │       │   ├── meta_extrinsics.h
+│   │   │       │   ├── meta_lidar_sensor.h
+│   │   │       │   ├── meta_streaming_info.h
+│   │   │       │   ├── operations.h
+│   │   │       │   ├── pcap_source.h
+│   │   │       │   ├── reader.h
+│   │   │       │   ├── stream_lidar_scan.h
+│   │   │       │   └── writer.h
+│   │   │       ├── os_pcap.h
+│   │   │       ├── pcap.h
+│   │   │       ├── point_viz.h
+│   │   │       ├── sensor_http.h
+│   │   │       ├── types.h
+│   │   │       ├── udp_packet_source.h
+│   │   │       ├── util.h
+│   │   │       └── version.h
+│   │   ├── lib
+│   │   │   ├── cmake
+│   │   │   │   └── OusterSDK
+│   │   │   │       ├── OusterSDKConfig.cmake
+│   │   │   │       ├── OusterSDKConfigVersion.cmake
+│   │   │   │       ├── OusterSDKTargets.cmake
+│   │   │   │       ├── OusterSDKTargets-release.cmake
+│   │   │   │       └── PcapConfig.cmake
+│   │   │   ├── libouster_client.a
+│   │   │   ├── libouster_osf.a
+│   │   │   ├── libouster_pcap.a
+│   │   │   └── libouster_viz.a
+│   │   └── share
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── ouster_example
+│   │       ├── LICENSE
+│   │       ├── LICENSE-bin
+│   │       └── ouster_example
+│   │           ├── hook
+│   │           │   ├── cmake_prefix_path.dsv
+│   │           │   ├── cmake_prefix_path.ps1
+│   │           │   └── cmake_prefix_path.sh
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           └── package.zsh
+│   ├── ouster_ros
+│   │   ├── include
+│   │   │   ├── nonstd
+│   │   │   │   └── optional.hpp
+│   │   │   ├── ouster
+│   │   │   │   ├── client.h
+│   │   │   │   ├── defaults.h
+│   │   │   │   ├── image_processing.h
+│   │   │   │   ├── impl
+│   │   │   │   │   ├── cartesian.h
+│   │   │   │   │   ├── client_poller.h
+│   │   │   │   │   ├── lidar_scan_impl.h
+│   │   │   │   │   ├── netcompat.h
+│   │   │   │   │   ├── packet_writer.h
+│   │   │   │   │   ├── profile_extension.h
+│   │   │   │   │   └── ring_buffer.h
+│   │   │   │   ├── lidar_scan.h
+│   │   │   │   ├── sensor_http.h
+│   │   │   │   ├── types.h
+│   │   │   │   ├── udp_packet_source.h
+│   │   │   │   ├── util.h
+│   │   │   │   └── version.h
+│   │   │   └── ouster_ros
+│   │   │       ├── common_point_types.h
+│   │   │       ├── os_point.h
+│   │   │       ├── os_processing_node_base.h
+│   │   │       ├── os_ros.h
+│   │   │       ├── os_sensor_node_base.h
+│   │   │       ├── sensor_point_types.h
+│   │   │       └── visibility_control.h
+│   │   ├── lib
+│   │   │   ├── libos_cloud_component.so
+│   │   │   ├── libos_driver_component.so
+│   │   │   ├── libos_image_component.so
+│   │   │   ├── libos_replay_component.so
+│   │   │   ├── libos_sensor_component.so
+│   │   │   ├── libouster_ros_library.so
+│   │   │   └── ouster_ros
+│   │   │       ├── os_cloud
+│   │   │       ├── os_driver
+│   │   │       ├── os_image
+│   │   │       ├── os_replay
+│   │   │       └── os_sensor
+│   │   └── share
+│   │       ├── ament_index
+│   │       │   └── resource_index
+│   │       │       ├── package_run_dependencies
+│   │       │       │   └── ouster_ros
+│   │       │       ├── packages
+│   │       │       │   └── ouster_ros
+│   │       │       ├── parent_prefix_path
+│   │       │       │   └── ouster_ros
+│   │       │       └── rclcpp_components
+│   │       │           └── ouster_ros
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── ouster_ros
+│   │       └── ouster_ros
+│   │           ├── cmake
+│   │           │   ├── ament_cmake_export_dependencies-extras.cmake
+│   │           │   ├── ament_cmake_export_include_directories-extras.cmake
+│   │           │   ├── ament_cmake_export_libraries-extras.cmake
+│   │           │   ├── ouster_rosConfig.cmake
+│   │           │   └── ouster_rosConfig-version.cmake
+│   │           ├── config
+│   │           │   ├── community_driver_config.yaml
+│   │           │   ├── community_driver.rviz
+│   │           │   ├── driver_params.yaml
+│   │           │   ├── metadata-qos-override.yaml
+│   │           │   ├── os_sensor_cloud_image_params.yaml
+│   │           │   ├── viz-reliable.rviz
+│   │           │   └── viz.rviz
+│   │           ├── environment
+│   │           │   ├── ament_prefix_path.dsv
+│   │           │   ├── ament_prefix_path.sh
+│   │           │   ├── library_path.dsv
+│   │           │   ├── library_path.sh
+│   │           │   ├── path.dsv
+│   │           │   └── path.sh
+│   │           ├── hook
+│   │           │   ├── cmake_prefix_path.dsv
+│   │           │   ├── cmake_prefix_path.ps1
+│   │           │   ├── cmake_prefix_path.sh
+│   │           │   ├── ld_library_path_lib.dsv
+│   │           │   ├── ld_library_path_lib.ps1
+│   │           │   └── ld_library_path_lib.sh
+│   │           ├── launch
+│   │           │   ├── driver.launch.py
+│   │           │   ├── driver_launch.py
+│   │           │   ├── __pycache__
+│   │           │   │   ├── driver_launch.cpython-310.pyc
+│   │           │   │   └── rviz.launch.cpython-310.pyc
+│   │           │   ├── record.composite.launch.xml
+│   │           │   ├── record.launch.xml -> record.composite.launch.xml
+│   │           │   ├── replay.composite.launch.xml
+│   │           │   ├── replay.launch.xml -> replay.composite.launch.xml
+│   │           │   ├── replay_pcap.launch.xml
+│   │           │   ├── rviz.launch.py
+│   │           │   ├── rviz.launch.xml
+│   │           │   ├── sensor.composite.launch.py
+│   │           │   ├── sensor.composite.launch.xml
+│   │           │   ├── sensor.independent.launch.py
+│   │           │   ├── sensor.independent.launch.xml
+│   │           │   ├── sensor.launch.xml -> sensor.composite.launch.xml
+│   │           │   └── sensor_mtp.launch.xml
+│   │           ├── LICENSE
+│   │           ├── local_setup.bash
+│   │           ├── local_setup.dsv
+│   │           ├── local_setup.sh
+│   │           ├── local_setup.zsh
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           ├── package.xml
+│   │           └── package.zsh
+│   ├── ouster_sensor_msgs
+│   │   ├── include
+│   │   │   └── ouster_sensor_msgs
+│   │   │       └── ouster_sensor_msgs
+│   │   │           ├── msg
+│   │   │           │   ├── detail
+│   │   │           │   │   ├── dds_fastrtps
+│   │   │           │   │   ├── packet_msg__builder.hpp
+│   │   │           │   │   ├── packet_msg__functions.c
+│   │   │           │   │   ├── packet_msg__functions.h
+│   │   │           │   │   ├── packet_msg__rosidl_typesupport_fastrtps_c.h
+│   │   │           │   │   ├── packet_msg__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │           │   │   ├── packet_msg__rosidl_typesupport_introspection_c.h
+│   │   │           │   │   ├── packet_msg__rosidl_typesupport_introspection_cpp.hpp
+│   │   │           │   │   ├── packet_msg__struct.h
+│   │   │           │   │   ├── packet_msg__struct.hpp
+│   │   │           │   │   ├── packet_msg__traits.hpp
+│   │   │           │   │   ├── packet_msg__type_support.c
+│   │   │           │   │   ├── packet_msg__type_support.cpp
+│   │   │           │   │   ├── packet_msg__type_support.h
+│   │   │           │   │   ├── packet_msg__type_support.hpp
+│   │   │           │   │   ├── telemetry__builder.hpp
+│   │   │           │   │   ├── telemetry__functions.c
+│   │   │           │   │   ├── telemetry__functions.h
+│   │   │           │   │   ├── telemetry__rosidl_typesupport_fastrtps_c.h
+│   │   │           │   │   ├── telemetry__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │           │   │   ├── telemetry__rosidl_typesupport_introspection_c.h
+│   │   │           │   │   ├── telemetry__rosidl_typesupport_introspection_cpp.hpp
+│   │   │           │   │   ├── telemetry__struct.h
+│   │   │           │   │   ├── telemetry__struct.hpp
+│   │   │           │   │   ├── telemetry__traits.hpp
+│   │   │           │   │   ├── telemetry__type_support.c
+│   │   │           │   │   ├── telemetry__type_support.cpp
+│   │   │           │   │   ├── telemetry__type_support.h
+│   │   │           │   │   └── telemetry__type_support.hpp
+│   │   │           │   ├── packet_msg.h
+│   │   │           │   ├── packet_msg.hpp
+│   │   │           │   ├── rosidl_generator_cpp__visibility_control.hpp
+│   │   │           │   ├── rosidl_generator_c__visibility_control.h
+│   │   │           │   ├── rosidl_typesupport_fastrtps_cpp__visibility_control.h
+│   │   │           │   ├── rosidl_typesupport_fastrtps_c__visibility_control.h
+│   │   │           │   ├── rosidl_typesupport_introspection_c__visibility_control.h
+│   │   │           │   ├── telemetry.h
+│   │   │           │   └── telemetry.hpp
+│   │   │           └── srv
+│   │   │               ├── detail
+│   │   │               │   ├── dds_fastrtps
+│   │   │               │   ├── get_config__builder.hpp
+│   │   │               │   ├── get_config__functions.c
+│   │   │               │   ├── get_config__functions.h
+│   │   │               │   ├── get_config__rosidl_typesupport_fastrtps_c.h
+│   │   │               │   ├── get_config__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               │   ├── get_config__rosidl_typesupport_introspection_c.h
+│   │   │               │   ├── get_config__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               │   ├── get_config__struct.h
+│   │   │               │   ├── get_config__struct.hpp
+│   │   │               │   ├── get_config__traits.hpp
+│   │   │               │   ├── get_config__type_support.c
+│   │   │               │   ├── get_config__type_support.cpp
+│   │   │               │   ├── get_config__type_support.h
+│   │   │               │   ├── get_config__type_support.hpp
+│   │   │               │   ├── get_metadata__builder.hpp
+│   │   │               │   ├── get_metadata__functions.c
+│   │   │               │   ├── get_metadata__functions.h
+│   │   │               │   ├── get_metadata__rosidl_typesupport_fastrtps_c.h
+│   │   │               │   ├── get_metadata__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               │   ├── get_metadata__rosidl_typesupport_introspection_c.h
+│   │   │               │   ├── get_metadata__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               │   ├── get_metadata__struct.h
+│   │   │               │   ├── get_metadata__struct.hpp
+│   │   │               │   ├── get_metadata__traits.hpp
+│   │   │               │   ├── get_metadata__type_support.c
+│   │   │               │   ├── get_metadata__type_support.cpp
+│   │   │               │   ├── get_metadata__type_support.h
+│   │   │               │   ├── get_metadata__type_support.hpp
+│   │   │               │   ├── set_config__builder.hpp
+│   │   │               │   ├── set_config__functions.c
+│   │   │               │   ├── set_config__functions.h
+│   │   │               │   ├── set_config__rosidl_typesupport_fastrtps_c.h
+│   │   │               │   ├── set_config__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               │   ├── set_config__rosidl_typesupport_introspection_c.h
+│   │   │               │   ├── set_config__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               │   ├── set_config__struct.h
+│   │   │               │   ├── set_config__struct.hpp
+│   │   │               │   ├── set_config__traits.hpp
+│   │   │               │   ├── set_config__type_support.c
+│   │   │               │   ├── set_config__type_support.cpp
+│   │   │               │   ├── set_config__type_support.h
+│   │   │               │   └── set_config__type_support.hpp
+│   │   │               ├── get_config.h
+│   │   │               ├── get_config.hpp
+│   │   │               ├── get_metadata.h
+│   │   │               ├── get_metadata.hpp
+│   │   │               ├── set_config.h
+│   │   │               └── set_config.hpp
+│   │   ├── lib
+│   │   │   ├── libouster_sensor_msgs__rosidl_generator_c.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_generator_py.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_typesupport_cpp.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_typesupport_c.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_typesupport_fastrtps_c.so
+│   │   │   ├── libouster_sensor_msgs__rosidl_typesupport_introspection_cpp.so
+│   │   │   └── libouster_sensor_msgs__rosidl_typesupport_introspection_c.so
+│   │   ├── local
+│   │   │   └── lib
+│   │   │       └── python3.10
+│   │   │           └── dist-packages
+│   │   │               ├── ouster_sensor_msgs
+│   │   │               │   ├── __init__.py
+│   │   │               │   ├── libouster_sensor_msgs__rosidl_generator_py.so
+│   │   │               │   ├── msg
+│   │   │               │   │   ├── __init__.py
+│   │   │               │   │   ├── _packet_msg.py
+│   │   │               │   │   ├── _packet_msg_s.c
+│   │   │               │   │   ├── __pycache__
+│   │   │               │   │   │   ├── __init__.cpython-310.pyc
+│   │   │               │   │   │   ├── _packet_msg.cpython-310.pyc
+│   │   │               │   │   │   └── _telemetry.cpython-310.pyc
+│   │   │               │   │   ├── _telemetry.py
+│   │   │               │   │   └── _telemetry_s.c
+│   │   │               │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_c.c
+│   │   │               │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │               │   ├── _ouster_sensor_msgs_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │               │   ├── ouster_sensor_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               │   ├── ouster_sensor_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               │   ├── ouster_sensor_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               │   ├── __pycache__
+│   │   │               │   │   └── __init__.cpython-310.pyc
+│   │   │               │   └── srv
+│   │   │               │       ├── _get_config.py
+│   │   │               │       ├── _get_config_s.c
+│   │   │               │       ├── _get_metadata.py
+│   │   │               │       ├── _get_metadata_s.c
+│   │   │               │       ├── __init__.py
+│   │   │               │       ├── __pycache__
+│   │   │               │       │   ├── _get_config.cpython-310.pyc
+│   │   │               │       │   ├── _get_metadata.cpython-310.pyc
+│   │   │               │       │   ├── __init__.cpython-310.pyc
+│   │   │               │       │   └── _set_config.cpython-310.pyc
+│   │   │               │       ├── _set_config.py
+│   │   │               │       └── _set_config_s.c
+│   │   │               └── ouster_sensor_msgs-0.12.2-py3.10.egg-info
+│   │   │                   ├── dependency_links.txt
+│   │   │                   ├── PKG-INFO
+│   │   │                   ├── SOURCES.txt
+│   │   │                   └── top_level.txt
+│   │   └── share
+│   │       ├── ament_index
+│   │       │   └── resource_index
+│   │       │       ├── package_run_dependencies
+│   │       │       │   └── ouster_sensor_msgs
+│   │       │       ├── packages
+│   │       │       │   └── ouster_sensor_msgs
+│   │       │       ├── parent_prefix_path
+│   │       │       │   └── ouster_sensor_msgs
+│   │       │       └── rosidl_interfaces
+│   │       │           └── ouster_sensor_msgs
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── ouster_sensor_msgs
+│   │       └── ouster_sensor_msgs
+│   │           ├── cmake
+│   │           │   ├── ament_cmake_export_dependencies-extras.cmake
+│   │           │   ├── ament_cmake_export_include_directories-extras.cmake
+│   │           │   ├── ament_cmake_export_libraries-extras.cmake
+│   │           │   ├── ament_cmake_export_targets-extras.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_generator_cExport.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_generator_cExport-noconfig.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_generator_cppExport.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_generator_pyExport.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_generator_pyExport-noconfig.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+│   │           │   ├── export_ouster_sensor_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+│   │           │   ├── ouster_sensor_msgsConfig.cmake
+│   │           │   ├── ouster_sensor_msgsConfig-version.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_cExport.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_cExport-noconfig.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_cppExport.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cExport.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport.cmake
+│   │           │   ├── ouster_sensor_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+│   │           │   ├── rosidl_cmake_export_typesupport_libraries-extras.cmake
+│   │           │   ├── rosidl_cmake_export_typesupport_targets-extras.cmake
+│   │           │   └── rosidl_cmake-extras.cmake
+│   │           ├── environment
+│   │           │   ├── ament_prefix_path.dsv
+│   │           │   ├── ament_prefix_path.sh
+│   │           │   ├── library_path.dsv
+│   │           │   ├── library_path.sh
+│   │           │   ├── path.dsv
+│   │           │   ├── path.sh
+│   │           │   ├── pythonpath.dsv
+│   │           │   └── pythonpath.sh
+│   │           ├── hook
+│   │           │   ├── cmake_prefix_path.dsv
+│   │           │   ├── cmake_prefix_path.ps1
+│   │           │   ├── cmake_prefix_path.sh
+│   │           │   ├── ld_library_path_lib.dsv
+│   │           │   ├── ld_library_path_lib.ps1
+│   │           │   └── ld_library_path_lib.sh
+│   │           ├── local_setup.bash
+│   │           ├── local_setup.dsv
+│   │           ├── local_setup.sh
+│   │           ├── local_setup.zsh
+│   │           ├── msg
+│   │           │   ├── PacketMsg.idl
+│   │           │   ├── PacketMsg.msg
+│   │           │   ├── Telemetry.idl
+│   │           │   └── Telemetry.msg
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           ├── package.xml
+│   │           ├── package.zsh
+│   │           └── srv
+│   │               ├── GetConfig.idl
+│   │               ├── GetConfig_Request.msg
+│   │               ├── GetConfig_Response.msg
+│   │               ├── GetConfig.srv
+│   │               ├── GetMetadata.idl
+│   │               ├── GetMetadata_Request.msg
+│   │               ├── GetMetadata_Response.msg
+│   │               ├── GetMetadata.srv
+│   │               ├── SetConfig.idl
+│   │               ├── SetConfig_Request.msg
+│   │               ├── SetConfig_Response.msg
+│   │               └── SetConfig.srv
+│   ├── sensor_sync
+│   │   ├── include
+│   │   │   └── sensor_sync
+│   │   │       └── sensor_sync
+│   │   │           └── msg
+│   │   │               ├── detail
+│   │   │               │   ├── dds_fastrtps
+│   │   │               │   ├── synced_sensors__builder.hpp
+│   │   │               │   ├── synced_sensors__functions.c
+│   │   │               │   ├── synced_sensors__functions.h
+│   │   │               │   ├── synced_sensors__rosidl_typesupport_fastrtps_c.h
+│   │   │               │   ├── synced_sensors__rosidl_typesupport_fastrtps_cpp.hpp
+│   │   │               │   ├── synced_sensors__rosidl_typesupport_introspection_c.h
+│   │   │               │   ├── synced_sensors__rosidl_typesupport_introspection_cpp.hpp
+│   │   │               │   ├── synced_sensors__struct.h
+│   │   │               │   ├── synced_sensors__struct.hpp
+│   │   │               │   ├── synced_sensors__traits.hpp
+│   │   │               │   ├── synced_sensors__type_support.c
+│   │   │               │   ├── synced_sensors__type_support.cpp
+│   │   │               │   ├── synced_sensors__type_support.h
+│   │   │               │   └── synced_sensors__type_support.hpp
+│   │   │               ├── rosidl_generator_cpp__visibility_control.hpp
+│   │   │               ├── rosidl_generator_c__visibility_control.h
+│   │   │               ├── rosidl_typesupport_fastrtps_cpp__visibility_control.h
+│   │   │               ├── rosidl_typesupport_fastrtps_c__visibility_control.h
+│   │   │               ├── rosidl_typesupport_introspection_c__visibility_control.h
+│   │   │               ├── synced_sensors.h
+│   │   │               └── synced_sensors.hpp
+│   │   ├── lib
+│   │   │   ├── libsensor_sync__rosidl_generator_c.so
+│   │   │   ├── libsensor_sync__rosidl_generator_py.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_cpp.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_c.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_fastrtps_cpp.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_fastrtps_c.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_introspection_cpp.so
+│   │   │   ├── libsensor_sync__rosidl_typesupport_introspection_c.so
+│   │   │   └── sensor_sync
+│   │   │       ├── calibration_node.py
+│   │   │       ├── __init__.py
+│   │   │       ├── lidar_utils.py
+│   │   │       └── sync_node.py
+│   │   ├── local
+│   │   │   └── lib
+│   │   │       └── python3.10
+│   │   │           └── dist-packages
+│   │   │               ├── sensor_sync
+│   │   │               │   ├── __init__.py
+│   │   │               │   ├── libsensor_sync__rosidl_generator_py.so
+│   │   │               │   ├── msg
+│   │   │               │   │   ├── __init__.py
+│   │   │               │   │   ├── __pycache__
+│   │   │               │   │   │   ├── __init__.cpython-310.pyc
+│   │   │               │   │   │   └── _synced_sensors.cpython-310.pyc
+│   │   │               │   │   ├── _synced_sensors.py
+│   │   │               │   │   └── _synced_sensors_s.c
+│   │   │               │   ├── __pycache__
+│   │   │               │   │   └── __init__.cpython-310.pyc
+│   │   │               │   ├── _sensor_sync_s.ep.rosidl_typesupport_c.c
+│   │   │               │   ├── _sensor_sync_s.ep.rosidl_typesupport_fastrtps_c.c
+│   │   │               │   ├── _sensor_sync_s.ep.rosidl_typesupport_introspection_c.c
+│   │   │               │   ├── sensor_sync_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               │   ├── sensor_sync_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               │   └── sensor_sync_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+│   │   │               └── sensor_sync-0.0.0-py3.10.egg-info
+│   │   │                   ├── dependency_links.txt
+│   │   │                   ├── PKG-INFO
+│   │   │                   ├── SOURCES.txt
+│   │   │                   └── top_level.txt
+│   │   └── share
+│   │       ├── ament_index
+│   │       │   └── resource_index
+│   │       │       ├── package_run_dependencies
+│   │       │       │   └── sensor_sync
+│   │       │       ├── packages
+│   │       │       │   └── sensor_sync
+│   │       │       ├── parent_prefix_path
+│   │       │       │   └── sensor_sync
+│   │       │       └── rosidl_interfaces
+│   │       │           └── sensor_sync
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── sensor_sync
+│   │       └── sensor_sync
+│   │           ├── cmake
+│   │           │   ├── ament_cmake_export_dependencies-extras.cmake
+│   │           │   ├── ament_cmake_export_include_directories-extras.cmake
+│   │           │   ├── ament_cmake_export_libraries-extras.cmake
+│   │           │   ├── ament_cmake_export_targets-extras.cmake
+│   │           │   ├── export_sensor_sync__rosidl_generator_cExport.cmake
+│   │           │   ├── export_sensor_sync__rosidl_generator_cExport-noconfig.cmake
+│   │           │   ├── export_sensor_sync__rosidl_generator_cppExport.cmake
+│   │           │   ├── export_sensor_sync__rosidl_generator_pyExport.cmake
+│   │           │   ├── export_sensor_sync__rosidl_generator_pyExport-noconfig.cmake
+│   │           │   ├── export_sensor_sync__rosidl_typesupport_fastrtps_cExport.cmake
+│   │           │   ├── export_sensor_sync__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+│   │           │   ├── export_sensor_sync__rosidl_typesupport_fastrtps_cppExport.cmake
+│   │           │   ├── export_sensor_sync__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+│   │           │   ├── rosidl_cmake_export_typesupport_libraries-extras.cmake
+│   │           │   ├── rosidl_cmake_export_typesupport_targets-extras.cmake
+│   │           │   ├── rosidl_cmake-extras.cmake
+│   │           │   ├── sensor_syncConfig.cmake
+│   │           │   ├── sensor_syncConfig-version.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_cExport.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_cExport-noconfig.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_cppExport.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_cppExport-noconfig.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_introspection_cExport.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_introspection_cExport-noconfig.cmake
+│   │           │   ├── sensor_sync__rosidl_typesupport_introspection_cppExport.cmake
+│   │           │   └── sensor_sync__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+│   │           ├── environment
+│   │           │   ├── ament_prefix_path.dsv
+│   │           │   ├── ament_prefix_path.sh
+│   │           │   ├── library_path.dsv
+│   │           │   ├── library_path.sh
+│   │           │   ├── path.dsv
+│   │           │   ├── path.sh
+│   │           │   ├── pythonpath.dsv
+│   │           │   └── pythonpath.sh
+│   │           ├── hook
+│   │           │   ├── cmake_prefix_path.dsv
+│   │           │   ├── cmake_prefix_path.ps1
+│   │           │   ├── cmake_prefix_path.sh
+│   │           │   ├── ld_library_path_lib.dsv
+│   │           │   ├── ld_library_path_lib.ps1
+│   │           │   └── ld_library_path_lib.sh
+│   │           ├── local_setup.bash
+│   │           ├── local_setup.dsv
+│   │           ├── local_setup.sh
+│   │           ├── local_setup.zsh
+│   │           ├── msg
+│   │           │   ├── SyncedSensors.idl
+│   │           │   └── SyncedSensors.msg
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           ├── package.xml
+│   │           └── package.zsh
+│   ├── sensor_visualizer
+│   │   ├── lib
+│   │   │   ├── python3.10
+│   │   │   │   └── site-packages
+│   │   │   │       ├── sensor_visualizer
+│   │   │   │       │   ├── camera_node.py
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── lidar_node.py
+│   │   │   │       │   ├── __pycache__
+│   │   │   │       │   │   ├── camera_node.cpython-310.pyc
+│   │   │   │       │   │   ├── __init__.cpython-310.pyc
+│   │   │   │       │   │   ├── lidar_node.cpython-310.pyc
+│   │   │   │       │   │   └── radar_node.cpython-310.pyc
+│   │   │   │       │   └── radar_node.py
+│   │   │   │       └── sensor_visualizer-0.0.0-py3.10.egg-info
+│   │   │   │           ├── dependency_links.txt
+│   │   │   │           ├── entry_points.txt
+│   │   │   │           ├── PKG-INFO
+│   │   │   │           ├── requires.txt
+│   │   │   │           ├── SOURCES.txt
+│   │   │   │           ├── top_level.txt
+│   │   │   │           └── zip-safe
+│   │   │   └── sensor_visualizer
+│   │   │       ├── camera_node
+│   │   │       ├── lidar_node
+│   │   │       └── radr_node
+│   │   └── share
+│   │       ├── ament_index
+│   │       │   └── resource_index
+│   │       │       └── packages
+│   │       │           └── sensor_visualizer
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── sensor_visualizer
+│   │       └── sensor_visualizer
+│   │           ├── hook
+│   │           │   ├── ament_prefix_path.dsv
+│   │           │   ├── ament_prefix_path.ps1
+│   │           │   ├── ament_prefix_path.sh
+│   │           │   ├── pythonpath.dsv
+│   │           │   ├── pythonpath.ps1
+│   │           │   └── pythonpath.sh
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           ├── package.xml
+│   │           └── package.zsh
+│   ├── setup.bash
+│   ├── setup.ps1
+│   ├── setup.sh
+│   └── setup.zsh
+├── log
+│   ├── build_2025-05-17_17-33-48
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── ouster_sensor_msgs
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-34-09
+│   │   ├── events.log
+│   │   └── logger_all.log
+│   ├── build_2025-05-17_17-34-14
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   ├── ouster_example
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_ros
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_sensor_msgs
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── sensor_sync
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   └── sensor_visualizer
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-47-08
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-47-26
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-48-00
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-48-30
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-49-22
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-49-37
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-50-00
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_17-51-05
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-27-50
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   ├── ouster_example
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_ros
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_sensor_msgs
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── sensor_sync
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   └── sensor_visualizer
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-27-57
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-29-39
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   ├── ouster_example
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_ros
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── ouster_sensor_msgs
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   ├── sensor_sync
+│   │   │   ├── command.log
+│   │   │   ├── stderr.log
+│   │   │   ├── stdout.log
+│   │   │   ├── stdout_stderr.log
+│   │   │   └── streams.log
+│   │   └── sensor_visualizer
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-29-43
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-30-50
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-39-47
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-40-07
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-54-53
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-55-32
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-57-02
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-17_18-57-51
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── sensor_sync
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── COLCON_IGNORE
+│   ├── latest -> latest_build
+│   └── latest_build -> build_2025-05-17_18-57-51
+├── run_calib_node.sh
+├── run_sync_node.sh
+├── source
+│   ├── multimodal_modeling
+│   │   ├── package.xml
+│   │   ├── resource
+│   │   │   └── sensor_visualizer
+│   │   ├── sensor_visualizer
+│   │   │   ├── camera_node.py
+│   │   │   ├── __init__.py
+│   │   │   ├── lidar_node.py
+│   │   │   └── radar_node.py
+│   │   ├── setup.cfg
+│   │   ├── setup.py
+│   │   └── test
+│   │       ├── test_copyright.py
+│   │       ├── test_flake8.py
+│   │       └── test_pep257.py
+│   ├── ouster-ros
+│   │   ├── CHANGELOG.rst
+│   │   ├── Dockerfile
+│   │   ├── docs
+│   │   │   ├── images
+│   │   │   │   └── logo.png
+│   │   │   ├── index.rst
+│   │   │   └── migration-guide.rst
+│   │   ├── LICENSE
+│   │   ├── ouster_ros
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── config
+│   │   │   │   ├── community_driver_config.yaml
+│   │   │   │   ├── community_driver.rviz
+│   │   │   │   ├── driver_params.yaml
+│   │   │   │   ├── metadata-qos-override.yaml
+│   │   │   │   ├── os_sensor_cloud_image_params.yaml
+│   │   │   │   ├── viz-reliable.rviz
+│   │   │   │   └── viz.rviz
+│   │   │   ├── include
+│   │   │   │   └── ouster_ros
+│   │   │   │       ├── common_point_types.h
+│   │   │   │       ├── os_point.h
+│   │   │   │       ├── os_processing_node_base.h
+│   │   │   │       ├── os_ros.h
+│   │   │   │       ├── os_sensor_node_base.h
+│   │   │   │       ├── sensor_point_types.h
+│   │   │   │       └── visibility_control.h
+│   │   │   ├── launch
+│   │   │   │   ├── driver.launch.py
+│   │   │   │   ├── driver_launch.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── driver_launch.cpython-310.pyc
+│   │   │   │   │   └── rviz.launch.cpython-310.pyc
+│   │   │   │   ├── record.composite.launch.xml
+│   │   │   │   ├── record.launch.xml -> record.composite.launch.xml
+│   │   │   │   ├── replay.composite.launch.xml
+│   │   │   │   ├── replay.launch.xml -> replay.composite.launch.xml
+│   │   │   │   ├── replay_pcap.launch.xml
+│   │   │   │   ├── rviz.launch.py
+│   │   │   │   ├── rviz.launch.xml
+│   │   │   │   ├── sensor.composite.launch.py
+│   │   │   │   ├── sensor.composite.launch.xml
+│   │   │   │   ├── sensor.independent.launch.py
+│   │   │   │   ├── sensor.independent.launch.xml
+│   │   │   │   ├── sensor.launch.xml -> sensor.composite.launch.xml
+│   │   │   │   └── sensor_mtp.launch.xml
+│   │   │   ├── ouster-sdk
+│   │   │   │   ├── CHANGELOG.rst
+│   │   │   │   ├── clang-linting.sh
+│   │   │   │   ├── cmake
+│   │   │   │   │   ├── build.h.in
+│   │   │   │   │   ├── Coverage.cmake
+│   │   │   │   │   ├── DefaultBuildType.cmake
+│   │   │   │   │   ├── FindCURL.cmake
+│   │   │   │   │   ├── FindEigen3.cmake
+│   │   │   │   │   ├── Findglfw3.cmake
+│   │   │   │   │   ├── FindGTest.cmake
+│   │   │   │   │   ├── Findjsoncpp.cmake
+│   │   │   │   │   ├── Findlibtins.cmake
+│   │   │   │   │   ├── FindOusterSDK.cmake
+│   │   │   │   │   ├── FindPcap.cmake
+│   │   │   │   │   ├── FindPybind11Internal.cmake
+│   │   │   │   │   ├── OusterSDKConfig.cmake.in
+│   │   │   │   │   ├── VcpkgEnv.cmake
+│   │   │   │   │   └── VersionGen.cmake
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── CMakeSettings.json
+│   │   │   │   ├── conan
+│   │   │   │   │   └── test_package
+│   │   │   │   │       ├── CMakeLists.txt
+│   │   │   │   │       └── conanfile.py
+│   │   │   │   ├── conanfile.py
+│   │   │   │   ├── docs
+│   │   │   │   │   ├── cli
+│   │   │   │   │   │   ├── common-use-cases.rst
+│   │   │   │   │   │   ├── getting-started.rst
+│   │   │   │   │   │   ├── mapping-sessions.rst
+│   │   │   │   │   │   ├── overview.rst
+│   │   │   │   │   │   └── sample-sessions.rst
+│   │   │   │   │   ├── conf.py
+│   │   │   │   │   ├── cpp
+│   │   │   │   │   │   ├── api.rst
+│   │   │   │   │   │   ├── building.rst
+│   │   │   │   │   │   ├── examples
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   └── simple_examples.rst
+│   │   │   │   │   │   ├── ouster_client
+│   │   │   │   │   │   │   ├── client.rst
+│   │   │   │   │   │   │   ├── image_processing.rst
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   ├── lidar_scan.rst
+│   │   │   │   │   │   │   ├── types.rst
+│   │   │   │   │   │   │   └── version.rst
+│   │   │   │   │   │   ├── ouster_osf
+│   │   │   │   │   │   │   ├── basics.rst
+│   │   │   │   │   │   │   ├── crc32.rst
+│   │   │   │   │   │   │   ├── file.rst
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   ├── layout_streaming.rst
+│   │   │   │   │   │   │   ├── metadata.rst
+│   │   │   │   │   │   │   ├── meta_extrinsics.rst
+│   │   │   │   │   │   │   ├── meta_lidar_sensor.rst
+│   │   │   │   │   │   │   ├── meta_streaming_info.rst
+│   │   │   │   │   │   │   ├── operations.rst
+│   │   │   │   │   │   │   ├── pcap_source.rst
+│   │   │   │   │   │   │   ├── reader.rst
+│   │   │   │   │   │   │   ├── stream_lidar_scan.rst
+│   │   │   │   │   │   │   └── writer.rst
+│   │   │   │   │   │   ├── ouster_pcap
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   └── os_pcap.rst
+│   │   │   │   │   │   └── ouster_viz
+│   │   │   │   │   │       ├── index.rst
+│   │   │   │   │   │       └── point_viz.rst
+│   │   │   │   │   ├── Doxyfile
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   ├── brooklyn_bridge_ls_50_range_image.png
+│   │   │   │   │   │   ├── brooklyn_bridge_ls_50_xyz_cut.png
+│   │   │   │   │   │   ├── lidar_scan_destaggered.png
+│   │   │   │   │   │   ├── lidar_scan_staggered.png
+│   │   │   │   │   │   ├── lidar_scan_xyz_84_3d.png
+│   │   │   │   │   │   ├── lidar_scan_xyz_84.png
+│   │   │   │   │   │   ├── Ouster_Logo_TM_Horiz_Black_RGB_600px.png
+│   │   │   │   │   │   ├── Ouster_Logo_TM_Horiz_White_RGB.svg
+│   │   │   │   │   │   ├── Ouster_Logo_TM_Stacked_White_RGB.svg
+│   │   │   │   │   │   ├── ouster-viz.png
+│   │   │   │   │   │   ├── scans_accum_accum_scan.png
+│   │   │   │   │   │   ├── scans_accum_dense_every.png
+│   │   │   │   │   │   ├── scans_accum_map_all_scan.png
+│   │   │   │   │   │   ├── scans_accum_track_all.png
+│   │   │   │   │   │   └── viz-tutorial
+│   │   │   │   │   │       ├── axes_helper_unstructured.png
+│   │   │   │   │   │       ├── empty_point_viz.png
+│   │   │   │   │   │       ├── image_set_pos_bot_right.png
+│   │   │   │   │   │       ├── image_set_pos_center.png
+│   │   │   │   │   │       ├── image_set_pos_left.png
+│   │   │   │   │   │       ├── image_set_pos_right.png
+│   │   │   │   │   │       ├── lidar_scan_fields_images_labels.png
+│   │   │   │   │   │       ├── lidar_scan_fields_images.png
+│   │   │   │   │   │       ├── lidar_scan_structured.png
+│   │   │   │   │   │       ├── lidar_scan_viz_checkers.png
+│   │   │   │   │   │       ├── lidar_scan_viz_labels.png
+│   │   │   │   │   │       └── lidar_scan_viz.png
+│   │   │   │   │   ├── index.rst
+│   │   │   │   │   ├── installation.rst
+│   │   │   │   │   ├── migration
+│   │   │   │   │   │   ├── migration-20220927-20230114.rst
+│   │   │   │   │   │   ├── migration-20230114-20230403.rst
+│   │   │   │   │   │   └── migration-20231031-20240423.rst
+│   │   │   │   │   ├── overview.rst
+│   │   │   │   │   ├── python
+│   │   │   │   │   │   ├── api
+│   │   │   │   │   │   │   ├── client.rst
+│   │   │   │   │   │   │   ├── examples.rst
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   ├── osf.rst
+│   │   │   │   │   │   │   ├── pcap.rst
+│   │   │   │   │   │   │   └── viz.rst
+│   │   │   │   │   │   ├── devel.rst
+│   │   │   │   │   │   ├── examples
+│   │   │   │   │   │   │   ├── basics-sensor.rst
+│   │   │   │   │   │   │   ├── conversion.rst
+│   │   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   │   ├── lidar-scan.rst
+│   │   │   │   │   │   │   ├── osf-examples.rst
+│   │   │   │   │   │   │   ├── record-stream.rst
+│   │   │   │   │   │   │   ├── udp-packets.rst
+│   │   │   │   │   │   │   └── visualizations.rst
+│   │   │   │   │   │   ├── quickstart.rst
+│   │   │   │   │   │   ├── slam-api-example.rst
+│   │   │   │   │   │   ├── using-scan-source.rst
+│   │   │   │   │   │   └── viz
+│   │   │   │   │   │       ├── index.rst
+│   │   │   │   │   │       ├── viz-api-tutorial.rst
+│   │   │   │   │   │       ├── viz-run.rst
+│   │   │   │   │   │       └── viz-scans-accum.rst
+│   │   │   │   │   ├── reference
+│   │   │   │   │   │   ├── changelog.rst
+│   │   │   │   │   │   ├── lidar-scan.rst
+│   │   │   │   │   │   └── osf.rst
+│   │   │   │   │   ├── sample-data.rst
+│   │   │   │   │   ├── _static
+│   │   │   │   │   │   └── css
+│   │   │   │   │   │       └── ouster_rtd_tweaks.css
+│   │   │   │   │   ├── _templates
+│   │   │   │   │   │   └── versions.html
+│   │   │   │   │   └── versions.json
+│   │   │   │   ├── examples
+│   │   │   │   │   ├── async_client_example.cpp
+│   │   │   │   │   ├── client_example.cpp
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── config_example.cpp
+│   │   │   │   │   ├── helpers.cpp
+│   │   │   │   │   ├── helpers.h
+│   │   │   │   │   ├── lidar_scan_example.cpp
+│   │   │   │   │   ├── linking_example
+│   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   ├── Dockerfile
+│   │   │   │   │   │   ├── example.bash
+│   │   │   │   │   │   ├── main.cpp
+│   │   │   │   │   │   └── readme.rst
+│   │   │   │   │   ├── mtp_client_example.cpp
+│   │   │   │   │   ├── osf_reader_example.cpp
+│   │   │   │   │   ├── osf_writer_example.cpp
+│   │   │   │   │   ├── representations_example.cpp
+│   │   │   │   │   └── viz_example.cpp
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── LICENSE-bin
+│   │   │   │   ├── ouster_client
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── include
+│   │   │   │   │   │   ├── optional-lite
+│   │   │   │   │   │   │   └── nonstd
+│   │   │   │   │   │   │       └── optional.hpp
+│   │   │   │   │   │   └── ouster
+│   │   │   │   │   │       ├── client.h
+│   │   │   │   │   │       ├── defaults.h
+│   │   │   │   │   │       ├── image_processing.h
+│   │   │   │   │   │       ├── impl
+│   │   │   │   │   │       │   ├── cartesian.h
+│   │   │   │   │   │       │   ├── client_poller.h
+│   │   │   │   │   │       │   ├── lidar_scan_impl.h
+│   │   │   │   │   │       │   ├── netcompat.h
+│   │   │   │   │   │       │   ├── packet_writer.h
+│   │   │   │   │   │       │   ├── profile_extension.h
+│   │   │   │   │   │       │   └── ring_buffer.h
+│   │   │   │   │   │       ├── lidar_scan.h
+│   │   │   │   │   │       ├── sensor_http.h
+│   │   │   │   │   │       ├── types.h
+│   │   │   │   │   │       ├── udp_packet_source.h
+│   │   │   │   │   │       ├── util.h
+│   │   │   │   │   │       └── version.h
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── client.cpp
+│   │   │   │   │       ├── curl_client.h
+│   │   │   │   │       ├── http_client.h
+│   │   │   │   │       ├── image_processing.cpp
+│   │   │   │   │       ├── lidar_scan.cpp
+│   │   │   │   │       ├── logging.cpp
+│   │   │   │   │       ├── logging.h
+│   │   │   │   │       ├── netcompat.cpp
+│   │   │   │   │       ├── parsing.cpp
+│   │   │   │   │       ├── profile_extension.cpp
+│   │   │   │   │       ├── sensor_http.cpp
+│   │   │   │   │       ├── sensor_http_imp.cpp
+│   │   │   │   │       ├── sensor_http_imp.h
+│   │   │   │   │       ├── sensor_info.cpp
+│   │   │   │   │       ├── sensor_tcp_imp.cpp
+│   │   │   │   │       ├── sensor_tcp_imp.h
+│   │   │   │   │       ├── types.cpp
+│   │   │   │   │       ├── udp_packet_source.cpp
+│   │   │   │   │       └── util.cpp
+│   │   │   │   ├── ouster_osf
+│   │   │   │   │   ├── CHANGELOG.rst
+│   │   │   │   │   ├── cmake
+│   │   │   │   │   │   └── osf_fb_utils.cmake
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── fb
+│   │   │   │   │   │   ├── chunk.fbs
+│   │   │   │   │   │   ├── header.fbs
+│   │   │   │   │   │   ├── metadata.fbs
+│   │   │   │   │   │   ├── os_sensor
+│   │   │   │   │   │   │   ├── extrinsics.fbs
+│   │   │   │   │   │   │   ├── lidar_scan_stream.fbs
+│   │   │   │   │   │   │   └── lidar_sensor.fbs
+│   │   │   │   │   │   └── streaming
+│   │   │   │   │   │       └── streaming_info.fbs
+│   │   │   │   │   ├── include
+│   │   │   │   │   │   └── ouster
+│   │   │   │   │   │       └── osf
+│   │   │   │   │   │           ├── basics.h
+│   │   │   │   │   │           ├── crc32.h
+│   │   │   │   │   │           ├── file.h
+│   │   │   │   │   │           ├── layout_streaming.h
+│   │   │   │   │   │           ├── metadata.h
+│   │   │   │   │   │           ├── meta_extrinsics.h
+│   │   │   │   │   │           ├── meta_lidar_sensor.h
+│   │   │   │   │   │           ├── meta_streaming_info.h
+│   │   │   │   │   │           ├── operations.h
+│   │   │   │   │   │           ├── pcap_source.h
+│   │   │   │   │   │           ├── reader.h
+│   │   │   │   │   │           ├── stream_lidar_scan.h
+│   │   │   │   │   │           └── writer.h
+│   │   │   │   │   ├── README.rst
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── basics.cpp
+│   │   │   │   │   │   ├── compat_ops.cpp
+│   │   │   │   │   │   ├── compat_ops.h
+│   │   │   │   │   │   ├── crc32.cpp
+│   │   │   │   │   │   ├── fb_utils.cpp
+│   │   │   │   │   │   ├── fb_utils.h
+│   │   │   │   │   │   ├── file.cpp
+│   │   │   │   │   │   ├── json_utils.cpp
+│   │   │   │   │   │   ├── json_utils.h
+│   │   │   │   │   │   ├── layout_streaming.cpp
+│   │   │   │   │   │   ├── metadata.cpp
+│   │   │   │   │   │   ├── meta_extrinsics.cpp
+│   │   │   │   │   │   ├── meta_lidar_sensor.cpp
+│   │   │   │   │   │   ├── meta_streaming_info.cpp
+│   │   │   │   │   │   ├── operations.cpp
+│   │   │   │   │   │   ├── pcap_source.cpp
+│   │   │   │   │   │   ├── png_tools.cpp
+│   │   │   │   │   │   ├── png_tools.h
+│   │   │   │   │   │   ├── reader.cpp
+│   │   │   │   │   │   ├── stream_lidar_scan.cpp
+│   │   │   │   │   │   └── writer.cpp
+│   │   │   │   │   └── tests
+│   │   │   │   │       ├── basics_test.cpp
+│   │   │   │   │       ├── CMakeLists.txt
+│   │   │   │   │       ├── common.h
+│   │   │   │   │       ├── crc_test.cpp
+│   │   │   │   │       ├── file_ops_test.cpp
+│   │   │   │   │       ├── file_test.cpp
+│   │   │   │   │       ├── metadata_tests.cpp
+│   │   │   │   │       ├── meta_streaming_info_test.cpp
+│   │   │   │   │       ├── operations_test.cpp
+│   │   │   │   │       ├── osf_test.h
+│   │   │   │   │       ├── pcap_source_test.cpp
+│   │   │   │   │       ├── png_tools_test.cpp
+│   │   │   │   │       ├── reader_test.cpp
+│   │   │   │   │       ├── writer_custom_test.cpp
+│   │   │   │   │       ├── writer_test.cpp
+│   │   │   │   │       └── writerv2_test.cpp
+│   │   │   │   ├── ouster_pcap
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── include
+│   │   │   │   │   │   └── ouster
+│   │   │   │   │   │       ├── indexed_pcap_reader.h
+│   │   │   │   │   │       ├── os_pcap.h
+│   │   │   │   │   │       └── pcap.h
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── indexed_pcap_reader.cpp
+│   │   │   │   │       ├── os_pcap.cpp
+│   │   │   │   │       └── pcap.cpp
+│   │   │   │   ├── ouster_viz
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── include
+│   │   │   │   │   │   └── ouster
+│   │   │   │   │   │       └── point_viz.h
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── camera.cpp
+│   │   │   │   │       ├── camera.h
+│   │   │   │   │       ├── cloud.cpp
+│   │   │   │   │       ├── cloud.h
+│   │   │   │   │       ├── colormaps.h
+│   │   │   │   │       ├── common.h
+│   │   │   │   │       ├── glfw.cpp
+│   │   │   │   │       ├── glfw.h
+│   │   │   │   │       ├── gltext.cpp
+│   │   │   │   │       ├── gltext.h
+│   │   │   │   │       ├── image.cpp
+│   │   │   │   │       ├── image.h
+│   │   │   │   │       ├── misc.cpp
+│   │   │   │   │       ├── misc.h
+│   │   │   │   │       └── point_viz.cpp
+│   │   │   │   ├── python
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── Dockerfile
+│   │   │   │   │   ├── MANIFEST.in
+│   │   │   │   │   ├── mypy.ini
+│   │   │   │   │   ├── pyproject.toml
+│   │   │   │   │   ├── README.rst
+│   │   │   │   │   ├── setup.cfg
+│   │   │   │   │   ├── setup.py
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── cpp
+│   │   │   │   │   │   │   ├── _client.cpp
+│   │   │   │   │   │   │   ├── _osf.cpp
+│   │   │   │   │   │   │   ├── _pcap.cpp
+│   │   │   │   │   │   │   └── _viz.cpp
+│   │   │   │   │   │   └── ouster
+│   │   │   │   │   │       ├── cli
+│   │   │   │   │   │       │   ├── core
+│   │   │   │   │   │       │   │   ├── borg.py
+│   │   │   │   │   │       │   │   ├── cli_args.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   └── util.py
+│   │   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │   │       │   ├── plugins
+│   │   │   │   │   │       │   │   ├── discover.py
+│   │   │   │   │   │       │   │   ├── source_osf.py
+│   │   │   │   │   │       │   │   ├── source_pcap.py
+│   │   │   │   │   │       │   │   ├── source.py
+│   │   │   │   │   │       │   │   ├── source_save.py
+│   │   │   │   │   │       │   │   ├── source_sensor.py
+│   │   │   │   │   │       │   │   ├── source_util.py
+│   │   │   │   │   │       │   │   └── testing.py
+│   │   │   │   │   │       │   └── py.typed
+│   │   │   │   │   │       ├── client
+│   │   │   │   │   │       │   └── __init__.py
+│   │   │   │   │   │       ├── osf
+│   │   │   │   │   │       │   └── __init__.py
+│   │   │   │   │   │       ├── pcap
+│   │   │   │   │   │       │   └── __init__.py
+│   │   │   │   │   │       ├── sdk
+│   │   │   │   │   │       │   ├── bag
+│   │   │   │   │   │       │   │   ├── bag.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │   │       │   ├── client
+│   │   │   │   │   │       │   │   ├── _client.pyi
+│   │   │   │   │   │       │   │   ├── core.py
+│   │   │   │   │   │       │   │   ├── data.py
+│   │   │   │   │   │       │   │   ├── _digest.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── multi.py
+│   │   │   │   │   │       │   │   ├── multi_scan_source.py
+│   │   │   │   │   │       │   │   ├── py.typed
+│   │   │   │   │   │       │   │   ├── scan_source_adapter.py
+│   │   │   │   │   │       │   │   ├── scan_source.py
+│   │   │   │   │   │       │   │   └── _utils
+│   │   │   │   │   │       │   │       └── __init__.py
+│   │   │   │   │   │       │   ├── convert_to_legacy.py
+│   │   │   │   │   │       │   ├── examples
+│   │   │   │   │   │       │   │   ├── client.py
+│   │   │   │   │   │       │   │   ├── colormaps.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── open3d.py
+│   │   │   │   │   │       │   │   ├── osf.py
+│   │   │   │   │   │       │   │   ├── pcap.py
+│   │   │   │   │   │       │   │   ├── reference.py
+│   │   │   │   │   │       │   │   └── viz.py
+│   │   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │   │       │   ├── io_type.py
+│   │   │   │   │   │       │   ├── open_source.py
+│   │   │   │   │   │       │   ├── osf
+│   │   │   │   │   │       │   │   ├── data.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── multi.py
+│   │   │   │   │   │       │   │   ├── _osf.pyi
+│   │   │   │   │   │       │   │   ├── osf_scan_source.py
+│   │   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │   │       │   ├── pcap
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── packet_iter.py
+│   │   │   │   │   │       │   │   ├── pcap_multi_packet_reader.py
+│   │   │   │   │   │       │   │   ├── pcap.py
+│   │   │   │   │   │       │   │   ├── _pcap.pyi
+│   │   │   │   │   │       │   │   ├── pcap_scan_source.py
+│   │   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │   │       │   ├── py.typed
+│   │   │   │   │   │       │   ├── sensor
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── py.typed
+│   │   │   │   │   │       │   │   ├── sensor_multi_packet_reader.py
+│   │   │   │   │   │       │   │   ├── sensor_scan_source.py
+│   │   │   │   │   │       │   │   └── util.py
+│   │   │   │   │   │       │   ├── sensor_util.py
+│   │   │   │   │   │       │   ├── simple_viz.py
+│   │   │   │   │   │       │   ├── util
+│   │   │   │   │   │       │   │   ├── extrinsics.py
+│   │   │   │   │   │       │   │   ├── forward_slicer.py
+│   │   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │   │       │   │   ├── metadata.py
+│   │   │   │   │   │       │   │   ├── parsing.py
+│   │   │   │   │   │       │   │   ├── pose_util.py
+│   │   │   │   │   │       │   │   ├── progress_bar.py
+│   │   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │   │       │   └── viz
+│   │   │   │   │   │       │       ├── core.py
+│   │   │   │   │   │       │       ├── __init__.py
+│   │   │   │   │   │       │       ├── multi_viz.py
+│   │   │   │   │   │       │       ├── py.typed
+│   │   │   │   │   │       │       ├── scans_accum.py
+│   │   │   │   │   │       │       ├── util.py
+│   │   │   │   │   │       │       ├── view_mode.py
+│   │   │   │   │   │       │       └── _viz.pyi
+│   │   │   │   │   │       └── viz
+│   │   │   │   │   │           └── __init__.py
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── conftest.py
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── osf
+│   │   │   │   │   │   │   ├── test_osf_basics.py
+│   │   │   │   │   │   │   └── test_osf_extrinsics.py
+│   │   │   │   │   │   ├── ouster
+│   │   │   │   │   │   │   └── cli
+│   │   │   │   │   │   │       └── plugins
+│   │   │   │   │   │   │           └── bad_plugin.py
+│   │   │   │   │   │   ├── test_batching.py
+│   │   │   │   │   │   ├── test_cli.py
+│   │   │   │   │   │   ├── test_cli_util.py
+│   │   │   │   │   │   ├── test_config.py
+│   │   │   │   │   │   ├── test_core.py
+│   │   │   │   │   │   ├── test_data.py
+│   │   │   │   │   │   ├── test_destagger.py
+│   │   │   │   │   │   ├── test_discover.py
+│   │   │   │   │   │   ├── test_extended_profiles.py
+│   │   │   │   │   │   ├── test_forward_slicer.py
+│   │   │   │   │   │   ├── test_http_client.py
+│   │   │   │   │   │   ├── test_metadata.py
+│   │   │   │   │   │   ├── test_open_source.py
+│   │   │   │   │   │   ├── test_packet_iter.py
+│   │   │   │   │   │   ├── test_parsing.py
+│   │   │   │   │   │   ├── test_pcap.py
+│   │   │   │   │   │   ├── test_plugins.py
+│   │   │   │   │   │   ├── test_pose_util.py
+│   │   │   │   │   │   ├── test_resolve_extrinsics.py
+│   │   │   │   │   │   ├── test_sdk_utils.py
+│   │   │   │   │   │   ├── test_single_scan_source.py
+│   │   │   │   │   │   ├── test_viz.py
+│   │   │   │   │   │   ├── test_viz_utils.py
+│   │   │   │   │   │   └── test_xyzlut.py
+│   │   │   │   │   └── tox.ini
+│   │   │   │   ├── README.rst
+│   │   │   │   └── tests
+│   │   │   │       ├── bcompat_meta_json_test.cpp
+│   │   │   │       ├── cartesian_test.cpp
+│   │   │   │       ├── CMakeLists.txt
+│   │   │   │       ├── fusa_profile_test.cpp
+│   │   │   │       ├── lidar_scan_test.cpp
+│   │   │   │       ├── metadata
+│   │   │   │       │   ├── 1_12_os1-991913000010-64.json
+│   │   │   │       │   ├── 1_12_os1-991937000062-16A0_legacy.json
+│   │   │   │       │   ├── 1_12_os1-991937000062-64_legacy.json
+│   │   │   │       │   ├── 1_13_os1-991913000010-64.json
+│   │   │   │       │   ├── 1_13_os1-991937000062-16A0_legacy.json
+│   │   │   │       │   ├── 1_13_os1-991937000062-32A02_legacy.json
+│   │   │   │       │   ├── 1_14_6cccd_os-882002000138-128_legacy.json
+│   │   │   │       │   ├── 1_14_6cccd_os-882002000138-32U0_legacy.json
+│   │   │   │       │   ├── 1_14_beta_os1-991937000062-16A0_legacy.json
+│   │   │   │       │   ├── 1_14_beta_os1-991937000062-64_legacy.json
+│   │   │   │       │   ├── 2_0_0_os1-991913000010-64.json
+│   │   │   │       │   ├── 2_0_0_os1-992008000494-128_col_win_legacy.json
+│   │   │   │       │   ├── 2_0_rc2_os-992011000121-32U0_legacy.json
+│   │   │   │       │   ├── 2_1_2_os1-991913000010-64.json
+│   │   │   │       │   ├── 2_1_2_os1-991913000010-64_legacy.json
+│   │   │   │       │   ├── 2_2_os-992119000444-128.json
+│   │   │   │       │   ├── 2_2_os-992119000444-128_legacy.json
+│   │   │   │       │   ├── 2_3_1_os-992146000760-128.json
+│   │   │   │       │   ├── 2_3_1_os-992146000760-128_legacy.json
+│   │   │   │       │   ├── 2_4_0_os-992146000760-128.json
+│   │   │   │       │   ├── 2_4_0_os-992146000760-128_legacy.json
+│   │   │   │       │   ├── 2_5_0_os-992146000760-128.json
+│   │   │   │       │   ├── 2_5_0_os-992146000760-128_legacy.json
+│   │   │   │       │   ├── 3_0_1_os-122246000293-128.json
+│   │   │   │       │   ├── 3_0_1_os-122246000293-128_legacy.json
+│   │   │   │       │   ├── malformed
+│   │   │   │       │   │   ├── complete_but_all_zeros_legacy.json
+│   │   │   │       │   │   ├── garbled_legacy_and_nonlegacy.json
+│   │   │   │       │   │   ├── incomplete_data_format_legacy.json
+│   │   │   │       │   │   ├── incomplete_data_format_nonlegacy.json
+│   │   │   │       │   │   ├── incomplete_no_calref_nonlegacy.json
+│   │   │   │       │   │   ├── incomplete_no_sensor_info_nonlegacy.json
+│   │   │   │       │   │   ├── incorrect_nbeam_angles_legacy_113.json
+│   │   │   │       │   │   └── legacy_with_calibration_status.json
+│   │   │   │       │   └── ouster-studio-reduced-config-v1.json
+│   │   │   │       ├── metadata_errors_test.cpp
+│   │   │   │       ├── metadata_test.cpp
+│   │   │   │       ├── osfs
+│   │   │   │       │   ├── empty_osf.osf
+│   │   │   │       │   └── OS-1-128_v2.3.0_1024x10_lb_n3.osf
+│   │   │   │       ├── packet_writer_test.cpp
+│   │   │   │       ├── parsing_benchmark_test.cpp
+│   │   │   │       ├── pcaps
+│   │   │   │       │   ├── empty_pcap.json
+│   │   │   │       │   ├── empty_pcap.pcap
+│   │   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10_digest.json
+│   │   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.pcap
+│   │   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10_digest.json
+│   │   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10.json
+│   │   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10.pcap
+│   │   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10-single-packet.pcap
+│   │   │   │       │   ├── OS-1-128_767798045_1024x10_20230712_120049.json
+│   │   │   │       │   ├── OS-1-128_767798045_1024x10_20230712_120049.pcap
+│   │   │   │       │   ├── OS-1-128_v2.3.0_1024x10.json
+│   │   │   │       │   ├── OS-1-128_v2.3.0_1024x10_lb_n3.pcap
+│   │   │   │       │   ├── OS-1-128_v2.3.0_1024x10_lb_n3_poses_kitti.txt
+│   │   │   │       │   ├── OS-1-128_v3.0.1_1024x10_20230216_142857_poses_kitti.txt
+│   │   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10_digest.json
+│   │   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10.json
+│   │   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10.pcap
+│   │   │   │       │   ├── OS-1-64_1024x10_fw20.pcap
+│   │   │   │       │   ├── OS-1-64_sensor_config_reduced.json
+│   │   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10_digest.json
+│   │   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10.json
+│   │   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10.pcap
+│   │   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10_digest.json
+│   │   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10.json
+│   │   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10.pcap
+│   │   │   │       │   └── VLI-16-one-packet.pcap
+│   │   │   │       ├── pcap_test.cpp
+│   │   │   │       ├── pcap_with_extrinsics
+│   │   │   │       │   ├── extrinsic_parameters.json
+│   │   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │   │       │   └── OS-0-128-U1_v2.3.0_10.pcap
+│   │   │   │       ├── pcap_without_extrinsics
+│   │   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │   │       │   └── OS-0-128-U1_v2.3.0_10.pcap
+│   │   │   │       ├── profile_extension_test.cpp
+│   │   │   │       ├── scan_batcher_test.cpp
+│   │   │   │       ├── udp_queue_test.cpp
+│   │   │   │       └── util.h
+│   │   │   ├── package.xml
+│   │   │   ├── src
+│   │   │   │   ├── image_processor.h
+│   │   │   │   ├── impl
+│   │   │   │   │   └── cartesian.h
+│   │   │   │   ├── imu_packet_handler.h
+│   │   │   │   ├── laser_scan_processor.h
+│   │   │   │   ├── lidar_packet_handler.h
+│   │   │   │   ├── lock_free_ring_buffer.h
+│   │   │   │   ├── os_cloud_node.cpp
+│   │   │   │   ├── os_driver_node.cpp
+│   │   │   │   ├── os_image_node.cpp
+│   │   │   │   ├── os_pcap_node.cpp
+│   │   │   │   ├── os_processing_node_base.cpp
+│   │   │   │   ├── os_replay_node.cpp
+│   │   │   │   ├── os_ros.cpp
+│   │   │   │   ├── os_sensor_node_base.cpp
+│   │   │   │   ├── os_sensor_node.cpp
+│   │   │   │   ├── os_sensor_node.h
+│   │   │   │   ├── os_static_transforms_broadcaster.h
+│   │   │   │   ├── point_cloud_compose.h
+│   │   │   │   ├── point_cloud_processor_factory.h
+│   │   │   │   ├── point_cloud_processor.h
+│   │   │   │   ├── point_meta_helpers.h
+│   │   │   │   ├── point_transform.h
+│   │   │   │   └── telemetry_handler.h
+│   │   │   └── test
+│   │   │       ├── lock_free_ring_buffer_test.cpp
+│   │   │       ├── point_accessor_test.cpp
+│   │   │       ├── point_cloud_compose_test.cpp
+│   │   │       ├── point_transform_test.cpp
+│   │   │       └── test_main.cpp
+│   │   ├── ouster-sdk
+│   │   │   ├── CHANGELOG.rst
+│   │   │   ├── clang-linting.sh
+│   │   │   ├── cmake
+│   │   │   │   ├── build.h.in
+│   │   │   │   ├── Coverage.cmake
+│   │   │   │   ├── DefaultBuildType.cmake
+│   │   │   │   ├── FindCURL.cmake
+│   │   │   │   ├── FindEigen3.cmake
+│   │   │   │   ├── Findglfw3.cmake
+│   │   │   │   ├── FindGTest.cmake
+│   │   │   │   ├── Findjsoncpp.cmake
+│   │   │   │   ├── Findlibtins.cmake
+│   │   │   │   ├── FindOusterSDK.cmake
+│   │   │   │   ├── FindPcap.cmake
+│   │   │   │   ├── FindPybind11Internal.cmake
+│   │   │   │   ├── OusterSDKConfig.cmake.in
+│   │   │   │   ├── VcpkgEnv.cmake
+│   │   │   │   └── VersionGen.cmake
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── CMakeSettings.json
+│   │   │   ├── conan
+│   │   │   │   └── test_package
+│   │   │   │       ├── CMakeLists.txt
+│   │   │   │       └── conanfile.py
+│   │   │   ├── conanfile.py
+│   │   │   ├── docs
+│   │   │   │   ├── cli
+│   │   │   │   │   ├── common-use-cases.rst
+│   │   │   │   │   ├── getting-started.rst
+│   │   │   │   │   ├── mapping-sessions.rst
+│   │   │   │   │   ├── overview.rst
+│   │   │   │   │   └── sample-sessions.rst
+│   │   │   │   ├── conf.py
+│   │   │   │   ├── cpp
+│   │   │   │   │   ├── api.rst
+│   │   │   │   │   ├── building.rst
+│   │   │   │   │   ├── examples
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   └── simple_examples.rst
+│   │   │   │   │   ├── ouster_client
+│   │   │   │   │   │   ├── client.rst
+│   │   │   │   │   │   ├── image_processing.rst
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   ├── lidar_scan.rst
+│   │   │   │   │   │   ├── types.rst
+│   │   │   │   │   │   └── version.rst
+│   │   │   │   │   ├── ouster_osf
+│   │   │   │   │   │   ├── basics.rst
+│   │   │   │   │   │   ├── crc32.rst
+│   │   │   │   │   │   ├── file.rst
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   ├── layout_streaming.rst
+│   │   │   │   │   │   ├── metadata.rst
+│   │   │   │   │   │   ├── meta_extrinsics.rst
+│   │   │   │   │   │   ├── meta_lidar_sensor.rst
+│   │   │   │   │   │   ├── meta_streaming_info.rst
+│   │   │   │   │   │   ├── operations.rst
+│   │   │   │   │   │   ├── pcap_source.rst
+│   │   │   │   │   │   ├── reader.rst
+│   │   │   │   │   │   ├── stream_lidar_scan.rst
+│   │   │   │   │   │   └── writer.rst
+│   │   │   │   │   ├── ouster_pcap
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   └── os_pcap.rst
+│   │   │   │   │   └── ouster_viz
+│   │   │   │   │       ├── index.rst
+│   │   │   │   │       └── point_viz.rst
+│   │   │   │   ├── Doxyfile
+│   │   │   │   ├── images
+│   │   │   │   │   ├── brooklyn_bridge_ls_50_range_image.png
+│   │   │   │   │   ├── brooklyn_bridge_ls_50_xyz_cut.png
+│   │   │   │   │   ├── lidar_scan_destaggered.png
+│   │   │   │   │   ├── lidar_scan_staggered.png
+│   │   │   │   │   ├── lidar_scan_xyz_84_3d.png
+│   │   │   │   │   ├── lidar_scan_xyz_84.png
+│   │   │   │   │   ├── Ouster_Logo_TM_Horiz_Black_RGB_600px.png
+│   │   │   │   │   ├── Ouster_Logo_TM_Horiz_White_RGB.svg
+│   │   │   │   │   ├── Ouster_Logo_TM_Stacked_White_RGB.svg
+│   │   │   │   │   ├── ouster-viz.png
+│   │   │   │   │   ├── scans_accum_accum_scan.png
+│   │   │   │   │   ├── scans_accum_dense_every.png
+│   │   │   │   │   ├── scans_accum_map_all_scan.png
+│   │   │   │   │   ├── scans_accum_track_all.png
+│   │   │   │   │   └── viz-tutorial
+│   │   │   │   │       ├── axes_helper_unstructured.png
+│   │   │   │   │       ├── empty_point_viz.png
+│   │   │   │   │       ├── image_set_pos_bot_right.png
+│   │   │   │   │       ├── image_set_pos_center.png
+│   │   │   │   │       ├── image_set_pos_left.png
+│   │   │   │   │       ├── image_set_pos_right.png
+│   │   │   │   │       ├── lidar_scan_fields_images_labels.png
+│   │   │   │   │       ├── lidar_scan_fields_images.png
+│   │   │   │   │       ├── lidar_scan_structured.png
+│   │   │   │   │       ├── lidar_scan_viz_checkers.png
+│   │   │   │   │       ├── lidar_scan_viz_labels.png
+│   │   │   │   │       └── lidar_scan_viz.png
+│   │   │   │   ├── index.rst
+│   │   │   │   ├── installation.rst
+│   │   │   │   ├── migration
+│   │   │   │   │   ├── migration-20220927-20230114.rst
+│   │   │   │   │   ├── migration-20230114-20230403.rst
+│   │   │   │   │   └── migration-20231031-20240423.rst
+│   │   │   │   ├── overview.rst
+│   │   │   │   ├── python
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── client.rst
+│   │   │   │   │   │   ├── examples.rst
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   ├── osf.rst
+│   │   │   │   │   │   ├── pcap.rst
+│   │   │   │   │   │   └── viz.rst
+│   │   │   │   │   ├── devel.rst
+│   │   │   │   │   ├── examples
+│   │   │   │   │   │   ├── basics-sensor.rst
+│   │   │   │   │   │   ├── conversion.rst
+│   │   │   │   │   │   ├── index.rst
+│   │   │   │   │   │   ├── lidar-scan.rst
+│   │   │   │   │   │   ├── osf-examples.rst
+│   │   │   │   │   │   ├── record-stream.rst
+│   │   │   │   │   │   ├── udp-packets.rst
+│   │   │   │   │   │   └── visualizations.rst
+│   │   │   │   │   ├── quickstart.rst
+│   │   │   │   │   ├── slam-api-example.rst
+│   │   │   │   │   ├── using-scan-source.rst
+│   │   │   │   │   └── viz
+│   │   │   │   │       ├── index.rst
+│   │   │   │   │       ├── viz-api-tutorial.rst
+│   │   │   │   │       ├── viz-run.rst
+│   │   │   │   │       └── viz-scans-accum.rst
+│   │   │   │   ├── reference
+│   │   │   │   │   ├── changelog.rst
+│   │   │   │   │   ├── lidar-scan.rst
+│   │   │   │   │   └── osf.rst
+│   │   │   │   ├── sample-data.rst
+│   │   │   │   ├── _static
+│   │   │   │   │   └── css
+│   │   │   │   │       └── ouster_rtd_tweaks.css
+│   │   │   │   ├── _templates
+│   │   │   │   │   └── versions.html
+│   │   │   │   └── versions.json
+│   │   │   ├── examples
+│   │   │   │   ├── async_client_example.cpp
+│   │   │   │   ├── client_example.cpp
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── config_example.cpp
+│   │   │   │   ├── helpers.cpp
+│   │   │   │   ├── helpers.h
+│   │   │   │   ├── lidar_scan_example.cpp
+│   │   │   │   ├── linking_example
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── Dockerfile
+│   │   │   │   │   ├── example.bash
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── readme.rst
+│   │   │   │   ├── mtp_client_example.cpp
+│   │   │   │   ├── osf_reader_example.cpp
+│   │   │   │   ├── osf_writer_example.cpp
+│   │   │   │   ├── representations_example.cpp
+│   │   │   │   └── viz_example.cpp
+│   │   │   ├── LICENSE
+│   │   │   ├── LICENSE-bin
+│   │   │   ├── ouster_client
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── include
+│   │   │   │   │   ├── optional-lite
+│   │   │   │   │   │   └── nonstd
+│   │   │   │   │   │       └── optional.hpp
+│   │   │   │   │   └── ouster
+│   │   │   │   │       ├── client.h
+│   │   │   │   │       ├── defaults.h
+│   │   │   │   │       ├── image_processing.h
+│   │   │   │   │       ├── impl
+│   │   │   │   │       │   ├── cartesian.h
+│   │   │   │   │       │   ├── client_poller.h
+│   │   │   │   │       │   ├── lidar_scan_impl.h
+│   │   │   │   │       │   ├── netcompat.h
+│   │   │   │   │       │   ├── packet_writer.h
+│   │   │   │   │       │   ├── profile_extension.h
+│   │   │   │   │       │   └── ring_buffer.h
+│   │   │   │   │       ├── lidar_scan.h
+│   │   │   │   │       ├── sensor_http.h
+│   │   │   │   │       ├── types.h
+│   │   │   │   │       ├── udp_packet_source.h
+│   │   │   │   │       ├── util.h
+│   │   │   │   │       └── version.h
+│   │   │   │   └── src
+│   │   │   │       ├── client.cpp
+│   │   │   │       ├── curl_client.h
+│   │   │   │       ├── http_client.h
+│   │   │   │       ├── image_processing.cpp
+│   │   │   │       ├── lidar_scan.cpp
+│   │   │   │       ├── logging.cpp
+│   │   │   │       ├── logging.h
+│   │   │   │       ├── netcompat.cpp
+│   │   │   │       ├── parsing.cpp
+│   │   │   │       ├── profile_extension.cpp
+│   │   │   │       ├── sensor_http.cpp
+│   │   │   │       ├── sensor_http_imp.cpp
+│   │   │   │       ├── sensor_http_imp.h
+│   │   │   │       ├── sensor_info.cpp
+│   │   │   │       ├── sensor_tcp_imp.cpp
+│   │   │   │       ├── sensor_tcp_imp.h
+│   │   │   │       ├── types.cpp
+│   │   │   │       ├── udp_packet_source.cpp
+│   │   │   │       └── util.cpp
+│   │   │   ├── ouster_osf
+│   │   │   │   ├── CHANGELOG.rst
+│   │   │   │   ├── cmake
+│   │   │   │   │   └── osf_fb_utils.cmake
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── fb
+│   │   │   │   │   ├── chunk.fbs
+│   │   │   │   │   ├── header.fbs
+│   │   │   │   │   ├── metadata.fbs
+│   │   │   │   │   ├── os_sensor
+│   │   │   │   │   │   ├── extrinsics.fbs
+│   │   │   │   │   │   ├── lidar_scan_stream.fbs
+│   │   │   │   │   │   └── lidar_sensor.fbs
+│   │   │   │   │   └── streaming
+│   │   │   │   │       └── streaming_info.fbs
+│   │   │   │   ├── include
+│   │   │   │   │   └── ouster
+│   │   │   │   │       └── osf
+│   │   │   │   │           ├── basics.h
+│   │   │   │   │           ├── crc32.h
+│   │   │   │   │           ├── file.h
+│   │   │   │   │           ├── layout_streaming.h
+│   │   │   │   │           ├── metadata.h
+│   │   │   │   │           ├── meta_extrinsics.h
+│   │   │   │   │           ├── meta_lidar_sensor.h
+│   │   │   │   │           ├── meta_streaming_info.h
+│   │   │   │   │           ├── operations.h
+│   │   │   │   │           ├── pcap_source.h
+│   │   │   │   │           ├── reader.h
+│   │   │   │   │           ├── stream_lidar_scan.h
+│   │   │   │   │           └── writer.h
+│   │   │   │   ├── README.rst
+│   │   │   │   ├── src
+│   │   │   │   │   ├── basics.cpp
+│   │   │   │   │   ├── compat_ops.cpp
+│   │   │   │   │   ├── compat_ops.h
+│   │   │   │   │   ├── crc32.cpp
+│   │   │   │   │   ├── fb_utils.cpp
+│   │   │   │   │   ├── fb_utils.h
+│   │   │   │   │   ├── file.cpp
+│   │   │   │   │   ├── json_utils.cpp
+│   │   │   │   │   ├── json_utils.h
+│   │   │   │   │   ├── layout_streaming.cpp
+│   │   │   │   │   ├── metadata.cpp
+│   │   │   │   │   ├── meta_extrinsics.cpp
+│   │   │   │   │   ├── meta_lidar_sensor.cpp
+│   │   │   │   │   ├── meta_streaming_info.cpp
+│   │   │   │   │   ├── operations.cpp
+│   │   │   │   │   ├── pcap_source.cpp
+│   │   │   │   │   ├── png_tools.cpp
+│   │   │   │   │   ├── png_tools.h
+│   │   │   │   │   ├── reader.cpp
+│   │   │   │   │   ├── stream_lidar_scan.cpp
+│   │   │   │   │   └── writer.cpp
+│   │   │   │   └── tests
+│   │   │   │       ├── basics_test.cpp
+│   │   │   │       ├── CMakeLists.txt
+│   │   │   │       ├── common.h
+│   │   │   │       ├── crc_test.cpp
+│   │   │   │       ├── file_ops_test.cpp
+│   │   │   │       ├── file_test.cpp
+│   │   │   │       ├── metadata_tests.cpp
+│   │   │   │       ├── meta_streaming_info_test.cpp
+│   │   │   │       ├── operations_test.cpp
+│   │   │   │       ├── osf_test.h
+│   │   │   │       ├── pcap_source_test.cpp
+│   │   │   │       ├── png_tools_test.cpp
+│   │   │   │       ├── reader_test.cpp
+│   │   │   │       ├── writer_custom_test.cpp
+│   │   │   │       ├── writer_test.cpp
+│   │   │   │       └── writerv2_test.cpp
+│   │   │   ├── ouster_pcap
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── include
+│   │   │   │   │   └── ouster
+│   │   │   │   │       ├── indexed_pcap_reader.h
+│   │   │   │   │       ├── os_pcap.h
+│   │   │   │   │       └── pcap.h
+│   │   │   │   └── src
+│   │   │   │       ├── indexed_pcap_reader.cpp
+│   │   │   │       ├── os_pcap.cpp
+│   │   │   │       └── pcap.cpp
+│   │   │   ├── ouster_viz
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── include
+│   │   │   │   │   └── ouster
+│   │   │   │   │       └── point_viz.h
+│   │   │   │   └── src
+│   │   │   │       ├── camera.cpp
+│   │   │   │       ├── camera.h
+│   │   │   │       ├── cloud.cpp
+│   │   │   │       ├── cloud.h
+│   │   │   │       ├── colormaps.h
+│   │   │   │       ├── common.h
+│   │   │   │       ├── glfw.cpp
+│   │   │   │       ├── glfw.h
+│   │   │   │       ├── gltext.cpp
+│   │   │   │       ├── gltext.h
+│   │   │   │       ├── image.cpp
+│   │   │   │       ├── image.h
+│   │   │   │       ├── misc.cpp
+│   │   │   │       ├── misc.h
+│   │   │   │       └── point_viz.cpp
+│   │   │   ├── python
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── Dockerfile
+│   │   │   │   ├── MANIFEST.in
+│   │   │   │   ├── mypy.ini
+│   │   │   │   ├── pyproject.toml
+│   │   │   │   ├── README.rst
+│   │   │   │   ├── setup.cfg
+│   │   │   │   ├── setup.py
+│   │   │   │   ├── src
+│   │   │   │   │   ├── cpp
+│   │   │   │   │   │   ├── _client.cpp
+│   │   │   │   │   │   ├── _osf.cpp
+│   │   │   │   │   │   ├── _pcap.cpp
+│   │   │   │   │   │   └── _viz.cpp
+│   │   │   │   │   └── ouster
+│   │   │   │   │       ├── cli
+│   │   │   │   │       │   ├── core
+│   │   │   │   │       │   │   ├── borg.py
+│   │   │   │   │       │   │   ├── cli_args.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   └── util.py
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── plugins
+│   │   │   │   │       │   │   ├── discover.py
+│   │   │   │   │       │   │   ├── source_osf.py
+│   │   │   │   │       │   │   ├── source_pcap.py
+│   │   │   │   │       │   │   ├── source.py
+│   │   │   │   │       │   │   ├── source_save.py
+│   │   │   │   │       │   │   ├── source_sensor.py
+│   │   │   │   │       │   │   ├── source_util.py
+│   │   │   │   │       │   │   └── testing.py
+│   │   │   │   │       │   └── py.typed
+│   │   │   │   │       ├── client
+│   │   │   │   │       │   └── __init__.py
+│   │   │   │   │       ├── osf
+│   │   │   │   │       │   └── __init__.py
+│   │   │   │   │       ├── pcap
+│   │   │   │   │       │   └── __init__.py
+│   │   │   │   │       ├── sdk
+│   │   │   │   │       │   ├── bag
+│   │   │   │   │       │   │   ├── bag.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │       │   ├── client
+│   │   │   │   │       │   │   ├── _client.pyi
+│   │   │   │   │       │   │   ├── core.py
+│   │   │   │   │       │   │   ├── data.py
+│   │   │   │   │       │   │   ├── _digest.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── multi.py
+│   │   │   │   │       │   │   ├── multi_scan_source.py
+│   │   │   │   │       │   │   ├── py.typed
+│   │   │   │   │       │   │   ├── scan_source_adapter.py
+│   │   │   │   │       │   │   ├── scan_source.py
+│   │   │   │   │       │   │   └── _utils
+│   │   │   │   │       │   │       └── __init__.py
+│   │   │   │   │       │   ├── convert_to_legacy.py
+│   │   │   │   │       │   ├── examples
+│   │   │   │   │       │   │   ├── client.py
+│   │   │   │   │       │   │   ├── colormaps.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── open3d.py
+│   │   │   │   │       │   │   ├── osf.py
+│   │   │   │   │       │   │   ├── pcap.py
+│   │   │   │   │       │   │   ├── reference.py
+│   │   │   │   │       │   │   └── viz.py
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── io_type.py
+│   │   │   │   │       │   ├── open_source.py
+│   │   │   │   │       │   ├── osf
+│   │   │   │   │       │   │   ├── data.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── multi.py
+│   │   │   │   │       │   │   ├── _osf.pyi
+│   │   │   │   │       │   │   ├── osf_scan_source.py
+│   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │       │   ├── pcap
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── packet_iter.py
+│   │   │   │   │       │   │   ├── pcap_multi_packet_reader.py
+│   │   │   │   │       │   │   ├── pcap.py
+│   │   │   │   │       │   │   ├── _pcap.pyi
+│   │   │   │   │       │   │   ├── pcap_scan_source.py
+│   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │       │   ├── py.typed
+│   │   │   │   │       │   ├── sensor
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── py.typed
+│   │   │   │   │       │   │   ├── sensor_multi_packet_reader.py
+│   │   │   │   │       │   │   ├── sensor_scan_source.py
+│   │   │   │   │       │   │   └── util.py
+│   │   │   │   │       │   ├── sensor_util.py
+│   │   │   │   │       │   ├── simple_viz.py
+│   │   │   │   │       │   ├── util
+│   │   │   │   │       │   │   ├── extrinsics.py
+│   │   │   │   │       │   │   ├── forward_slicer.py
+│   │   │   │   │       │   │   ├── __init__.py
+│   │   │   │   │       │   │   ├── metadata.py
+│   │   │   │   │       │   │   ├── parsing.py
+│   │   │   │   │       │   │   ├── pose_util.py
+│   │   │   │   │       │   │   ├── progress_bar.py
+│   │   │   │   │       │   │   └── py.typed
+│   │   │   │   │       │   └── viz
+│   │   │   │   │       │       ├── core.py
+│   │   │   │   │       │       ├── __init__.py
+│   │   │   │   │       │       ├── multi_viz.py
+│   │   │   │   │       │       ├── py.typed
+│   │   │   │   │       │       ├── scans_accum.py
+│   │   │   │   │       │       ├── util.py
+│   │   │   │   │       │       ├── view_mode.py
+│   │   │   │   │       │       └── _viz.pyi
+│   │   │   │   │       └── viz
+│   │   │   │   │           └── __init__.py
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── conftest.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── osf
+│   │   │   │   │   │   ├── test_osf_basics.py
+│   │   │   │   │   │   └── test_osf_extrinsics.py
+│   │   │   │   │   ├── ouster
+│   │   │   │   │   │   └── cli
+│   │   │   │   │   │       └── plugins
+│   │   │   │   │   │           └── bad_plugin.py
+│   │   │   │   │   ├── test_batching.py
+│   │   │   │   │   ├── test_cli.py
+│   │   │   │   │   ├── test_cli_util.py
+│   │   │   │   │   ├── test_config.py
+│   │   │   │   │   ├── test_core.py
+│   │   │   │   │   ├── test_data.py
+│   │   │   │   │   ├── test_destagger.py
+│   │   │   │   │   ├── test_discover.py
+│   │   │   │   │   ├── test_extended_profiles.py
+│   │   │   │   │   ├── test_forward_slicer.py
+│   │   │   │   │   ├── test_http_client.py
+│   │   │   │   │   ├── test_metadata.py
+│   │   │   │   │   ├── test_open_source.py
+│   │   │   │   │   ├── test_packet_iter.py
+│   │   │   │   │   ├── test_parsing.py
+│   │   │   │   │   ├── test_pcap.py
+│   │   │   │   │   ├── test_plugins.py
+│   │   │   │   │   ├── test_pose_util.py
+│   │   │   │   │   ├── test_resolve_extrinsics.py
+│   │   │   │   │   ├── test_sdk_utils.py
+│   │   │   │   │   ├── test_single_scan_source.py
+│   │   │   │   │   ├── test_viz.py
+│   │   │   │   │   ├── test_viz_utils.py
+│   │   │   │   │   └── test_xyzlut.py
+│   │   │   │   └── tox.ini
+│   │   │   ├── README.rst
+│   │   │   └── tests
+│   │   │       ├── bcompat_meta_json_test.cpp
+│   │   │       ├── cartesian_test.cpp
+│   │   │       ├── CMakeLists.txt
+│   │   │       ├── fusa_profile_test.cpp
+│   │   │       ├── lidar_scan_test.cpp
+│   │   │       ├── metadata
+│   │   │       │   ├── 1_12_os1-991913000010-64.json
+│   │   │       │   ├── 1_12_os1-991937000062-16A0_legacy.json
+│   │   │       │   ├── 1_12_os1-991937000062-64_legacy.json
+│   │   │       │   ├── 1_13_os1-991913000010-64.json
+│   │   │       │   ├── 1_13_os1-991937000062-16A0_legacy.json
+│   │   │       │   ├── 1_13_os1-991937000062-32A02_legacy.json
+│   │   │       │   ├── 1_14_6cccd_os-882002000138-128_legacy.json
+│   │   │       │   ├── 1_14_6cccd_os-882002000138-32U0_legacy.json
+│   │   │       │   ├── 1_14_beta_os1-991937000062-16A0_legacy.json
+│   │   │       │   ├── 1_14_beta_os1-991937000062-64_legacy.json
+│   │   │       │   ├── 2_0_0_os1-991913000010-64.json
+│   │   │       │   ├── 2_0_0_os1-992008000494-128_col_win_legacy.json
+│   │   │       │   ├── 2_0_rc2_os-992011000121-32U0_legacy.json
+│   │   │       │   ├── 2_1_2_os1-991913000010-64.json
+│   │   │       │   ├── 2_1_2_os1-991913000010-64_legacy.json
+│   │   │       │   ├── 2_2_os-992119000444-128.json
+│   │   │       │   ├── 2_2_os-992119000444-128_legacy.json
+│   │   │       │   ├── 2_3_1_os-992146000760-128.json
+│   │   │       │   ├── 2_3_1_os-992146000760-128_legacy.json
+│   │   │       │   ├── 2_4_0_os-992146000760-128.json
+│   │   │       │   ├── 2_4_0_os-992146000760-128_legacy.json
+│   │   │       │   ├── 2_5_0_os-992146000760-128.json
+│   │   │       │   ├── 2_5_0_os-992146000760-128_legacy.json
+│   │   │       │   ├── 3_0_1_os-122246000293-128.json
+│   │   │       │   ├── 3_0_1_os-122246000293-128_legacy.json
+│   │   │       │   ├── malformed
+│   │   │       │   │   ├── complete_but_all_zeros_legacy.json
+│   │   │       │   │   ├── garbled_legacy_and_nonlegacy.json
+│   │   │       │   │   ├── incomplete_data_format_legacy.json
+│   │   │       │   │   ├── incomplete_data_format_nonlegacy.json
+│   │   │       │   │   ├── incomplete_no_calref_nonlegacy.json
+│   │   │       │   │   ├── incomplete_no_sensor_info_nonlegacy.json
+│   │   │       │   │   ├── incorrect_nbeam_angles_legacy_113.json
+│   │   │       │   │   └── legacy_with_calibration_status.json
+│   │   │       │   └── ouster-studio-reduced-config-v1.json
+│   │   │       ├── metadata_errors_test.cpp
+│   │   │       ├── metadata_test.cpp
+│   │   │       ├── osfs
+│   │   │       │   ├── empty_osf.osf
+│   │   │       │   └── OS-1-128_v2.3.0_1024x10_lb_n3.osf
+│   │   │       ├── packet_writer_test.cpp
+│   │   │       ├── parsing_benchmark_test.cpp
+│   │   │       ├── pcaps
+│   │   │       │   ├── empty_pcap.json
+│   │   │       │   ├── empty_pcap.pcap
+│   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10_digest.json
+│   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.pcap
+│   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10_digest.json
+│   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10.json
+│   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10.pcap
+│   │   │       │   ├── OS-0-32-U1_v2.2.0_1024x10-single-packet.pcap
+│   │   │       │   ├── OS-1-128_767798045_1024x10_20230712_120049.json
+│   │   │       │   ├── OS-1-128_767798045_1024x10_20230712_120049.pcap
+│   │   │       │   ├── OS-1-128_v2.3.0_1024x10.json
+│   │   │       │   ├── OS-1-128_v2.3.0_1024x10_lb_n3.pcap
+│   │   │       │   ├── OS-1-128_v2.3.0_1024x10_lb_n3_poses_kitti.txt
+│   │   │       │   ├── OS-1-128_v3.0.1_1024x10_20230216_142857_poses_kitti.txt
+│   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10_digest.json
+│   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10.json
+│   │   │       │   ├── OS-1-32-G_v2.1.1_1024x10.pcap
+│   │   │       │   ├── OS-1-64_1024x10_fw20.pcap
+│   │   │       │   ├── OS-1-64_sensor_config_reduced.json
+│   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10_digest.json
+│   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10.json
+│   │   │       │   ├── OS-2-128-U1_v2.3.0_1024x10.pcap
+│   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10_digest.json
+│   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10.json
+│   │   │       │   ├── OS-2-32-U0_v2.0.0_1024x10.pcap
+│   │   │       │   └── VLI-16-one-packet.pcap
+│   │   │       ├── pcap_test.cpp
+│   │   │       ├── pcap_with_extrinsics
+│   │   │       │   ├── extrinsic_parameters.json
+│   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │       │   └── OS-0-128-U1_v2.3.0_10.pcap
+│   │   │       ├── pcap_without_extrinsics
+│   │   │       │   ├── OS-0-128-U1_v2.3.0_1024x10.json
+│   │   │       │   └── OS-0-128-U1_v2.3.0_10.pcap
+│   │   │       ├── profile_extension_test.cpp
+│   │   │       ├── scan_batcher_test.cpp
+│   │   │       ├── udp_queue_test.cpp
+│   │   │       └── util.h
+│   │   ├── ouster_sensor_msgs
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── msg
+│   │   │   │   ├── PacketMsg.msg
+│   │   │   │   └── Telemetry.msg
+│   │   │   ├── package.xml
+│   │   │   └── srv
+│   │   │       ├── GetConfig.srv
+│   │   │       ├── GetMetadata.srv
+│   │   │       └── SetConfig.srv
+│   │   └── README.md
+│   └── sensor_sync
+│       ├── CMakeLists.txt
+│       ├── include
+│       │   └── sensor_sync
+│       ├── LICENSE
+│       ├── msg
+│       │   └── SyncedSensors.msg
+│       ├── package.xml
+│       ├── sensor_sync
+│       │   ├── calibration_node.py
+│       │   ├── __init__.py
+│       │   ├── lidar_test_node.py
+│       │   ├── lidar_utils.py
+│       │   └── sync_node.py
+│       └── src
+└── tree.txt
+
+791 directories, 3196 files

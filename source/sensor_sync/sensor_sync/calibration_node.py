@@ -13,14 +13,78 @@ from sensor_msgs.msg import PointCloud2, PointField
 import ros2_numpy as rnp
 import struct
 import matplotlib.pyplot as plt
+# from ouster_sensor_msgs.msg import PacketMsg
+# from ouster_sensor_msgs.libouster_sensor_msgs__rosidl_generator_py import point_cloud_from_packets
 from mpl_toolkits.mplot3d import Axes3D
+from ouster.sdk.client import LidarScan, ChanField, XYZLut
 
 
 class LidarUtils(Node):
     def __init__(self):
-        pass
+        
+        self.init_plot()
 
-    def lidar_reconstructor(self, msg):
+
+    def init_plot(self):
+        self.fig = plt.figure()
+        self.ax = self.fig.add_subplot(111, projection='3d')
+        plt.ion()
+        plt.show()
+        logger.info("Lidar Visualizer Node Initialized")
+
+        # Metadata and LUT initialization
+        self.metadata = None
+        self.xyz_lut = None
+
+
+    def update_plot(self, points):
+        x_vals = points[:, 0]
+        y_vals = points[:, 1]
+        z_vals = points[:, 2]
+        intensity = points[:, 3]
+
+        self.ax.cla()
+        self.scatter = self.ax.scatter(x_vals, y_vals, z_vals, c=intensity, cmap='viridis', s=1)
+        self.ax.set_title("Live 3D PointCloud Visualization")
+        self.ax.set_xlabel("X")
+        self.ax.set_ylabel("Y")
+        self.ax.set_zlabel("Z")
+        plt.draw()
+        plt.pause(0.001)
+
+
+    def convert_to_numpy(self, msg):
+        try:
+            scan = LidarScan(msg.height, msg.width)
+            scan_field = scan.field(ChanField.RANGE)
+            xyz_lut = XYZLut(self.metadata)
+            xyz = xyz_lut(scan_field)
+
+            intensity = scan.field(ChanField.REFLECTIVITY)
+
+            x = xyz[:, :, 0].flatten()
+            y = xyz[:, :, 1].flatten()
+            z = xyz[:, :, 2].flatten()
+            intensity = intensity.flatten()
+
+            points = np.stack((x, y, z, intensity), axis=-1)
+            return points
+
+        except Exception as e:
+            logger.error(f"Error in convert_to_numpy: {e}")
+            return np.array([])
+
+
+    def lidar_reconstructor(self, packet_msg):
+        try:
+            points = self.convert_to_numpy(packet_msg)
+            if points.size > 0:
+                self.update_plot(points)
+        except Exception as e:
+            logger.error(f"Error in lidar_callback: {e}")
+
+
+    def manual_lidar_reconstructor(self, msg):
         try:
             point_step = msg.point_step
             data = msg.data
@@ -79,15 +143,13 @@ class LidarUtils(Node):
             points_array = np.array(reconstructed_points, dtype=np.float32)
             logger.info(f"Reconstructed PointCloud2 with shape: {points_array.shape}")
             if points_array.shape[0] > 0:
-                self.visualize_points(points_array)
+                self.update_plot(points_array)
             else:
                 logger.warning("No valid points to visualize.")
 
         except Exception as e:
             logger.error(f"Error in lidar_callback: {e}")
         return points_array
-    
-
 
     def visualize_points(self, points):
         """ Live 3D visualization using Matplotlib. """
@@ -150,47 +212,50 @@ class LidarUtils(Node):
 class CalibrationNode(Node):
     def __init__(self):
         super().__init__('calibration_node')
+        # self.subscription = self.create_subscription(
+        #     SyncedSensors,
+        #     '/synced_sensors',
+        #     self.listener_callback,
+        #     10
+        # )
+
+        
+
+        # self.l_utils = LidarUtils()
+        # # self.sync_pub = self.create_publisher(SyncedSensors, '/synced_sensors', 10)
+        # # self.timer = self.create_timer(0.5, self.timer_callback)
+
+        # self.camera = None
+        # self.lidar = None
+        # self.radar = None
+        # self.visualize = False
+        # self.bridge = CvBridge()
+
         self.subscription = self.create_subscription(
-            SyncedSensors,
-            '/synced_sensors',
+            PointCloud2,
+            '/ouster/points',
             self.listener_callback,
             10
         )
-
-        self.l_utils = LidarUtils()
-        # self.sync_pub = self.create_publisher(SyncedSensors, '/synced_sensors', 10)
-        # self.timer = self.create_timer(0.5, self.timer_callback)
-
-        self.camera = None
-        self.lidar = None
-        self.radar = None
-        self.visualize = False
-        self.bridge = CvBridge()
+        self.lidar_node = LidarUtils()
         logger.info("Calibration Node Initialized")
 
 
+
     def listener_callback(self, msg):
-        self.camera = msg.camera
-        self.lidar = msg.lidar
-        self.radar = msg.radar
-        logger.info(f"Received Synced Message:")
-        logger.info(f"Sync Time: {msg.sync_time}")
+        logger.debug("listener_callback...")
+
+        self.lidar_node.lidar_reconstructor(msg)
+        # self.camera = msg.camera
+        # self.lidar = msg.lidar
+        # self.radar = msg.radar
+        # logger.info(f"Received Synced Message:")
+        # logger.info(f"Sync Time: {msg.sync_time}")
         
-        logger.debug(f'lidar_points:{self.lidar.header}')
+        # logger.debug(f'lidar_points:{self.lidar.header}')
 
-        lidar_points = self.l_utils.lidar_reconstructor(self.lidar)
-        # lidar_points = self.pc2_to_array(self.lidar)
+        # lidar_points = self.l_utils.manual_lidar_reconstructor(self.lidar)
 
-        # logger.debug(f"First 5 X Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Y Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Z Points: {lidar_points['xyz'][:5]}")
-        # logger.debug(f"First 5 Intensity: {lidar_points['intensity'][:5]}")
-
-        # self.process_camera()
-        # self.process_lidar()
-        # self.process_radar()
-
-        # radar_points = self.parse_pointcloud2(self.radar)
 
 
 
