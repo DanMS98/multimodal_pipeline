@@ -33,6 +33,7 @@ install(
 install(PROGRAMS
   sensor_sync/sync_node.py
   sensor_sync/calibration_node.py
+  sensor_sync/lidar_test_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
