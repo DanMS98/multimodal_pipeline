@@ -71,17 +71,17 @@ class CalibrationNode(Node):
         return transform
     
 
-    # def transform_to_matrix(self, transform):
-    #     t = transform.transform.translation
-    #     q = transform.transform.rotation
+    def transform_to_matrix(self, transform):
+        t = transform.transform.translation
+        q = transform.transform.rotation
 
-    #     translation = np.array([t.x, t.y, t.z])
-    #     rotation = R.from_quat([q.x, q.y, q.z, q.w]).as_matrix()
+        translation = np.array([t.x, t.y, t.z])
+        rotation = R.from_quat([q.x, q.y, q.z, q.w]).as_matrix()
 
-    #     T = np.eye(4)
-    #     T[:3, :3] = rotation
-    #     T[:3, 3] = translation
-    #     return T
+        T = np.eye(4)
+        T[:3, :3] = rotation
+        T[:3, 3] = translation
+        return T
 
     def transform_to_kdl(self, t):
         return PyKDL.Frame(PyKDL.Rotation.Quaternion(
@@ -93,12 +93,35 @@ class CalibrationNode(Node):
     
     def do_transform_cloud(self, cloud, transform):
         t_kdl = self.transform_to_kdl(transform)
+        # T = self.transform_to_matrix(transform)
+        fields = cloud.fields
+        header = cloud.header
         points_out = []
-        for p_in in read_points(cloud, field_names=("x", "y", "z")):
-            p_out = t_kdl * PyKDL.Vector(p_in[0], p_in[1], p_in[2])
+
+        for p in read_points(cloud, field_names=[f.name for f in fields], skip_nans=False):
+            xyz = PyKDL.Vector(p[0], p[1], p[2])
+            # transformed_xyz = t_kdl * xyz
+            # xyz = np.array([p[0], p[1], p[2], 1.0])
+            # transformed_xyz = T @ xyz
+            # full_point = (
+            #     transformed_xyz[0],  # x
+            #     transformed_xyz[1],  # y
+            #     transformed_xyz[2],  # z
+            #     p[3],  # intensity
+            #     p[4],  # t
+            #     p[5],  # reflectivity
+            #     p[6],  # ring
+            #     p[7],  # ambient
+            #     p[8],  # range
+            #     )   
+            # points_out.append(full_point)
+            
+            p_out = t_kdl * xyz
             points_out.append([p_out[0], p_out[1], p_out[2]])
-        res = create_cloud_xyz32(transform.header, points_out)
-        return res
+
+        # transformed_cloud = pc2.create_cloud(header, fields, points_out)
+        transformed_cloud = create_cloud_xyz32(transform.header, points_out)
+        return transformed_cloud
             
 
 
