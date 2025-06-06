@@ -7,23 +7,16 @@ from loguru import logger
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
-import open3d as o3d
-import struct
-from sensor_msgs.msg import PointCloud2, PointField
-import sensor_msgs_py.point_cloud2 as pc2
-import ros2_numpy as rnp
+from sensor_msgs.msg import PointCloud2, PointField, Image
 import struct
 import matplotlib.pyplot as plt
 from tf2_ros import Buffer, TransformListener
-from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
-import tf2_ros
 from sensor_msgs_py.point_cloud2 import create_cloud, read_points, create_cloud_xyz32
 from geometry_msgs.msg import TransformStamped
 import time
 from scipy.spatial.transform import Rotation as R
 from geometry_msgs.msg import Point
 import PyKDL
-# from tf2_sensor_msgs.tf2_sensor_msgs import do_transform_cloud
 
 
 
@@ -37,12 +30,21 @@ class CalibrationNode(Node):
                                                 spin_thread=True)
         # self.timer = self.create_timer(2.0, self.lookup_all_transforms)
 
-        self.subscription = self.create_subscription(
+        self.lidar_subscription = self.create_subscription(
             PointCloud2,
             '/ouster/points',
             self.listener_callback,
             10
         )
+        # self.create_subscription(Image, '/camera/camera/color/image_raw', self.camera_callback, 10)
+
+        self.camera_subscription = self.create_subscription(
+            Image,
+            '/camera/color/image_raw',
+            self.image_callback,
+            10
+        )
+        self.bridge = CvBridge()
         self.lidar_pub = self.create_publisher(PointCloud2, '/ouster/points_base', 10)
         self.publisher = self.create_publisher(PointCloud2, 'transformed_cloud', 10)
 
@@ -70,6 +72,22 @@ class CalibrationNode(Node):
             logger.error(f'Failed to get transform: {e}')
         return transform
     
+
+    def image_callback(self, msg: Image):
+        try:
+            image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        except Exception as e:
+            logger.error(f"Failed to convert image: {e}")
+            return
+
+        tf_msg = self.lookup_transform(source_frame=msg.header.frame_id,
+                                    target_frame='base_link',
+                                    print_tfs=False)
+
+        # if tf_msg:
+        #     cam_to_base = self.transform_to_matrix(tf_msg)
+        #     logger.info(f"Got camera → base_link transform:\n{cam_to_base}")
+        
 
     def transform_to_matrix(self, transform):
         t = transform.transform.translation

@@ -2,6 +2,7 @@
 build/
 install/
 log/
+output_pcds/
 
 # Python cache
 *.pyc
