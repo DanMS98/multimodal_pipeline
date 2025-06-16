@@ -15,6 +15,8 @@ class MultiPointCloudSaver(Node):
 
         self.ouster_output_folder = 'lidar_pcds'
         self.radar_output_folder = 'radar_pcds'
+        self.ouster_output_folder = os.path.join('pcds', 'lidar')
+        self.radar_output_folder = os.path.join('pcds', 'radar')
         os.makedirs(self.ouster_output_folder, exist_ok=True)
         os.makedirs(self.radar_output_folder, exist_ok=True)
 
@@ -28,12 +30,12 @@ class MultiPointCloudSaver(Node):
             10
         )
 
-        # self.create_subscription(
-        #     PointCloud2,
-        #     '/radar_data/point_cloud',
-        #     self.radar_callback,
-        #     10
-        # )
+        self.create_subscription(
+            PointCloud2,
+            '/radar_data/point_cloud',
+            self.radar_callback,
+            10
+        )
 
         logger.info("Subscribed to /ouster/points and /radar_data/point_cloud")
 
@@ -69,6 +71,11 @@ class MultiPointCloudSaver(Node):
         )
 
     def radar_callback(self, msg):
+        field_names = [f.name for f in msg.fields]
+        for f in msg.fields:
+            f.count = 1
+        # logger.info(f"Radar fields: {field_names}")
+        
         self.radar_frame_id = self.process_pointcloud(
             msg,
             self.radar_output_folder,
