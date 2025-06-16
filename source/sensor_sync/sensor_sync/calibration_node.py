@@ -35,8 +35,8 @@ class CalibrationNode(Node):
         self.radar_topic = '/radar_data/point_cloud'
         self.camera_topic = '/camera/color/image_raw'
 
-        self.lidar_topic = '/synced/ouster_pointcloud'
-        self.radar_topic = '/synced/radar_pointcloud'
+        self.lidar_topic = '/ouster/synced_pointcloud'
+        self.radar_topic = '/radar_data/synced_pointcloud'
 
         self.bridge = CvBridge()
 
@@ -62,11 +62,11 @@ class CalibrationNode(Node):
             10
         )
         
-        # self.lidar_pub = self.create_publisher(PointCloud2, '/ouster/points_base', 10)
-        # self.publisher = self.create_publisher(PointCloud2, 'transformed_cloud', 10)
+        lidar_pub_topic = '/ouster/calib_pointcloud'
+        radar_pub_topic = '/radar_data/calib_pointcloud'
 
-        self.calib_ouster_pub = self.create_publisher(PointCloud2, '/calib/ouster_pointcloud', 10)
-        self.calib_radar_pub = self.create_publisher(PointCloud2, '/calib/radar_pointcloud', 10)
+        self.calib_ouster_pub = self.create_publisher(PointCloud2, lidar_pub_topic, 10)
+        self.calib_radar_pub = self.create_publisher(PointCloud2, radar_pub_topic, 10)
 
 
         logger.info("Calibration Node Initialized")

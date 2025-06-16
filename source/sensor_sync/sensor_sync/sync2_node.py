@@ -6,6 +6,7 @@ from sensor_msgs.msg import PointCloud2
 from rclpy.time import Time
 from collections import deque
 import copy
+from loguru import logger
 
 class RadarLidarSyncNode(Node):
     def __init__(self):
@@ -13,13 +14,19 @@ class RadarLidarSyncNode(Node):
 
         self.radar_buffer = deque(maxlen=50)
 
-        self.create_subscription(PointCloud2, '/ouster/points', self.lidar_callback, 10)
-        self.create_subscription(PointCloud2, '/radar_data/point_cloud', self.radar_callback, 10)
+        lidar_topic = '/ouster/points'
+        radar_topic = '/radar_data/point_cloud'
 
-        self.lidar_pub = self.create_publisher(PointCloud2, '/synced/ouster_pointcloud', 10)
-        self.radar_pub = self.create_publisher(PointCloud2, '/synced/radar_pointcloud', 10)
+        self.create_subscription(PointCloud2, lidar_topic, self.lidar_callback, 10)
+        self.create_subscription(PointCloud2, radar_topic, self.radar_callback, 10)
 
-        self.get_logger().info("Radar-LiDAR sync node initialized with buffering and /synced outputs.")
+        lidar_publish_topic = '/ouster/synced_pointcloud'
+        radar_publish_topic = '/radar_data/synced_pointcloud'
+
+        self.lidar_pub = self.create_publisher(PointCloud2, lidar_publish_topic, 10)
+        self.radar_pub = self.create_publisher(PointCloud2, radar_publish_topic, 10)
+        
+        logger.info("Radar-LiDAR sync node initialized with buffering and /synced outputs.")
 
     def radar_callback(self, msg):
         stamp_ns = Time.from_msg(msg.header.stamp).nanoseconds
@@ -35,7 +42,7 @@ class RadarLidarSyncNode(Node):
                 break
 
         if matched_radar_msg is None:
-            self.get_logger().warn("No matching radar message found for current LiDAR frame.")
+            logger.warning("No matching radar message found for current LiDAR frame.")
             return
 
         synced_radar = copy.deepcopy(matched_radar_msg)
@@ -44,7 +51,7 @@ class RadarLidarSyncNode(Node):
         self.lidar_pub.publish(lidar_msg)
         self.radar_pub.publish(synced_radar)
 
-        self.get_logger().info(
+        logger.info(
             f"Published synced LiDAR and Radar @ t={lidar_msg.header.stamp.sec}.{lidar_msg.header.stamp.nanosec}"
         )
 

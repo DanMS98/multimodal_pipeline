@@ -36,8 +36,8 @@ class MultiPointCloudSaver(Node):
 
         # radar_topic = '/radar_data/point_cloud'
         # ouster_topic = '/ouster/points'
-        radar_topic = '/calib/radar_pointcloud'
-        ouster_topic = '/calib/ouster_pointcloud'
+        radar_topic = '/radar_data/calib_pointcloud'
+        ouster_topic = '/ouster/calib_pointcloud'
 
         self.create_subscription(
             PointCloud2,
