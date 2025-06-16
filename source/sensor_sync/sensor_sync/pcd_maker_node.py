@@ -23,30 +23,21 @@ class MultiPointCloudSaver(Node):
         self.ouster_frame_id = 0
         self.radar_frame_id = 0
 
-        # self.create_subscription(
-        #     PointCloud2,
-        #     '/ouster/points',
-        #     self.ouster_callback,
-        #     10
-        # )
+        # radar_topic = '/radar_data/point_cloud'
+        # ouster_topic = '/ouster/points'
+        radar_topic = '/radar_data/point_cloud'
+        ouster_topic = '/ouster/points'
 
         self.create_subscription(
             PointCloud2,
-            '/synced/ouster_pointcloud',
+            ouster_topic,
             self.ouster_callback,
             10
         )
 
-        # self.create_subscription(
-        #     PointCloud2,
-        #     '/radar_data/point_cloud',
-        #     self.radar_callback,
-        #     10
-        # )
-
         self.create_subscription(
             PointCloud2,
-            '/synced/radar_pointcloud',
+            radar_topic,
             self.radar_callback,
             10
         )
