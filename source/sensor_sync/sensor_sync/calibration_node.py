@@ -30,23 +30,44 @@ class CalibrationNode(Node):
                                                 spin_thread=True)
         # self.timer = self.create_timer(2.0, self.lookup_all_transforms)
 
+
+        self.lidar_topic = '/ouster/points'
+        self.radar_topic = '/radar_data/point_cloud'
+        self.camera_topic = '/camera/color/image_raw'
+
+        self.lidar_topic = '/synced/ouster_pointcloud'
+        self.radar_topic = '/synced/radar_pointcloud'
+
+        self.bridge = CvBridge()
+
         self.lidar_subscription = self.create_subscription(
             PointCloud2,
-            '/ouster/points',
-            self.listener_callback,
+            self.lidar_topic,
+            self.ouster_callback,
             10
         )
+        self.radar_subscription = self.create_subscription(
+            PointCloud2,
+            self.radar_topic,
+            self.radar_callback,
+            10
+        )
+
         # self.create_subscription(Image, '/camera/camera/color/image_raw', self.camera_callback, 10)
 
         self.camera_subscription = self.create_subscription(
             Image,
-            '/camera/color/image_raw',
+            self.camera_topic,
             self.image_callback,
             10
         )
-        self.bridge = CvBridge()
-        self.lidar_pub = self.create_publisher(PointCloud2, '/ouster/points_base', 10)
-        self.publisher = self.create_publisher(PointCloud2, 'transformed_cloud', 10)
+        
+        # self.lidar_pub = self.create_publisher(PointCloud2, '/ouster/points_base', 10)
+        # self.publisher = self.create_publisher(PointCloud2, 'transformed_cloud', 10)
+
+        self.calib_ouster_pub = self.create_publisher(PointCloud2, '/calib/ouster_pointcloud', 10)
+        self.calib_radar_pub = self.create_publisher(PointCloud2, '/calib/radar_pointcloud', 10)
+
 
         logger.info("Calibration Node Initialized")
 
@@ -116,58 +137,49 @@ class CalibrationNode(Node):
         header = cloud.header
         points_out = []
 
-        for p in read_points(cloud, field_names=[f.name for f in fields], skip_nans=False):
+        has_intensity = any(f.name == 'intensity' for f in fields)
+
+        for p in read_points(cloud, field_names=[f.name for f in fields], skip_nans=True):
             xyz = PyKDL.Vector(p[0], p[1], p[2])
-            # transformed_xyz = t_kdl * xyz
-            # xyz = np.array([p[0], p[1], p[2], 1.0])
-            # transformed_xyz = T @ xyz
-            # full_point = (
-            #     transformed_xyz[0],  # x
-            #     transformed_xyz[1],  # y
-            #     transformed_xyz[2],  # z
-            #     p[3],  # intensity
-            #     p[4],  # t
-            #     p[5],  # reflectivity
-            #     p[6],  # ring
-            #     p[7],  # ambient
-            #     p[8],  # range
-            #     )   
-            # points_out.append(full_point)
-            
             p_out = t_kdl * xyz
-            points_out.append([p_out[0], p_out[1], p_out[2]])
-
-        # transformed_cloud = pc2.create_cloud(header, fields, points_out)
-        transformed_cloud = create_cloud_xyz32(transform.header, points_out)
-        return transformed_cloud
-            
-
-
-    def listener_callback(self, msg: PointCloud2):
+            intensity = p[3] if has_intensity else 0.0
+            points_out.append((p_out[0], p_out[1], p_out[2], intensity))
 
         
-        tf_msg = self.lookup_transform(source_frame=msg.header.frame_id,
-                              target_frame='base_link', print_tfs=True)
-        # T = self.transform_to_matrix(tf_msg)
-        transformed_cloud = self.do_transform_cloud(msg, tf_msg)
-        logger.debug('transformed succedfully')
-        logger.info(transformed_cloud.header)
-        self.publisher.publish(transformed_cloud)
+        fields_out = [
+            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1),
+            PointField(name='intensity', offset=12, datatype=PointField.FLOAT32, count=1),
+        ]
 
-            
-        # if T is None or T.shape != (4, 4):
-        #     logger.error(f"Invalid transformation matrix: {T}")
-        #     return
-        ################
-        # transformed_cloud = do_transform_cloud(msg, tf_msg)
-        # transformed_cloud.header.frame_id = 'base_link'
-        ################
+        return create_cloud(header, fields_out, points_out)
+
+
+    def ouster_callback(self, msg: PointCloud2):
+        tf_msg = self.lookup_transform(source_frame=msg.header.frame_id,
+                                       target_frame='base_link',
+                                       print_tfs=False)
+        if tf_msg:
+            transformed = self.do_transform_cloud(msg, tf_msg)
+            self.calib_ouster_pub.publish(transformed)
+            logger.info("Published transformed LiDAR to /calib/ouster_pointcloud")
+
+    def radar_callback(self, msg: PointCloud2):
+        for f in msg.fields:
+            f.count = 1
+        tf_msg = self.lookup_transform(source_frame=msg.header.frame_id,
+                                       target_frame='base_link',
+                                       print_tfs=False)
+        if tf_msg:
+            transformed = self.do_transform_cloud(msg, tf_msg)
+            self.calib_radar_pub.publish(transformed)
+            logger.info("Published transformed Radar to calib/radar_pointcloud")
+
      
        
 
 
-
-    
 
 
 
