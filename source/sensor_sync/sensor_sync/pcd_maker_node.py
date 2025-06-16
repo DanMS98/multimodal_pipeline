@@ -23,21 +23,35 @@ class MultiPointCloudSaver(Node):
         self.ouster_frame_id = 0
         self.radar_frame_id = 0
 
+        # self.create_subscription(
+        #     PointCloud2,
+        #     '/ouster/points',
+        #     self.ouster_callback,
+        #     10
+        # )
+
         self.create_subscription(
             PointCloud2,
-            '/ouster/points',
+            '/synced/ouster_pointcloud',
             self.ouster_callback,
             10
         )
 
+        # self.create_subscription(
+        #     PointCloud2,
+        #     '/radar_data/point_cloud',
+        #     self.radar_callback,
+        #     10
+        # )
+
         self.create_subscription(
             PointCloud2,
-            '/radar_data/point_cloud',
+            '/synced/radar_pointcloud',
             self.radar_callback,
             10
         )
 
-        logger.info("Subscribed to /ouster/points and /radar_data/point_cloud")
+        logger.info("Subscribed to /synced/ouster_pointcloud and /synced/radar_pointcloud")
 
     def process_pointcloud(self, msg, output_folder, frame_id, sensor_name):
         logger.info(f"Processing point cloud from {sensor_name}...")
