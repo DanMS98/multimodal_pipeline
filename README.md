@@ -20,3 +20,16 @@ git clone git@github.com:DanMS98/multimodal_pipeline.git
 cd ..
 colcon build
 source install/setup.bash
+```
+
+---
+
+## 🔍 Visualizer: Projecting LiDAR and Radar Points onto Camera
+
+The `visualizer.py` node projects 3D points from LiDAR and radar onto the 2D camera image using known `tf_static` transformations and camera intrinsics.  Just to check Transformations.
+
+### 🖼️ Camera View
+
+![Visualizer GIF](media/visualizer_demo.gif)
+
+> 📂 Place your screen-recorded demo as `media/visualizer_demo.gif`.
