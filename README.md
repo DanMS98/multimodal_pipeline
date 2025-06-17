@@ -32,4 +32,3 @@ The `visualizer.py` node projects 3D points from LiDAR and radar onto the 2D cam
 
 ![Visualizer GIF](media/visualizer_demo.gif)
 
-> 📂 Place your screen-recorded demo as `media/visualizer_demo.gif`.
