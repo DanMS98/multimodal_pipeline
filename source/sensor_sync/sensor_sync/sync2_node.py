@@ -25,7 +25,7 @@ class RadarLidarSyncNode(Node):
 
         lidar_publish_topic = '/ouster/synced_pointcloud'
         radar_publish_topic = '/radar_data/synced_pointcloud'
-        camera_publish_topic = '/camera/synced_image'
+        camera_publish_topic = '/camera/camera/color/synced_image'
 
         self.lidar_pub = self.create_publisher(PointCloud2, lidar_publish_topic, 10)
         self.radar_pub = self.create_publisher(PointCloud2, radar_publish_topic, 10)
