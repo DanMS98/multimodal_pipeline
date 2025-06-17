@@ -79,9 +79,6 @@ class LidarToCameraVisualizer(Node):
         cv2.waitKey(1)
 
     def project_and_draw(self, msg, image, sensor_name='Sensor'):
-        logger.info(f"sensor name: [{sensor_name}] \
-                    Processing point cloud with {len(msg.data)} points. \n \
-                        Frame ID: {msg.header.frame_id} ")
         try:
             tf_msg: TransformStamped = self.tf_buffer.lookup_transform(
                 target_frame=self.cam_frame,
