@@ -26,7 +26,7 @@ source install/setup.bash
 
 ## Data demo
 Here is a sample of radar and Lidar data synced, calibrated, and combined into one file:
-![demo GIF](media/demodata.gif)
+![demo GIF](media/damodata.gif)
 
 #### 🔍 Visualizer: Projecting LiDAR and Radar Points onto Camera
 
