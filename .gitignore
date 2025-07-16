@@ -6,6 +6,7 @@ log/
 *Dataset/
 # Python cache
 *.pyc
+*.mat
 __pycache__/
 
 # Misc
