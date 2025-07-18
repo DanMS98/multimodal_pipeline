@@ -4,6 +4,7 @@ install/
 log/
 *pcds/
 *Dataset/
+stgcnn_input/
 # Python cache
 *.pyc
 *.mat
@@ -13,5 +14,8 @@ __pycache__/
 .colcon/
 *.swp
 *.DS_Store
+*.json
+*.pkl
 /source/ouster-ros/
+
 
