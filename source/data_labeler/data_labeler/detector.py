@@ -201,8 +201,9 @@ class Detector(Node):
 
 
     def run_detection_callback(self, request, response):
+        self.prev_detections = []  # [{id, x, y, z}]
+        self.next_id = 0
         with torch.no_grad():
-
             for idx, data_dict in enumerate(self.demo_dataset):
                 self.logger.info(f'Visualized sample index: \t{idx + 1}')
                 data_dict = self.demo_dataset.collate_batch([data_dict])
@@ -235,9 +236,38 @@ class Detector(Node):
                 
                 frame_id = int(data_dict['frame_id'][0])
 
+                current_dets = []
+                assigned_ids = set()
+
                 for i in range(len(boxes_np)):
+
+                    x, y, z = boxes_np[i][:3]
+                    min_dist = float('inf')
+                    matched_id = None
+
+                    for prev_detections in self.prev_detections:
+                        if prev_detections['id'] in assigned_ids:
+                            continue
+                        dx = prev_detections['x'] - x
+                        dy = prev_detections['y'] - y
+                        dz = prev_detections['z'] - z
+                        dist = np.sqrt(dx**2 + dy**2 + dz**2)
+
+                        if dist < 0.5 and dist < min_dist:
+                            min_dist = dist
+                            matched_id = prev_detections['id']
+
+                    if matched_id is not None:
+                        assigned_id = matched_id
+                        assigned_ids.add(matched_id)
+                    else:
+                        assigned_id = self.next_id
+                        self.next_id += 1
+
+
                     det = {
                         "frame_id": frame_id,
+                        "id": assigned_id,
                         "x": float(boxes_np[i][0]),
                         "y": float(boxes_np[i][1]),
                         "z": float(boxes_np[i][2]),
@@ -248,7 +278,10 @@ class Detector(Node):
                         "score": float(scores_np[i]),
                         "label": int(labels_np[i])
                     }
+                    current_dets.append(det)
                     self.all_detections.append(det)
+                
+                self.prev_detections = current_dets
 
                 if self.show_detection:
                     draw_scenes(
