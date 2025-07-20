@@ -1,5 +1,5 @@
 
-# 🚶 Sensor Sync: Pedestrian Detection Pipeline (ROS 2 Humble)
+# Sensor Sync: Pedestrian Detection Pipeline (ROS 2 Humble)
 
 This repository contains ROS 2 packages that transform raw LiDAR, radar, and camera data into synchronized, calibrated, and pseudo-labeled datasets—ready to be used for pedestrian behavior prediction and training trajectory models.
 
@@ -17,7 +17,7 @@ All stages are ROS 2 Humble–compatible and can be tested with real sensors or 
 
 ---
 
-## 🧰 Supported Sensors
+## Supported Sensors
 
 These packages assume the following setup (can be modified):
 
@@ -31,7 +31,7 @@ You can use either real-time sensor data or recorded `rosbag` files.
 
 ## 📦 Packages
 
-### ✅ `sensor_sync`
+### `sensor_sync`
 
 Responsible for synchronizing, calibrating, and saving data from all sensors:
 
@@ -43,7 +43,7 @@ Responsible for synchronizing, calibrating, and saving data from all sensors:
 
 ---
 
-### ✅ `data_labeler`
+### `data_labeler`
 
 Uses a modified **PointRCNN_IoU** model to pseudo-label the point cloud data (pedestrians only).
 
@@ -79,7 +79,7 @@ Example output:
 - Python 3 with `pip`
 
 
-### 📥 Clone and Build
+### Clone and Build
 
 In your ROS 2 workspace:
 
@@ -93,7 +93,7 @@ source install/setup.bash
 ```
 
 
-### 🚀 Running `sensor_sync`
+### Running `sensor_sync`
 
 After building, you can run the synchronizer node (see launch files in the package or write your own custom node using `sensor_sync`'s interface).
 run the launch file using:
@@ -106,7 +106,7 @@ ros2 launch sensor_sync start_sync_line.launch.py use_terminals:=true
 ```
 
 
-### 🧠 Running `data_labeler`
+### Running `data_labeler`
 
 1. Install [OpenPCDet](https://github.com/open-mmlab/OpenPCDet/blob/master/docs/INSTALL.md)
 2. Edit `detector.py` that is located in `data_labeler`:
@@ -130,11 +130,11 @@ ros2 service call /run_detection interfaces/srv/RunDetection
 ✅ **Output**: JSON file labeling pedestrians per frame.
 
 
-## 🏋️ Training Your Model
+## Training Your Model
 The provided JSON can be use to train different models.
 in this project it was used to train trajactory prediction model of STGCNN.
 
-### 📈 Example: STGCNN
+### Example: STGCNN
 
 you can use `convert_to_stgcnn.py` file to convert the detected JSON to the input format of the model used in this project: https://github.com/abduallahmohamed/Social-STGCNN <br>
 You may also modify the script to adapt to other models.
