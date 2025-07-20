@@ -119,7 +119,7 @@ Then:
 ros2 run data_labeler detector
 ```
 
-This launches a ROS 2 which is a**SERVICE NODE**.
+This launches a ROS 2 which is a **SERVICE NODE**.
 
 In a new terminal, call the service:
 
@@ -127,7 +127,7 @@ In a new terminal, call the service:
 ros2 service call /run_detection interfaces/srv/RunDetection
 ```
 
-✅ **Output**: JSON file labeling pedestrians per frame.
+**Output**: JSON file labeling pedestrians per frame.
 
 
 ## Training Your Model
@@ -136,7 +136,7 @@ in this project it was used to train trajactory prediction model of STGCNN.
 
 ### Example: STGCNN
 
-you can use `convert_to_stgcnn.py` file to convert the detected JSON to the input format of the model used in this project: https://github.com/abduallahmohamed/Social-STGCNN <br>
+You can use `convert_to_stgcnn.py` file to convert the detected JSON to the input format of the model used in this project: https://github.com/abduallahmohamed/Social-STGCNN <br>
 You may also modify the script to adapt to other models.
 
 
@@ -158,7 +158,7 @@ Detected pedestrian bounding boxes using PointRCNN_IoU:
 
 ### 🖼️ Visualizer: LiDAR/Radar → Camera Projection
 
-Visualizes 3D points from radar/LiDAR on the 2D camera image using `tf_static` and camera intrinsics.
+You can use the visualizer node to check if the sensors are publishing the data in the correct format and correct topics. This node visualizes 3D points from radar/LiDAR on the 2D camera image using `tf_static` and camera intrinsics.
 
 ```bash
 ros2 run sensor_sync visualizer.py
@@ -175,6 +175,6 @@ ros2 run sensor_sync visualizer.py
 - The pseudo-labeler is not perfect—labels are used as weak supervision
 
 ## Credits & Disclaimer
-This project’s detector logic is adapted from OpenPCDet, an open-source toolbox for 3D object detection from point clouds.
-I gratefully acknowledge their contribution—especially the data loading, model inference, and visualizer components that were modified to suit our pedestrian-only labeling needs.
+The detector logic of this project is adapted from OpenPCDet, an open-source toolbox for 3D object detection from point clouds.
+I gratefully acknowledge their contribution, especially the data loading, model inference, and visualizer components that were modified to suit my pedestrian-only labeling needs.
 OpenPCDet is licensed under the BSD 3-Clause License, and this repository complies with its terms.
