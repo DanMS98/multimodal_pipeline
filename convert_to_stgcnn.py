@@ -9,7 +9,7 @@ def convert(json_path: str, output_pkl_path: str):
     with open(json_path, 'r') as f:
         detections = json.load(f)
 
-    # Group detections: frame_id → {ped_id: (x, y)}
+
     frame_map = defaultdict(dict)
     for det in detections:
         frame = det['frame_id']
@@ -22,10 +22,9 @@ def convert(json_path: str, output_pkl_path: str):
     frame_ids_list = []
     ped_ids_list = []
 
-    for i in range(len(sorted_frames) - 19):  # 20-frame window
+    for i in range(len(sorted_frames) - 19):  
         frame_ids = sorted_frames[i:i+20]
 
-        # Find common pedestrian IDs across all 20 frames
         common_ids = set(frame_map[frame_ids[0]].keys())
         for fid in frame_ids[1:]:
             common_ids &= frame_map[fid].keys()
@@ -35,7 +34,7 @@ def convert(json_path: str, output_pkl_path: str):
 
         common_ids = sorted(list(common_ids))
         T, N = 20, len(common_ids)
-        seq = np.zeros((T, N, 2))  # shape: [20, N, 2]
+        seq = np.zeros((T, N, 2))  
 
         for t, fid in enumerate(frame_ids):
             for n, pid in enumerate(common_ids):

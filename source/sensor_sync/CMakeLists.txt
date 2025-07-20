@@ -34,7 +34,6 @@ install(PROGRAMS
   sensor_sync/sync_node.py
   sensor_sync/sync2_node.py
   sensor_sync/calibration_node.py
-  sensor_sync/lidar_test_node.py
   sensor_sync/pcd_maker_node.py
   sensor_sync/visualizer.py
   DESTINATION lib/${PROJECT_NAME}

@@ -13,8 +13,9 @@ from loguru import logger
 from scipy.spatial.transform import Rotation as R
 
 
+
 class LidarToCameraVisualizer(Node):
-    def __init__(self):
+    def __init__(self, use_synced_topics=False):
         super().__init__('lidar_to_camera_visualizer')
         
         self.tf_buffer = Buffer()
@@ -26,16 +27,26 @@ class LidarToCameraVisualizer(Node):
 
         self.create_subscription(CameraInfo, '/camera/camera/color/camera_info',
                                   self.camera_info_callback, 10)
-        self.create_subscription(Image, '/camera/camera/color/synced_image',
-                                  self.image_callback, 10)
-        self.create_subscription(PointCloud2, '/ouster/synced_pointcloud',
-                                  self.lidar_callback, 10)
-        self.create_subscription(PointCloud2, '/radar_data/synced_pointcloud',
-                                  self.radar_callback, 10)
+        
+        if use_synced_topics:
+            self.create_subscription(Image, '/camera/camera/color/synced_image',
+                                      self.image_callback, 10)
+            self.create_subscription(PointCloud2, '/ouster/synced_pointcloud',
+                                      self.lidar_callback, 10)
+            self.create_subscription(PointCloud2, '/radar_data/synced_pointcloud',
+                                      self.radar_callback, 10)
+        else:
+            self.create_subscription(Image, '/camera/camera/color/image_raw',
+                                    self.image_callback, 10)
+            self.create_subscription(PointCloud2, '/ouster/points',
+                                    self.lidar_callback, 10)
+            self.create_subscription(PointCloud2, '/radar_data/point_cloud',
+                                    self.radar_callback, 10)
 
         self.latest_image = None
         self.latest_radar_frame = None
-        logger.info("Lidar to Camera Visualizer Node Initialized.")
+        logger.info(f"Lidar to Camera Visualizer Node Initialized. Using {'synced' if use_synced_topics else 'default'} topics.")
+
 
     def camera_info_callback(self, msg):
         K = np.array(msg.k).reshape(3, 3)
@@ -127,8 +138,9 @@ class LidarToCameraVisualizer(Node):
 
 
 def main(args=None):
+
     rclpy.init(args=args)
-    node = LidarToCameraVisualizer()
+    node = LidarToCameraVisualizer(use_synced_topics=True)
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
