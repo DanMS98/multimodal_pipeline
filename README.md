@@ -1,5 +1,5 @@
 
-# Sensor Sync: Pedestrian Detection Pipeline (ROS 2 Humble)
+# Pedestrian Detection Pipeline
 
 This repository contains ROS 2 packages that transform raw LiDAR, radar, and camera data into synchronized, calibrated, and pseudo-labeled datasets, ready to be used for pedestrian behavior prediction and training trajectory models.
 
