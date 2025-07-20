@@ -1,7 +1,7 @@
 
 # Sensor Sync: Pedestrian Detection Pipeline (ROS 2 Humble)
 
-This repository contains ROS 2 packages that transform raw LiDAR, radar, and camera data into synchronized, calibrated, and pseudo-labeled datasets—ready to be used for pedestrian behavior prediction and training trajectory models.
+This repository contains ROS 2 packages that transform raw LiDAR, radar, and camera data into synchronized, calibrated, and pseudo-labeled datasets, ready to be used for pedestrian behavior prediction and training trajectory models.
 
 ---
 
@@ -165,14 +165,13 @@ ros2 run sensor_sync visualizer.py
 ```
 
 - Set `use_synced_topics=True` to check data alignment
-- Good for checking `rosbag` integrity and sensor synchronization
 
 ![Visualizer GIF](media/visualizer_demo.gif)
 
 ## Notes
 
 - All transforms are assumed to be known (`tf_static`)
-- The pseudo-labeler is not perfect—labels are used as weak supervision
+- The pseudo-labeler is not perfect, labels are used as weak supervision
 
 ## Credits & Disclaimer
 The detector logic of this project is adapted from OpenPCDet, an open-source toolbox for 3D object detection from point clouds.
