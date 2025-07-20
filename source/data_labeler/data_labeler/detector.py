@@ -1,30 +1,26 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import PointCloud2
-import sensor_msgs_py.point_cloud2 as pc2
 import numpy as np
 import glob, sys
 import open3d
-
-sys.path.insert(0, "/home/danial/gitclones/OpenPCDet/")
 import open3d
 import torch
 import matplotlib
 import numpy as np
+import torch
+from pathlib import Path
+from loguru import logger as lu_logger
+import open3d
+import json
 
+sys.path.insert(0, "/home/danial/gitclones/OpenPCDet/")
 
 from pcdet.config import cfg, cfg_from_yaml_file
 from pcdet.models import build_network, load_data_to_gpu
 from pcdet.utils import common_utils
-import torch
 from pcdet.datasets import DatasetTemplate
-from pathlib import Path
 
 from interfaces.srv import RunDetection
-
-from loguru import logger
-import open3d
-import json
 
 
 box_colormap = [
@@ -72,7 +68,6 @@ def draw_scenes(points, gt_boxes=None, ref_boxes=None, ref_labels=None, ref_scor
     if isinstance(ref_boxes, torch.Tensor):
         ref_boxes = ref_boxes.cpu().numpy()
 
-    # Clear previous geometries
     for g in added_geometries:
         vis.remove_geometry(g, reset_bounding_box=False)
     added_geometries.clear()
@@ -182,7 +177,7 @@ class Detector(Node):
         ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointrcnn_iou_7875.pth'
         dataset_path = '/home/danial/gitclones/OpenPCDet/merged_bin/'
         ext = '.bin'
-        self.logger = common_utils.create_logger()
+        self.logger = lu_logger
         self.show_detection = show_detection
 
         cfg_from_yaml_file(cfg_file, cfg)

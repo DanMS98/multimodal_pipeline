@@ -140,7 +140,7 @@ class LidarToCameraVisualizer(Node):
 def main(args=None):
 
     rclpy.init(args=args)
-    node = LidarToCameraVisualizer(use_synced_topics=True)
+    node = LidarToCameraVisualizer(use_synced_topics=False)
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
