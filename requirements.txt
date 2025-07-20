@@ -4,3 +4,6 @@ matplotlib==3.10.3
 pandas==2.3.0
 numpy==1.26.4
 opencv-python
+torch==2.7.1
+torchmetrics==1.7.3
+torchvision==0.22.1
