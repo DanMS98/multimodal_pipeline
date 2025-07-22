@@ -175,7 +175,8 @@ class Detector(Node):
 
         cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/pointrcnn_iou.yaml'
         ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointrcnn_iou_7875.pth'
-        dataset_path = '/home/danial/gitclones/OpenPCDet/merged_bin/'
+        dataset_path = '/home/danial/rosws/Dataset/merged_bin/'
+        print(f"Dataset path: {dataset_path}")
         ext = '.bin'
         self.logger = lu_logger
         self.show_detection = show_detection
@@ -198,6 +199,7 @@ class Detector(Node):
     def run_detection_callback(self, request, response):
         self.prev_detections = []  # [{id, x, y, z}]
         self.next_id = 0
+        
         with torch.no_grad():
             for idx, data_dict in enumerate(self.demo_dataset):
                 self.logger.info(f'Visualized sample index: \t{idx + 1}')
@@ -289,8 +291,7 @@ class Detector(Node):
                 
         self.logger.info('Detection done.')
         output_path = 'raw_detections.json'
-        msg = f'[INFO] Saved {len(self.all_detections)} \
-              detections to {output_path}'
+        msg = f'[INFO] Saved {len(self.all_detections)} detections to {output_path}'
         with open(output_path, 'w') as f:
             json.dump(self.all_detections, f, indent=2)
 
