@@ -7,6 +7,7 @@ log/
 stgcnn_input/
 # Python cache
 *.pyc
+*.h5
 *.mat
 __pycache__/
 

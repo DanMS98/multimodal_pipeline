@@ -93,6 +93,9 @@ def draw_scenes(points, gt_boxes=None, ref_boxes=None, ref_labels=None, ref_scor
     if ref_boxes is not None:
         draw_box(vis, ref_boxes, (0, 1, 0), ref_labels, ref_scores)
 
+
+    vis.get_view_control().set_zoom(0.25)
+
     vis.poll_events()
     vis.update_renderer()
 
