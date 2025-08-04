@@ -5,7 +5,7 @@ This repository contains ROS 2 packages that transform raw LiDAR, radar, and cam
 
 ---
 
-## 📋 Overview
+## Overview
 
 This pipeline works in three main stages:
 
@@ -14,6 +14,13 @@ This pipeline works in three main stages:
 3. **Optional Visualization** (`visualizer.py`)
 
 All stages are ROS 2 Humble–compatible and can be tested with real sensors or using recorded `rosbag` files.
+
+### Rqt-graph representation
+
+Here's the detailed connection between the nodes and topics:
+
+![RQT_GRAPH](media/rosgraph_full.png)
+
 
 ---
 
@@ -29,7 +36,7 @@ You can use either real-time sensor data or recorded `rosbag` files.
 
 ---
 
-## 📦 Packages
+## Packages
 
 ### `sensor_sync`
 
