@@ -22,6 +22,7 @@ class LidarToCameraVisualizer(Node):
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
         self.bridge = CvBridge()
+        self.save_counter = 0
         self.intrinsics = None
         self.cam_frame = 'camera_color_optical_frame'
 
@@ -85,7 +86,11 @@ class LidarToCameraVisualizer(Node):
         vis_img = self.project_and_draw(msg, vis_img, sensor_name='LiDAR')
         vis_img = self.project_and_draw(self.latest_radar_frame, vis_img, sensor_name='Radar')
 
-        vis_img = cv2.resize(vis_img, (640, 480))
+        # vis_img = cv2.resize(vis_img, (640, 480))
+        if cv2.waitKey(1) == ord('s'):
+            cv2.imwrite(f'projected_lidar_radar_{self.save_counter}.png', vis_img)
+            self.save_counter += 1
+            logger.info(f'Saved projected_lidar_radar_{self.save_counter}.png')
         cv2.imshow("Projected LiDAR on Camera", vis_img)
         cv2.waitKey(1)
 
@@ -140,7 +145,7 @@ class LidarToCameraVisualizer(Node):
 def main(args=None):
 
     rclpy.init(args=args)
-    node = LidarToCameraVisualizer(use_synced_topics=False)
+    node = LidarToCameraVisualizer(use_synced_topics=True)
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
