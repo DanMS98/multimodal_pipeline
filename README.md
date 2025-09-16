@@ -179,6 +179,9 @@ ros2 run sensor_sync visualizer.py
 
 - All transforms are assumed to be known (`tf_static`)
 - The pseudo-labeler is not perfect, labels are used as weak supervision
+- While using After installing OpenPCDet, you have to change a few things to avoid bugs.
+  1.  update the POINT_CLOUD_RANGE in dataset configs to cover the whole range of the scanned point clouds.
+  2.  update the path and change it to an absoulte path in models config files.
 
 ## Credits & Disclaimer
 The detector logic of this project is adapted from OpenPCDet, an open-source toolbox for 3D object detection from point clouds.
