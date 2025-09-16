@@ -160,7 +160,7 @@ Radar + LiDAR data combined and calibrated:
 
 Detected pedestrian bounding boxes using PointRCNN_IoU:
 
-![demo GIF](media/labeler.gif)
+![demo GIF](media/labeler2.gif)
 
 
 ### 🖼️ Visualizer: LiDAR/Radar → Camera Projection

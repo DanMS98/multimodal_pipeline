@@ -94,7 +94,7 @@ def draw_scenes(points, gt_boxes=None, ref_boxes=None, ref_labels=None, ref_scor
         draw_box(vis, ref_boxes, (0, 1, 0), ref_labels, ref_scores)
 
 
-    vis.get_view_control().set_zoom(0.25)
+    vis.get_view_control().set_zoom(0.05)
 
     vis.poll_events()
     vis.update_renderer()
@@ -176,8 +176,31 @@ class Detector(Node):
         super().__init__('detector_node')
         self.srv = self.create_service(RunDetection, 'run_detection', self.run_detection_callback)
 
-        cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/pointrcnn_iou.yaml'
-        ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointrcnn_iou_7875.pth'
+        
+
+        # cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/nuscenes_models/cbgs_pp_multihead.yaml'
+        # ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pp_multihead_nds5823_updated.pth'
+
+        # cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/second.yaml'
+        # ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/second_7862.pth'
+
+        cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/pointrcnn.yaml'
+        ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointrcnn_7870.pth'
+
+
+        # cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/PartA2.yaml'
+        # ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/PartA2_7940.pth'
+
+        
+
+        # cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/pointpillar.yaml'
+        # ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointpillar_7728.pth'
+
+
+        # cfg_file = '/home/danial/gitclones/OpenPCDet/tools/cfgs/kitti_models/pointrcnn_iou.yaml'
+        # ckpt_file = '/home/danial/gitclones/OpenPCDet/checkpoints/pointrcnn_iou_7875.pth'
+
+
         dataset_path = '/home/danial/rosws/Dataset/merged_bin/'
         print(f"Dataset path: {dataset_path}")
         ext = '.bin'
@@ -290,6 +313,7 @@ class Detector(Node):
                         ref_scores=scores,
                         ref_labels=labels
                     )
+                    # input("Press Enter to continue to the next frame...")
 
                 
         self.logger.info('Detection done.')
